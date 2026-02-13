@@ -95,23 +95,23 @@
 
         /* --- Hero Section --- */
         .hero {
-            height: 100vh;
+            min-height: 90vh; /* Changed to min-height to accommodate larger image on smaller screens */
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 0 20px;
-            margin-top: -60px; /* Offset nav height */
+            padding: 80px 20px; /* Increased padding */
         }
 
         .hero-content img {
-            width: 180px;
-            height: 180px;
+            /* UPDATED SIZE HERE */
+            width: 280px; 
+            height: 280px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--accent-color);
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
-            margin-bottom: 1.5rem;
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.4); /* Increased glow */
+            margin-bottom: 2rem;
         }
 
         .hero h1 {
@@ -150,7 +150,7 @@
             padding: 80px 10%;
         }
 
-        /* --- Skills Section (New) --- */
+        /* --- Skills Section --- */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
@@ -171,7 +171,7 @@
             margin-right: 8px;
         }
 
-        /* --- Projects Grid --- */
+        /* --- Projects/Awards Grid --- */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -185,6 +185,8 @@
             border: 1px solid rgba(255,255,255,0.05);
             transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -193,14 +195,32 @@
             border-color: var(--accent-color);
         }
 
+        /* Standard Project Images */
         .card img {
             width: 100%;
-            height: 200px;
+            height: 220px; /* Slightly taller than before */
             object-fit: cover;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* UPDATED: Specific rule for Award/Certificate Images to prevent trimming */
+        #awards .card img {
+            height: auto; /* Allow natural height */
+            max-height: 400px; /* But don't let them get too huge */
+            object-fit: contain; /* Ensure the whole image fits inside */
+            padding: 15px; /* Give certificates some breathing room */
+            background: rgba(0,0,0,0.2); /* Slightly darker background for certs */
         }
 
         .card-content {
             padding: 1.5rem;
+            flex-grow: 1; /* Ensures content fills space evenly */
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-content p {
+             flex-grow: 1;
         }
 
         .card-content h3 {
@@ -256,6 +276,7 @@
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
+            .hero-content img { width: 220px; height: 220px; } /* Slightly smaller on mobile */
             nav { padding: 1rem; }
             .nav-links { display: none; } /* Simplified for mobile */
         }
@@ -359,15 +380,15 @@
             <div class="card">
                 <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg" alt="Certificate">
                 <div class="card-content">
-                    <h3>ISG-ISRS 2025</h3>
-                    <p>Official Certification for presentation on space technologies.</p>
+                    <h3>ISG-ISRS 2025 Certificate</h3>
+                    <p>Official Certification for technical presentation on space technologies at the national gathering.</p>
                 </div>
             </div>
             <div class="card">
                 <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation">
                 <div class="card-content">
                     <h3>Conference Presentation</h3>
-                    <p>Delivered technical insights at the national ISG-ISRS gathering.</p>
+                    <p>Delivered technical insights at the national ISG-ISRS gathering regarding satellite applications.</p>
                 </div>
             </div>
         </div>
