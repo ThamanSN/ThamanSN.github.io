@@ -9,41 +9,89 @@
             font-family: Arial, sans-serif;
             background-color: #0f172a;
             color: white;
+            scroll-behavior: smooth;
         }
+
         header {
             text-align: center;
             padding: 60px 20px;
             background: linear-gradient(135deg, #1e3a8a, #0f172a);
         }
+
+        nav {
+            background: #020617;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #3b82f6;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
         section {
-            padding: 40px 20px;
+            padding: 50px 20px;
             max-width: 1000px;
             margin: auto;
         }
+
         h2 {
             border-bottom: 2px solid #3b82f6;
             padding-bottom: 10px;
         }
+
         .card {
             background: #1e293b;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
         }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
         img {
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             border-radius: 10px;
             margin-top: 15px;
         }
+
+        .profile {
+            width: 160px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
             background: #020617;
+            margin-top: 40px;
         }
-        a {
-            color: #3b82f6;
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            border-radius: 6px;
             text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #2563eb;
         }
     </style>
 </head>
@@ -53,51 +101,62 @@
 <header>
     <h1>Thaman SN</h1>
     <p>Mechanical Engineering Student | Aspiring ISRO Scientist 🚀</p>
+    <img src="My_Image.jpg" class="profile">
 </header>
 
-<section>
+<nav>
+    <a href="#qualification">Qualifications</a>
+    <a href="#awards">Awards</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="qualification">
     <h2>🎓 Qualifications</h2>
     <div class="card">
-        <p>B.Tech in Mechanical Engineering</p>
+        <p><strong>B.Tech in Mechanical Engineering</strong></p>
         <p>The National Institute of Engineering (South Campus)</p>
         <p>2024 – 2028</p>
     </div>
 </section>
 
-<section>
+<section id="awards">
     <h2>🏆 Awards & Achievements</h2>
+
     <div class="card">
-        <ul>
-            <li>Young Scientist Award</li>
-            <li>District Level Science Winner</li>
-            <li>State & National Level Project Recognition</li>
-        </ul>
+        <p><strong>ISG-ISRS 2025 Certificate</strong></p>
+        <img src="ISG-ISRS_2025_Certificate image.jpg">
+    </div>
+
+    <div class="card">
+        <p><strong>ISG-ISRS 2025 Presentation</strong></p>
+        <img src="ISG-ISRS_2025_Presentaion Image.jpg">
     </div>
 </section>
 
-<section>
+<section id="projects">
     <h2>🚀 Projects</h2>
 
     <div class="card">
         <h3>ISRAAS Satellite Project</h3>
-        <p>Led development of lightweight CubeSat for border security and atmospheric monitoring.</p>
-        <img src="project1.jpg">
+        <p>Led development of a lightweight CubeSat for border security and atmospheric monitoring. Focused on system integration, structural analysis, and IoT communication architecture.</p>
+        <img src="ISRAAS-Satellite Image.jpg">
     </div>
 
     <div class="card">
-        <h3>TeleMap CanSat</h3>
-        <p>Drone-mounted EM signal mapping system using ESP32 and GSM telemetry.</p>
-        <img src="project2.jpg">
+        <h3>Chocolate 3D Printing Machine</h3>
+        <p>Developed a custom Arduino-based 3-axis chocolate 3D printer with dual microcontroller coordination for precision extrusion.</p>
+        <img src="Chocolate 3D printing_vishvakarma.jpg">
     </div>
-
 </section>
 
-<section>
+<section id="contact">
     <h2>📩 Contact</h2>
     <div class="card">
         <p>Email: yourmail@gmail.com</p>
         <p>LinkedIn: linkedin.com/in/yourprofile</p>
-        <p>GitHub: github.com/yourusername</p>
+        <p>GitHub: github.com/ThamanSN</p>
+        <a href="#" class="btn">Download Resume</a>
     </div>
 </section>
 
