@@ -95,22 +95,21 @@
 
         /* --- Hero Section --- */
         .hero {
-            min-height: 90vh; /* Changed to min-height to accommodate larger image on smaller screens */
+            min-height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 80px 20px; /* Increased padding */
+            padding: 80px 20px;
         }
 
         .hero-content img {
-            /* UPDATED SIZE HERE */
             width: 280px; 
             height: 280px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--accent-color);
-            box-shadow: 0 0 40px rgba(56, 189, 248, 0.4); /* Increased glow */
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.4);
             margin-bottom: 2rem;
         }
 
@@ -198,23 +197,23 @@
         /* Standard Project Images */
         .card img {
             width: 100%;
-            height: 220px; /* Slightly taller than before */
+            height: 220px;
             object-fit: cover;
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* UPDATED: Specific rule for Award/Certificate Images to prevent trimming */
+        /* Award/Certificate Images - Full Fit */
         #awards .card img {
-            height: auto; /* Allow natural height */
-            max-height: 400px; /* But don't let them get too huge */
-            object-fit: contain; /* Ensure the whole image fits inside */
-            padding: 15px; /* Give certificates some breathing room */
-            background: rgba(0,0,0,0.2); /* Slightly darker background for certs */
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            padding: 15px;
+            background: rgba(0,0,0,0.2);
         }
 
         .card-content {
             padding: 1.5rem;
-            flex-grow: 1; /* Ensures content fills space evenly */
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
@@ -276,9 +275,9 @@
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
-            .hero-content img { width: 220px; height: 220px; } /* Slightly smaller on mobile */
+            .hero-content img { width: 220px; height: 220px; }
             nav { padding: 1rem; }
-            .nav-links { display: none; } /* Simplified for mobile */
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -298,7 +297,7 @@
         <div class="hero-content">
             <img src="Project Image/My_Image.jpeg" alt="Thaman SN Profile">
             <h1>Thaman SN</h1>
-            <p>Mechanical Engineer | Space Tech Enthusiast | Aspiring ISRO Scientist</p>
+            <p>Mechanical Engineer</p>
             <a href="#contact" class="hero-btn">Get in Touch</a>
         </div>
     </section>
@@ -333,19 +332,6 @@
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop" alt="OrbEye Tracking">
-                <div class="card-content">
-                    <h3>OrbEye</h3>
-                    <p>Real-time satellite and space debris tracking system using TLE data. Features multi-object tracking and 3D visualization capabilities.</p>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>Skyfield</span>
-                        <span>Cartopy</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
                 <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer">
                 <div class="card-content">
                     <h3>ChocoPrint 3D</h3>
@@ -354,19 +340,6 @@
                         <span>Arduino</span>
                         <span>Mechatronics</span>
                         <span>3D Printing</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=1000&auto=format&fit=crop" alt="TeleMap CanSat">
-                <div class="card-content">
-                    <h3>TeleMap CanSat</h3>
-                    <p>Drone-mounted EM signal mapping system. Utilizes ESP32 for logging and GSM telemetry for real-time data transmission.</p>
-                    <div class="tech-stack">
-                        <span>ESP32</span>
-                        <span>Telemetry</span>
-                        <span>Drone Tech</span>
                     </div>
                 </div>
             </div>
