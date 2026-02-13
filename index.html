@@ -1,168 +1,396 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Thaman SN | Portfolio</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thaman SN | Engineering Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        body {
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8; /* Sky Blue */
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --glass: rgba(30, 41, 59, 0.7);
+        }
+
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: white;
+            padding: 0;
+            box-sizing: border-box;
             scroll-behavior: smooth;
         }
 
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #1e3a8a, #0f172a);
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 20%);
+            overflow-x: hidden;
         }
 
-        nav {
-            background: #020617;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
-
-        nav a {
-            color: #3b82f6;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: white;
-        }
-
-        section {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: auto;
+        /* --- Typography --- */
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif; /* Space-tech font */
+            color: var(--text-primary);
         }
 
         h2 {
-            border-bottom: 2px solid #3b82f6;
-            padding-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* --- Navigation --- */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: -60px; /* Offset nav height */
+        }
+
+        .hero-content img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .hero-btn {
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .hero-btn:hover {
+            background: var(--accent-color);
+            color: #000;
+            box-shadow: 0 0 20px var(--accent-color);
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 80px 10%;
+        }
+
+        /* --- Skills Section (New) --- */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        .skill-tag i {
+            color: var(--accent-color);
+            margin-right: 8px;
+        }
+
+        /* --- Projects Grid --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .card {
-            background: #1e293b;
-            padding: 25px;
-            margin: 25px 0;
-            border-radius: 12px;
-            transition: transform 0.3s ease;
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
         }
 
         .card:hover {
-            transform: scale(1.02);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-color: var(--accent-color);
         }
 
-        img {
+        .card img {
             width: 100%;
-            max-width: 450px;
-            border-radius: 10px;
-            margin-top: 15px;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .profile {
-            width: 160px;
-            border-radius: 50%;
-            margin-top: 20px;
+        .card-content {
+            padding: 1.5rem;
         }
 
+        .card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            margin-top: 1rem;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tech-stack span {
+            font-size: 0.75rem;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        /* --- Footer --- */
         footer {
-            text-align: center;
-            padding: 20px;
             background: #020617;
-            margin-top: 40px;
+            padding: 40px 10%;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #3b82f6;
-            color: white;
-            border-radius: 6px;
-            text-decoration: none;
-            margin-top: 10px;
+        .social-links {
+            margin-bottom: 20px;
         }
 
-        .btn:hover {
-            background: #2563eb;
+        .social-links a {
+            font-size: 1.5rem;
+            margin: 0 15px;
+            color: var(--text-secondary);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: scale(1.2);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            nav { padding: 1rem; }
+            .nav-links { display: none; } /* Simplified for mobile */
         }
     </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Thaman SN</h1>
-    <p>Mechanical Engineering Student</p>
-    <img src="Project Image/My_Image.jpeg" class="profile">
-</header>
+    <nav>
+        <div class="logo">Thaman SN.</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#awards">Awards</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-<nav>
-    <a href="#qualification">Qualifications</a>
-    <a href="#awards">Awards</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <section class="hero">
+        <div class="hero-content">
+            <img src="Project Image/My_Image.jpeg" alt="Thaman SN Profile">
+            <h1>Thaman SN</h1>
+            <p>Mechanical Engineer | Space Tech Enthusiast | Aspiring ISRO Scientist</p>
+            <a href="#contact" class="hero-btn">Get in Touch</a>
+        </div>
+    </section>
 
-<section id="qualification">
-    <h2>🎓 Qualifications</h2>
-    <div class="card">
-        <p><strong>B.Tech in Mechanical Engineering</strong></p>
-        <p>The National Institute of Engineering (South Campus)</p>
-        <p>2024 – 2028</p>
-    </div>
-</section>
+    <section id="about">
+        <h2>🛠 Technical Arsenal</h2>
+        <div class="skills-grid">
+            <div class="skill-tag"><i class="fas fa-satellite"></i> Satellite Systems</div>
+            <div class="skill-tag"><i class="fas fa-microchip"></i> Embedded Systems (ESP32)</div>
+            <div class="skill-tag"><i class="fas fa-code"></i> Python & Skyfield</div>
+            <div class="skill-tag"><i class="fas fa-cube"></i> CubeSats</div>
+            <div class="skill-tag"><i class="fas fa-shield-alt"></i> Ethical Hacking Basics</div>
+            <div class="skill-tag"><i class="fas fa-print"></i> 3D Printing & CAD</div>
+        </div>
+    </section>
 
-<section id="awards">
-    <h2>🏆 Awards & Achievements</h2>
+    <section id="projects">
+        <h2>🚀 Featured Missions</h2>
+        <div class="grid-container">
+            
+            <div class="card">
+                <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite">
+                <div class="card-content">
+                    <h3>ISRAAS Satellite Project</h3>
+                    <p><strong>Team Lead (3 Years)</strong>. Developed a lightweight CubeSat for border security and atmospheric monitoring. Focused on structural analysis and system integration.</p>
+                    <div class="tech-stack">
+                        <span>CubeSat</span>
+                        <span>Border Security</span>
+                        <span>Team Leadership</span>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-        <p><strong>ISG-ISRS 2025 Certificate</strong></p>
-        <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg">
-    </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop" alt="OrbEye Tracking">
+                <div class="card-content">
+                    <h3>OrbEye</h3>
+                    <p>Real-time satellite and space debris tracking system using TLE data. Features multi-object tracking and 3D visualization capabilities.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Skyfield</span>
+                        <span>Cartopy</span>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-        <p><strong>ISG-ISRS 2025 Presentation</strong></p>
-        <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg">
-    </div>
-</section>
+            <div class="card">
+                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer">
+                <div class="card-content">
+                    <h3>ChocoPrint 3D</h3>
+                    <p>Arduino-based 3-axis chocolate 3D printer. Engineered dual microcontroller coordination for precision thermal control and extrusion.</p>
+                    <div class="tech-stack">
+                        <span>Arduino</span>
+                        <span>Mechatronics</span>
+                        <span>3D Printing</span>
+                    </div>
+                </div>
+            </div>
 
-<section id="projects">
-    <h2>🚀 Projects</h2>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=1000&auto=format&fit=crop" alt="TeleMap CanSat">
+                <div class="card-content">
+                    <h3>TeleMap CanSat</h3>
+                    <p>Drone-mounted EM signal mapping system. Utilizes ESP32 for logging and GSM telemetry for real-time data transmission.</p>
+                    <div class="tech-stack">
+                        <span>ESP32</span>
+                        <span>Telemetry</span>
+                        <span>Drone Tech</span>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-        <h3>ISRAAS Satellite Project</h3>
-        <p>Led development of a lightweight CubeSat for border security and atmospheric monitoring. Focused on system integration and structural analysis.</p>
-        <img src="Project Image/ISRAAS-Satellite Image.jpeg">
-    </div>
+        </div>
+    </section>
 
-    <div class="card">
-        <h3>Chocolate 3D Printing Machine</h3>
-        <p>Developed an Arduino-based 3-axis chocolate 3D printer with dual microcontroller coordination for precision extrusion.</p>
-        <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg">
-    </div>
-</section>
+    <section id="awards">
+        <h2>🏆 Achievements</h2>
+        <div class="grid-container">
+            <div class="card">
+                <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg" alt="Certificate">
+                <div class="card-content">
+                    <h3>ISG-ISRS 2025</h3>
+                    <p>Official Certification for presentation on space technologies.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation">
+                <div class="card-content">
+                    <h3>Conference Presentation</h3>
+                    <p>Delivered technical insights at the national ISG-ISRS gathering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="contact">
-    <h2>📩 Contact</h2>
-    <div class="card">
-        <p>Email:thamansn217@gmail.com</p>
-        <p>LinkedIn: https://www.linkedin.com/in/thaman-sn-552a34342/</p>
-        <p>GitHub: github.com/ThamanSN</p>
-        <a href="#" class="btn">Download Resume</a>
-    </div>
-</section>
+    <section id="contact">
+        <div class="card" style="text-align: center; max-width: 600px; margin: auto;">
+            <div class="card-content">
+                <h3>Let's Connect</h3>
+                <p>Open to research collaborations in Satellite Systems and Space Technology.</p>
+                <div class="social-links" style="margin-top: 20px;">
+                    <a href="mailto:yourmail@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/ThamanSN"><i class="fab fa-github"></i></a>
+                </div>
+                <a href="#" class="hero-btn">Download Resume</a>
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <p>© 2026 Thaman SN | Built with GitHub Pages</p>
-</footer>
+    <footer>
+        <p>© 2026 Thaman SN. Built for the stars. 🚀</p>
+    </footer>
 
 </body>
 </html>
