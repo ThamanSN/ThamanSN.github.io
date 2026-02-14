@@ -11,7 +11,7 @@
         :root {
             --bg-color: #0f172a;
             --card-bg: #1e293b;
-            --accent-color: #38bdf8; /* Sky Blue */
+            --accent-color: #38bdf8;
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --glass: rgba(30, 41, 59, 0.7);
@@ -34,9 +34,8 @@
             overflow-x: hidden;
         }
 
-        /* --- Typography --- */
         h1, h2, h3 {
-            font-family: 'Orbitron', sans-serif; /* Space-tech font */
+            font-family: 'Orbitron', sans-serif;
             color: var(--text-primary);
         }
 
@@ -62,7 +61,6 @@
 
         a { text-decoration: none; color: inherit; transition: 0.3s; }
 
-        /* --- Navigation --- */
         nav {
             position: sticky;
             top: 0;
@@ -93,7 +91,6 @@
             color: var(--accent-color);
         }
 
-        /* --- Hero Section --- */
         .hero {
             min-height: 90vh;
             display: flex;
@@ -144,12 +141,10 @@
             box-shadow: 0 0 20px var(--accent-color);
         }
 
-        /* --- Sections General --- */
         section {
             padding: 80px 10%;
         }
 
-        /* --- Skills Section --- */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
@@ -170,7 +165,6 @@
             margin-right: 8px;
         }
 
-        /* --- Projects/Awards Grid --- */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -194,7 +188,6 @@
             border-color: var(--accent-color);
         }
 
-        /* Standard Project Images */
         .card img {
             width: 100%;
             height: 220px;
@@ -202,7 +195,6 @@
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* Award/Certificate Images - Full Fit */
         #awards .card img {
             height: auto;
             max-height: 400px;
@@ -217,10 +209,6 @@
             display: flex;
             flex-direction: column;
         }
-        
-        .card-content p {
-             flex-grow: 1;
-        }
 
         .card-content h3 {
             font-size: 1.2rem;
@@ -234,22 +222,6 @@
             line-height: 1.6;
         }
 
-        .tech-stack {
-            margin-top: 1rem;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .tech-stack span {
-            font-size: 0.75rem;
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--accent-color);
-            padding: 4px 8px;
-            border-radius: 4px;
-        }
-
-        /* --- Footer --- */
         footer {
             background: #020617;
             padding: 40px 10%;
@@ -272,7 +244,6 @@
             transform: scale(1.2);
         }
 
-        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             .hero-content img { width: 220px; height: 220px; }
@@ -281,108 +252,152 @@
         }
     </style>
 </head>
+
 <body>
 
-    <nav>
-        <div class="logo">Thaman SN.</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#awards">Awards</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+<nav>
+    <div class="logo">Thaman SN.</div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <img src="Project Image/My_Image.jpeg" alt="Thaman SN Profile">
-            <h1>Thaman SN</h1>
-            <p>Mechanical Engineer</p>
-            <a href="#contact" class="hero-btn">Get in Touch</a>
-        </div>
-    </section>
+<section class="hero">
+    <div class="hero-content">
+        <img src="Project Image/My_Image.jpeg" alt="Thaman SN Profile">
+        <h1>Thaman SN</h1>
+        <p>Mechanical Engineer</p>
+        <a href="#contact" class="hero-btn">Get in Touch</a>
+    </div>
+</section>
 
-    <section id="about">
-        <h2>🛠 Technical Arsenal</h2>
-        <div class="skills-grid">
-            <div class="skill-tag"><i class="fas fa-satellite"></i> Cube Sat and Satellite Systems</div>
-            <div class="skill-tag"><i class="fas fa-microchip"></i> Embedded Systems and IoT Integration</div>
-            <div class="skill-tag"><i class="fas fa-shield-alt"></i> Solid Works , On-Shape, Solid Edge, Autodesk Fusion</div>
-            <div class="skill-tag"><i class="fas fa-print"></i> 3D Printing (knowledge in Additive Manufacturing)</div>
-        </div>
-    </section>
+<section id="about">
+    <h2>🛠 Technical Arsenal</h2>
+    <div class="skills-grid">
+        <div class="skill-tag"><i class="fas fa-satellite"></i> Cube Sat and Satellite Systems</div>
+        <div class="skill-tag"><i class="fas fa-microchip"></i> Embedded Systems and IoT Integration</div>
+        <div class="skill-tag"><i class="fas fa-shield-alt"></i> Solid Works , On-Shape, Solid Edge, Autodesk Fusion</div>
+        <div class="skill-tag"><i class="fas fa-print"></i> 3D Printing (Additive Manufacturing)</div>
+    </div>
+</section>
 
-    <section id="projects">
-        <h2>🚀 Featured Missions</h2>
-        <div class="grid-container">
-            
-            <div class="card">
-                <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite">
-                <div class="card-content">
-                    <h3>ISRAAS Satellite Project</h3>
-                    <p><strong>Team Lead (3 Years)</strong>. Developed a lightweight CubeSat for border security and atmospheric monitoring. Focused on structural analysis and system integration.</p>
-                    <div class="tech-stack">
-                        <span>CubeSat</span>
-                        <span>Border Security</span>
-                        <span>Team Leadership</span>
-                    </div>
-                </div>
-            </div>
+<section id="projects">
+    <h2>🚀 Featured Missions</h2>
+    <div class="grid-container">
 
-            <div class="card">
-                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer">
-                <div class="card-content">
-                    <h3>ChocoPrint 3D</h3>
-                    <p>Arduino-based 3-axis chocolate 3D printer. Engineered dual microcontroller coordination for precision thermal control and extrusion.</p>
-                    <div class="tech-stack">
-                        <span>Arduino</span>
-                        <span>Mechatronics</span>
-                        <span>3D Printing</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="awards">
-        <h2>🏆 Achievements</h2>
-        <div class="grid-container">
-            <div class="card">
-                <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg" alt="Certificate">
-                <div class="card-content">
-                    <h3>ISG-ISRS 2025 Certificate</h3>
-                    <p>Official Certification for technical presentation on space technologies at the national gathering.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation">
-                <div class="card-content">
-                    <h3>Conference Presentation</h3>
-                    <p>Delivered technical insights at the national ISG-ISRS gathering regarding satellite applications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="card" style="text-align: center; max-width: 600px; margin: auto;">
+        <div class="card">
+            <img src="Project Image/ISRAAS-Satellite Image.jpeg">
             <div class="card-content">
-                <h3>Let's Connect</h3>
-                <p>Open to research collaborations and System Level Project Development.</p>
-                <div class="social-links" style="margin-top: 20px;">
-                    <a href="mailto:thamansn217@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/thaman-sn-552a34342/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/ThamanSN"><i class="fab fa-github"></i></a>
-                </div>
-                <a href="#" class="hero-btn">Download Resume</a>
+                <h3>ISRAAS Satellite Project</h3>
+                <p><strong>Team Lead (3 Years)</strong>. Developed a lightweight CubeSat for border security and atmospheric monitoring.</p>
             </div>
         </div>
-    </section>
 
-    <footer>
-        <p>© 2026 Thaman SN. Built for the stars. 🚀</p>
-    </footer>
+        <div class="card">
+            <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg">
+            <div class="card-content">
+                <h3>ChocoPrint 3D</h3>
+                <p>Arduino-based 3-axis chocolate 3D printer with dual microcontroller precision control.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="awards">
+    <h2>🏆 Achievements</h2>
+    <div class="grid-container">
+
+        <!-- National Level (Placeholder) -->
+        <div class="card">
+            <div style="height:300px; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.2);">
+                <p style="color:var(--accent-color); font-weight:600;">National Level Young Scientist Award Image Coming Soon</p>
+            </div>
+            <div class="card-content">
+                <h3>National Level Young Scientist Award</h3>
+                <p>Recognized at the National Level for scientific innovation and research excellence.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Project Image/State_level_youngscientist_award.jpeg">
+            <div class="card-content">
+                <h3>State Level Young Scientist Award</h3>
+                <p>State-level recognition for excellence in scientific project development.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Project Image/District_level_youngscientist_award.jpeg">
+            <div class="card-content">
+                <h3>District Level Young Scientist Award</h3>
+                <p>District-level award for innovation and technical presentation.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Project Image/Inspire_award_2019.jpeg">
+            <div class="card-content">
+                <h3>INSPIRE Award – 2019</h3>
+                <p>Recognized for scientific creativity under INSPIRE initiative.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Project Image/inspire_award_2021.jpeg">
+            <div class="card-content">
+                <h3>INSPIRE Award – 2021</h3>
+                <p>Continued excellence in research and innovation.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Project Image/SSTH_2021.jpeg">
+            <div class="card-content">
+                <h3>SSTH 2021 – Sahyadri Science Talent Hunt</h3>
+                <p>Prize winner at Sahyadri College of Engineering & Management.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Project Image/SSTH_2023.jpeg">
+            <div class="card-content">
+                <h3>SSTH 2023 – Sahyadri Science Talent Hunt</h3>
+                <p>State-level competition recognition for technical excellence.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Project Image/ENVISION_2025.jpeg">
+            <div class="card-content">
+                <h3>First Prize – ENVISION 2025</h3>
+                <p>First Prize at ENVISION conducted at The National Institute of Engineering, Mysore.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <div class="card" style="text-align: center; max-width: 600px; margin: auto;">
+        <div class="card-content">
+            <h3>Let's Connect</h3>
+            <p>Open to research collaborations and system-level development.</p>
+            <div class="social-links" style="margin-top: 20px;">
+                <a href="mailto:thamansn217@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/thaman-sn-552a34342/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ThamanSN"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Thaman SN. Built for the stars. 🚀</p>
+</footer>
 
 </body>
 </html>
