@@ -202,9 +202,16 @@
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* UPDATED: SPECIFICALLY FOR FEATURED MISSIONS */
+        /* UPDATED: Featured Missions (Projects) Images 
+           - Increased height to 500px 
+           - Changed to 'contain' so full photo is visible 
+        */
         #projects .card img {
-            height: 420px; /* Increased size significantly */
+            height: auto;
+            max-height: 500px; /* Increased size significantly */
+            object-fit: contain; /* Ensures full photo is visible */
+            padding: 10px;
+            background: rgba(0,0,0,0.2);
         }
 
         /* Award/Certificate Images - Full Fit */
@@ -349,6 +356,18 @@
                 </div>
             </div>
 
+            <div class="card">
+                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation">
+                <div class="card-content">
+                    <h3>Conference Presentation</h3>
+                    <p>Delivered technical insights at the national ISG-ISRS gathering regarding satellite applications.</p>
+                    <div class="tech-stack">
+                        <span>Technical Presentation</span>
+                        <span>ISRO-ISRS</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -372,14 +391,6 @@
                 </div>
             </div>
             
-            <div class="card">
-                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation">
-                <div class="card-content">
-                    <h3>Conference Presentation</h3>
-                    <p>Delivered technical insights at the national ISG-ISRS gathering regarding satellite applications.</p>
-                </div>
-            </div>
-
             <div class="card">
                 <img src="Project Image/State_level_youngscientist_award.jpg" alt="State Level Young Scientist">
                 <div class="card-content">
