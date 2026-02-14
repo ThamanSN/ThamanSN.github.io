@@ -194,15 +194,20 @@
             border-color: var(--accent-color);
         }
 
-        /* Standard Project Images - UPDATED HEIGHT HERE */
+        /* Standard Project Images */
         .card img {
             width: 100%;
-            height: 350px; /* Increased from 220px to 350px to show more image */
+            height: 220px;
             object-fit: cover;
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* Award/Certificate Images - Full Fit (Unchanged) */
+        /* UPDATED: SPECIFICALLY FOR FEATURED MISSIONS */
+        #projects .card img {
+            height: 420px; /* Increased size significantly */
+        }
+
+        /* Award/Certificate Images - Full Fit */
         #awards .card img {
             height: auto;
             max-height: 400px;
