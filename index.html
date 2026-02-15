@@ -117,17 +117,28 @@
 
         .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem; /* Reduced margin to pull title closer to subtitle */
             background: linear-gradient(to right, #fff, #94a3b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero p {
-            font-size: 1.2rem;
+        /* Subtitle Style (Mechanical Engineer) */
+        .hero .subtitle {
+            font-size: 1.5rem; /* Made slightly larger */
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        /* Bio Text Style */
+        .hero .bio {
+            font-size: 1.1rem;
             color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto 2rem auto;
+            max-width: 700px; /* Slightly wider for reading comfort */
+            margin: 0 auto 2.5rem auto;
+            line-height: 1.8;
         }
 
         .hero-btn {
@@ -204,14 +215,11 @@
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* UPDATED: Featured Missions (Projects) Images 
-           - Increased height to 500px 
-           - Changed to 'contain' so full photo is visible 
-        */
+        /* UPDATED: Featured Missions (Projects) Images */
         #projects .card img {
             height: auto;
-            max-height: 500px; /* Increased size significantly */
-            object-fit: contain; /* Ensures full photo is visible */
+            max-height: 500px;
+            object-fit: contain;
             padding: 10px;
             background: rgba(0,0,0,0.2);
         }
@@ -311,7 +319,13 @@
         <div class="hero-content">
             <img src="Project Image/My_Image.jpeg" alt="Thaman S N Profile">
             <h1>Thaman SN</h1>
-            <p>Mechanical Engineer</p>
+            
+            <p class="subtitle">Mechanical Engineer</p>
+            <p class="bio">
+                Aspiring Space Scientist and Mechanical Engineering student at NIE Mysuru, passionate about satellite systems and embedded technology. 
+                I specialize in CubeSat development, 3D printing, and robotics, leading projects like OrbEye and ISRAAS to solve real-world aerospace challenges. 
+                Dedicated to innovation, I aim to join ISRO and contribute to the future of India's space missions.
+            </p>
             <a href="#contact" class="hero-btn">Get in Touch</a>
         </div>
     </section>
@@ -324,7 +338,7 @@
             <div class="skill-tag"><i class="fas fa-code"></i> Solid Works </div>
              <div class="skill-tag"><i class="fas fa-code"></i> Solid Edge </div>
              <div class="skill-tag"><i class="fas fa-code"></i>  OnShape </div>
-             <div class="skill-tag"><i class="fas fa-code"></i>  Autodest Fusion </div>
+             <div class="skill-tag"><i class="fas fa-code"></i>  Autodesk Fusion </div>
             <div class="skill-tag"><i class="fas fa-cube"></i> CubeSats & CanSat Development</div>
             <div class="skill-tag"><i class="fas fa-print"></i> Robotics & Automation</div>
         </div>
@@ -393,7 +407,7 @@
                 <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg" alt="ISG-ISRS Certificate">
                 <div class="card-content">
                     <h3>ISG-ISRS 2025 Certificate</h3>
-                    <p>Official Certification for technical presentation on space technologies at the national Conference at IIT kharagpur, Kolkata  .</p>
+                    <p>Official Certification for technical presentation on space technologies at the national Conference at IIT kharagpur, Kolkata  .</p>
                 </div>
             </div>
             
