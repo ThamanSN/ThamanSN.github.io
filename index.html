@@ -230,7 +230,17 @@
             background: rgba(0,0,0,0.2);
         }
 
-        /* Publications Images - Makes them look clickable */
+        /* Publications Section Styling - Stops it from stretching too wide */
+        #publications .grid-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #publications .card {
+            max-width: 800px;
+            width: 100%;
+        }
+
         #publications .card img {
             height: auto;
             max-height: 500px;
@@ -405,7 +415,7 @@
     </section>
 
     <section id="publications">
-        <h2>📚 Technical Research & Publications</h2>
+        <h2>📚 Publications & Research</h2>
         <div class="grid-container">
             
             <div class="card">
