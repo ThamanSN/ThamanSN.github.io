@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thaman SN | Engineering Portfolio</title>
+    <title>Thaman S N | Engineering Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <meta name="google-site-verification" content="1m-jVR0HrB5bJCQ3zwADsiA-th-Ia8Bjolj-LmWBLcw" />
+    <meta name="keywords" content="Thaman S N, Thaman SN, Thaman S.N., Mechanical Engineer, Portfolio, ISRO">
+    <meta name="description" content="Official portfolio of Thaman S N, a Mechanical Engineer and aspiring ISRO Scientist.">
 
     <style>
         :root {
@@ -117,26 +119,24 @@
 
         .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 0.5rem; /* Reduced margin to pull title closer to subtitle */
+            margin-bottom: 0.5rem;
             background: linear-gradient(to right, #fff, #94a3b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Subtitle Style (Mechanical Engineer) */
         .hero .subtitle {
-            font-size: 1.5rem; /* Made slightly larger */
+            font-size: 1.5rem;
             color: var(--accent-color);
             margin-bottom: 1.5rem;
             font-family: 'Orbitron', sans-serif;
             letter-spacing: 1px;
         }
 
-        /* Bio Text Style */
         .hero .bio {
             font-size: 1.1rem;
             color: var(--text-secondary);
-            max-width: 700px; /* Slightly wider for reading comfort */
+            max-width: 700px;
             margin: 0 auto 2.5rem auto;
             line-height: 1.8;
         }
@@ -207,7 +207,6 @@
             border-color: var(--accent-color);
         }
 
-        /* Standard Project Images */
         .card img {
             width: 100%;
             height: 220px;
@@ -215,7 +214,6 @@
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* UPDATED: Featured Missions (Projects) Images */
         #projects .card img {
             height: auto;
             max-height: 500px;
@@ -224,13 +222,27 @@
             background: rgba(0,0,0,0.2);
         }
 
-        /* Award/Certificate Images - Full Fit */
         #awards .card img {
             height: auto;
             max-height: 400px;
             object-fit: contain;
             padding: 15px;
             background: rgba(0,0,0,0.2);
+        }
+
+        /* Publications Images - Makes them look clickable */
+        #publications .card img {
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            padding: 10px;
+            background: rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        #publications .card img:hover {
+            transform: scale(1.02);
         }
 
         .card-content {
@@ -271,7 +283,6 @@
             border-radius: 4px;
         }
 
-        /* --- Footer --- */
         footer {
             background: #020617;
             padding: 40px 10%;
@@ -294,7 +305,6 @@
             transform: scale(1.2);
         }
 
-        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             .hero-content img { width: 220px; height: 220px; }
@@ -310,6 +320,7 @@
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
             <a href="#awards">Awards</a>
             <a href="#contact">Contact</a>
         </div>
@@ -318,7 +329,7 @@
     <section class="hero">
         <div class="hero-content">
             <img src="Project Image/My_Image.jpeg" alt="Thaman S N Profile">
-            <h1>Thaman SN</h1>
+            <h1>Thaman S N</h1>
             
             <p class="subtitle">Mechanical Engineer</p>
             <p class="bio">
@@ -387,6 +398,28 @@
                         <span>Border Security</span>
                         <span>Team Leadership</span>
                     </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="publications">
+        <h2>📚 Publications & Research</h2>
+        <div class="grid-container">
+            
+            <div class="card">
+                <a href="NIRVANA_Paper.pdf" target="_blank" title="Click to read full paper">
+                    <img src="Project Image/Nirvana_frontpage.png" alt="NIRVANA Paper Front Page">
+                </a>
+                <div class="card-content">
+                    <h3>NIRVANA Research Paper</h3>
+                    <p>A comprehensive research study on advanced engineering concepts and satellite systems. Click the image above or the button below to read the full document.</p>
+                    <div class="tech-stack" style="margin-bottom: 15px;">
+                        <span>Research Publication</span>
+                        <span>Satellite Tech</span>
+                    </div>
+                    <a href="NIRVANA_Paper.pdf" target="_blank" class="hero-btn" style="padding: 8px 20px; font-size: 0.9rem;">Read Full Paper</a>
                 </div>
             </div>
 
@@ -490,13 +523,13 @@
                     <a href="https://www.linkedin.com/in/thaman-sn-552a34342/"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/ThamanSN"><i class="fab fa-github"></i></a>
                 </div>
-                <a href="Thaman_SN_Resume.pdf.pdf" target="_blank" class="hero-btn">Download Resume</a>
+                <a href="Thaman_SN_Resume.pdf" target="_blank" class="hero-btn">Download Resume</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Thaman SN. Driven by Curiosity, Powered by Engineering 🚀</p>
+        <p>© 2026 Thaman S N. Driven by Curiosity, Powered by Engineering 🚀</p>
     </footer>
 
 </body>
