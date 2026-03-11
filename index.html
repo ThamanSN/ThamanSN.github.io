@@ -293,6 +293,40 @@
             border-radius: 4px;
         }
 
+        /* --- Aura Animation for Dropdown --- */
+        @keyframes auraEffect {
+            0% { color: #38bdf8; text-shadow: 0 0 5px rgba(56, 189, 248, 0.4); }
+            33% { color: #a855f7; text-shadow: 0 0 8px rgba(168, 85, 247, 0.6); }
+            66% { color: #ec4899; text-shadow: 0 0 8px rgba(236, 72, 153, 0.6); }
+            100% { color: #38bdf8; text-shadow: 0 0 5px rgba(56, 189, 248, 0.4); }
+        }
+
+        .aura-text {
+            animation: auraEffect 3s infinite alternate;
+            font-weight: 700;
+            outline: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: 0.3s;
+            list-style: none; /* Customizes the marker if needed */
+        }
+
+        /* Customizing the details marker to look cleaner */
+        .aura-text::-webkit-details-marker {
+            display: none;
+        }
+        .aura-text::before {
+            content: '✦ ';
+            font-size: 0.9em;
+        }
+        details[open] .aura-text::before {
+            content: '✧ ';
+        }
+
+        .aura-text:hover {
+            transform: scale(1.02);
+        }
+
         footer {
             background: #020617;
             padding: 40px 10%;
@@ -373,17 +407,84 @@
     <section id="projects">
         <h2>🚀 Featured Missions</h2>
         <div class="grid-container">
-            
+
             <div class="card">
-                <img src="Project Image/e_yantra_iitBombay.jpg" alt="e-Yantra Robotics Competition">
+                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation">
+                <div class="card-content">
+                    <h3>Conference Presentation at IIT Kharagpur, Kolkata</h3>
+                    <p>Presented advanced technical insights on CubeSat architecture and satellite applications at the National ISG–ISRS Conference.</p>
+                    
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">View Project & Technical Details</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                            <p><strong>Overview:</strong> Contributed to broader technical discussions on emerging space technologies and remote-sensing methodologies.</p>
+                            <p><strong>Impact:</strong> Engaged with leading researchers and professionals to validate concepts and expand knowledge in practical satellite technology.</p>
+                        </div>
+                    </details>
+
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>Technical Presentation</span>
+                        <span>ISG - ISRS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer">
+                <div class="card-content">
+                    <h3>ChocoPrint 3D</h3>
+                    <p>3-axis chocolate 3D printer system engineered for precise thermal control and fluid extrusion.</p>
+
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">View Project & Technical Details</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                            <p><strong>Technical Overview:</strong> Utilized an ATmega328P paired with a CNC shield to accurately drive the 3-axis motion kinematics.</p>
+                            <p><strong>Solution:</strong> Developed dual microcontroller coordination to handle the unique rheological properties of chocolate, balancing thermal management with feed-rate control.</p>
+                        </div>
+                    </details>
+
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>ATmega328P and CNC Shield</span>
+                        <span>Mechatronics</span>
+                        <span>3D Printing</span>
+                        <span>Team Leadership</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite">
+                <div class="card-content">
+                    <h3>ISRAAS Satellite Project</h3>
+                    <p><strong>Team Lead</strong>. Developed a lightweight CubeSat for border security and atmospheric monitoring.</p>
+                    
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">View Project & Technical Details</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                            <p><strong>Overview:</strong> Focused heavily on full system integration and structural analysis of a deployable CubeSat unit.</p>
+                            <p><strong>Responsibility:</strong> Directed a team through the complete engineering cycle, from conceptual mission design to environmental application implementation.</p>
+                        </div>
+                    </details>
+
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>CubeSat</span>
+                        <span>Environmental monitoring</span>
+                        <span>Border Security</span>
+                        <span>Team Leadership</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/e_yantra_iitBombay.jpeg" alt="e-Yantra Robotics Competition">
                 <div class="card-content">
                     <h3>e-Yantra Robotics Competition 2025-26</h3>
                     <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; flex-grow: 0;">Achievement: National-Level Competition by IIT Bombay | Selected till semi finals</p>
-                    <p><strong>Overview:</strong> Developing an autonomous farm-to-collection center delivery robot. The robot navigates complex paths, identifies and picks up color-coded crop crates, and delivers them to designated collection points.</p>
+                    <p><strong>Overview:</strong> Developing an autonomous farm-to-collection center delivery robot capable of navigating complex paths and color-coded item retrieval.</p>
                     
-                    <details style="margin-top: 15px; margin-bottom: 15px; cursor: pointer; color: var(--text-secondary); font-size: 0.9rem;">
-                        <summary style="color: var(--accent-color); font-weight: 600; outline: none;">View Project & Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px;">
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">View Project & Technical Details</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
                             <p><strong>Problem Statement:</strong> Agricultural logistics requires efficient automation for transporting harvested crops from fields to collection centers. Traditional manual methods are time-consuming and labor-intensive, especially for large farms.</p>
                             <p><strong>Solution:</strong> An autonomous robot system using STM32 microcontroller with advanced line following algorithms that can navigate white/black lines, sharp curves, zigzag patterns, and dotted segments. IR array sensors enable color-coded crate identification and precise pickup/delivery operations.</p>
                             <div>
@@ -410,42 +511,40 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation">
-                <div class="card-content">
-                    <h3>Conference Presentation at IIT kharagpur, Kolkata</h3>
-                    <p>Presented advanced technical insights on CubeSat architecture and satellite applications at the National ISG–ISRS Conference at IIT Kharagpur, Kolkata, contributing to discussions on emerging space technologies.</p>
-                    <div class="tech-stack">
-                        <span>Technical Presentation</span>
-                        <span>India Society of geomatics - Indian Society of Remote-Sensing </span>
-                    </div>
-                </div>
-            </div>
 
             <div class="card">
-                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer">
+                <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND Autonomous UAV">
                 <div class="card-content">
-                    <h3>ChocoPrint 3D</h3>
-                    <p>ATmega328P and CNC sheild for 3-axis chocolate 3D printer. Engineered dual microcontroller coordination for precision thermal control and extrusion.</p>
-                    <div class="tech-stack">
-                        <span>ATmega328P and CNC Shield</span>
-                        <span>Mechatronics</span>
-                        <span>3D Printing</span>
-                        <span>Team Leadership</span>
-                    </div>
-                </div>
-            </div>
+                    <h3>ASCEND – Autonomous UAV System</h3>
+                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; flex-grow: 0;">Achievement: Concept Proposal Submitted | January 2026</p>
+                    <p><strong>Overview:</strong> GPS-denied autonomous quadrotor UAV system designed for indoor navigation and surveillance for the ISRO Robotics Challenge (IRoC-U 2026).</p>
+                    
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">View Project & Technical Details</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                            <p><strong>Problem Statement:</strong> GPS signals are unavailable or unreliable in indoor environments, underground facilities, and urban canyons, making traditional UAV navigation impossible for search-and-rescue, surveillance, and inspection.</p>
+                            <p><strong>Solution:</strong> A vision-based autonomous navigation pipeline using OAK-D Pro stereo camera for depth perception and visual odometry, integrated with Pixhawk flight controller running ArduPilot firmware.</p>
+                            <div>
+                                <strong>Key Features:</strong>
+                                <ul style="margin-left: 20px; margin-top: 5px;">
+                                    <li>GPS-denied autonomous navigation</li>
+                                    <li>Stereo vision-based localization</li>
+                                    <li>SLAM mapping for indoor environments</li>
+                                    <li>Pixhawk + ArduPilot integration</li>
+                                    <li>Multi-sensor fusion framework</li>
+                                </ul>
+                            </div>
+                            <p><strong>Technical Navigation & Control:</strong> Multi-sensor integration combining IMU, LiDAR/ultrasonic range sensors, and stereo vision using SLAM algorithms for precise localization. Hardware integration strategy includes MAVLink communications and real-time data processing for mission-critical operations.</p>
+                            <p><strong>Impact:</strong> Submitted innovative concept proposal to ISRO's national robotics challenge, demonstrating advanced understanding of autonomous systems, computer vision, and GPS-denied navigation techniques.</p>
+                        </div>
+                    </details>
 
-            <div class="card">
-                <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite">
-                <div class="card-content">
-                    <h3>ISRAAS Satellite Project</h3>
-                    <p><strong>Team Lead </strong>. Developed a lightweight CubeSat for border security and atmospheric monitoring. Focused on system integration and structural analysis.</p>
-                    <div class="tech-stack">
-                        <span>CubeSat</span>
-                        <span>Environmental monitoring</span>
-                        <span>Border Security</span>
-                        <span>Team Leadership</span>
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>Pixhawk & ArduPilot</span>
+                        <span>OAK-D Pro Stereo</span>
+                        <span>SLAM Algorithms</span>
+                        <span>ROS & Python</span>
+                        <span>Sensor Fusion</span>
                     </div>
                 </div>
             </div>
