@@ -149,6 +149,7 @@
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         .hero-btn:hover {
@@ -293,38 +294,68 @@
             border-radius: 4px;
         }
 
-        /* --- Aura Animation for Dropdown --- */
-        @keyframes auraEffect {
-            0% { color: #38bdf8; text-shadow: 0 0 5px rgba(56, 189, 248, 0.4); }
-            33% { color: #a855f7; text-shadow: 0 0 8px rgba(168, 85, 247, 0.6); }
-            66% { color: #ec4899; text-shadow: 0 0 8px rgba(236, 72, 153, 0.6); }
-            100% { color: #38bdf8; text-shadow: 0 0 5px rgba(56, 189, 248, 0.4); }
+        /* --- Futuristic Left-to-Right Highlight Animation --- */
+        @keyframes textShine {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
         }
 
         .aura-text {
-            animation: auraEffect 3s infinite alternate;
+            background: linear-gradient(90deg, var(--text-secondary) 0%, var(--accent-color) 40%, #a855f7 50%, var(--accent-color) 60%, var(--text-secondary) 100%);
+            background-size: 200% auto;
+            color: var(--accent-color);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textShine 3s linear infinite;
             font-weight: 700;
             outline: none;
             display: inline-block;
             cursor: pointer;
-            transition: 0.3s;
-            list-style: none; /* Customizes the marker if needed */
+            transition: transform 0.3s;
         }
 
-        /* Customizing the details marker to look cleaner */
         .aura-text::-webkit-details-marker {
             display: none;
         }
+        
         .aura-text::before {
             content: '✦ ';
             font-size: 0.9em;
         }
+        
         details[open] .aura-text::before {
             content: '✧ ';
         }
 
         .aura-text:hover {
             transform: scale(1.02);
+        }
+
+        /* --- Sweeping Light Effect for Buttons --- */
+        @keyframes buttonSweep {
+            0% { left: -100%; }
+            50% { left: 200%; }
+            100% { left: 200%; }
+        }
+
+        .aura-btn {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .aura-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transform: skewX(-20deg);
+            animation: buttonSweep 3s infinite linear;
+            z-index: -1;
         }
 
         footer {
@@ -430,29 +461,6 @@
             </div>
 
             <div class="card">
-                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer">
-                <div class="card-content">
-                    <h3>ChocoPrint 3D</h3>
-                    <p>3-axis chocolate 3D printer system engineered for precise thermal control and fluid extrusion.</p>
-
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
-                        <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
-                            <p><strong>Technical Overview:</strong> Utilized an ATmega328P paired with a CNC shield to accurately drive the 3-axis motion kinematics.</p>
-                            <p><strong>Solution:</strong> Developed dual microcontroller coordination to handle the unique rheological properties of chocolate, balancing thermal management with feed-rate control.</p>
-                        </div>
-                    </details>
-
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>ATmega328P and CNC Shield</span>
-                        <span>Mechatronics</span>
-                        <span>3D Printing</span>
-                        <span>Team Leadership</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
                 <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite">
                 <div class="card-content">
                     <h3>ISRAAS Satellite Project</h3>
@@ -471,43 +479,6 @@
                         <span>Environmental monitoring</span>
                         <span>Border Security</span>
                         <span>Team Leadership</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="Project Image/e_yantra_iitBombay.jpg" alt="e-Yantra Robotics Competition">
-                <div class="card-content">
-                    <h3>e-Yantra Robotics Competition 2025-26</h3>
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; flex-grow: 0;">Achievement: National-Level Competition by IIT Bombay | Selected till semi finals</p>
-                    <p><strong>Overview:</strong> Developing an autonomous farm-to-collection center delivery robot capable of navigating complex paths and color-coded item retrieval.</p>
-                    
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
-                        <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
-                            <p><strong>Problem Statement:</strong> Agricultural logistics requires efficient automation for transporting harvested crops from fields to collection centers. Traditional manual methods are time-consuming and labor-intensive, especially for large farms.</p>
-                            <p><strong>Solution:</strong> An autonomous robot system using STM32 microcontroller with advanced line following algorithms that can navigate white/black lines, sharp curves, zigzag patterns, and dotted segments. IR array sensors enable color-coded crate identification and precise pickup/delivery operations.</p>
-                            <div>
-                                <strong>Key Features:</strong>
-                                <ul style="margin-left: 20px; margin-top: 5px;">
-                                    <li>Advanced line following for complex paths</li>
-                                    <li>IR sensor-based crate identification</li>
-                                    <li>STM32 embedded control architecture</li>
-                                    <li>PID-optimized motor control</li>
-                                    <li>CoppeliaSim simulation testing</li>
-                                </ul>
-                            </div>
-                            <p><strong>Technical Navigation & Control:</strong> Real-time sensor fusion, motor control using PID optimization, and decision-making algorithms for autonomous navigation. Iterative testing and validation using CoppeliaSim robot simulation environment.</p>
-                            <p><strong>Impact:</strong> Building practical experience in autonomous robotics, embedded systems, and sensor fusion through participation in India's premier robotics competition organized by IIT Bombay.</p>
-                        </div>
-                    </details>
-
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>STM32 Microcontroller</span>
-                        <span>Embedded C</span>
-                        <span>CoppeliaSim</span>
-                        <span>IR Array Sensors</span>
-                        <span>PID Control</span>
                     </div>
                 </div>
             </div>
@@ -549,6 +520,66 @@
                 </div>
             </div>
 
+            <div class="card">
+                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer">
+                <div class="card-content">
+                    <h3>ChocoPrint 3D</h3>
+                    <p>3-axis chocolate 3D printer system engineered for precise thermal control and fluid extrusion.</p>
+
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">View Project & Technical Details</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                            <p><strong>Technical Overview:</strong> Utilized an ATmega328P paired with a CNC shield to accurately drive the 3-axis motion kinematics.</p>
+                            <p><strong>Solution:</strong> Developed dual microcontroller coordination to handle the unique rheological properties of chocolate, balancing thermal management with feed-rate control.</p>
+                        </div>
+                    </details>
+
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>ATmega328P and CNC Shield</span>
+                        <span>Mechatronics</span>
+                        <span>3D Printing</span>
+                        <span>Team Leadership</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/e_yantra_iitBombay.jpeg" alt="e-Yantra Robotics Competition">
+                <div class="card-content">
+                    <h3>e-Yantra Robotics Competition 2025-26</h3>
+                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; flex-grow: 0;">Achievement: National-Level Competition by IIT Bombay | Selected till semi finals</p>
+                    <p><strong>Overview:</strong> Developing an autonomous farm-to-collection center delivery robot capable of navigating complex paths and color-coded item retrieval.</p>
+                    
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">View Project & Technical Details</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                            <p><strong>Problem Statement:</strong> Agricultural logistics requires efficient automation for transporting harvested crops from fields to collection centers. Traditional manual methods are time-consuming and labor-intensive, especially for large farms.</p>
+                            <p><strong>Solution:</strong> An autonomous robot system using STM32 microcontroller with advanced line following algorithms that can navigate white/black lines, sharp curves, zigzag patterns, and dotted segments. IR array sensors enable color-coded crate identification and precise pickup/delivery operations.</p>
+                            <div>
+                                <strong>Key Features:</strong>
+                                <ul style="margin-left: 20px; margin-top: 5px;">
+                                    <li>Advanced line following for complex paths</li>
+                                    <li>IR sensor-based crate identification</li>
+                                    <li>STM32 embedded control architecture</li>
+                                    <li>PID-optimized motor control</li>
+                                    <li>CoppeliaSim simulation testing</li>
+                                </ul>
+                            </div>
+                            <p><strong>Technical Navigation & Control:</strong> Real-time sensor fusion, motor control using PID optimization, and decision-making algorithms for autonomous navigation. Iterative testing and validation using CoppeliaSim robot simulation environment.</p>
+                            <p><strong>Impact:</strong> Building practical experience in autonomous robotics, embedded systems, and sensor fusion through participation in India's premier robotics competition organized by IIT Bombay.</p>
+                        </div>
+                    </details>
+
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>STM32 Microcontroller</span>
+                        <span>Embedded C</span>
+                        <span>CoppeliaSim</span>
+                        <span>IR Array Sensors</span>
+                        <span>PID Control</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -568,7 +599,7 @@
                         <span>Satellite Tech</span>
                         <span>IoT Telemetry</span>
                     </div>
-                    <a href="NIRVANA_Paper.pdf" target="_blank" class="hero-btn" style="padding: 8px 20px; font-size: 0.9rem;">Click to Read Full Paper</a>
+                    <a href="NIRVANA_Paper.pdf" target="_blank" class="hero-btn aura-btn" style="padding: 8px 20px; font-size: 0.9rem;">Click to Read Full Paper</a>
                 </div>
             </div>
 
@@ -672,7 +703,7 @@
                     <a href="https://www.linkedin.com/in/thaman-sn-552a34342/"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/ThamanSN"><i class="fab fa-github"></i></a>
                 </div>
-                <a href="Thaman_SN_Resume.pdf" target="_blank" class="hero-btn">Download Resume</a>
+                <a href="Thaman_SN_Resume.pdf" target="_blank" class="hero-btn aura-btn">Download Resume</a>
             </div>
         </div>
     </section>
