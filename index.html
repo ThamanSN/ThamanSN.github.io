@@ -40,7 +40,7 @@
 
         /* --- Typography --- */
         h1, h2, h3 {
-            font-family: 'Orbitron', sans-serif; /* Space-tech font */
+            font-family: 'Orbitron', sans-serif;
             color: var(--text-primary);
         }
 
@@ -194,7 +194,7 @@
             margin-right: 8px;
         }
 
-        /* --- Projects/Awards/Certifications Grid --- */
+        /* --- Grid Container for Cards --- */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -220,7 +220,7 @@
 
         .card img {
             width: 100%;
-            height: 250px; 
+            height: 250px;
             object-fit: cover;
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
@@ -233,47 +233,11 @@
             background: rgba(0,0,0,0.2);
         }
 
-        #awards .card img, #certifications .card img {
-            height: 250px;
-            object-fit: cover;
-            padding: 0;
-            background: transparent;
-        }
-
-        /* Publications Section Styling */
-        #publications .grid-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        #publications .card {
-            max-width: 800px;
-            width: 100%;
-        }
-
-        #publications .card img {
-            height: auto;
-            max-height: 500px;
-            object-fit: contain;
-            padding: 10px;
-            background: rgba(0,0,0,0.2);
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        
-        #publications .card img:hover {
-            transform: scale(1.02);
-        }
-
         .card-content {
             padding: 1.5rem;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-        }
-        
-        .card-content p {
-             flex-grow: 1;
         }
 
         .card-content h3 {
@@ -286,6 +250,7 @@
             font-size: 0.9rem;
             color: var(--text-secondary);
             line-height: 1.6;
+            flex-grow: 1;
         }
 
         .tech-stack {
@@ -303,7 +268,7 @@
             border-radius: 4px;
         }
 
-        /* --- Futuristic Animations --- */
+        /* --- Animations --- */
         @keyframes textShine {
             0% { background-position: 0% 50%; }
             100% { background-position: 200% 50%; }
@@ -324,47 +289,7 @@
             transition: transform 0.3s;
         }
 
-        .aura-text::-webkit-details-marker {
-            display: none;
-        }
-        
-        .aura-text::before {
-            content: '✦ ';
-            font-size: 0.9em;
-        }
-        
-        details[open] .aura-text::before {
-            content: '✧ ';
-        }
-
-        .aura-text:hover {
-            transform: scale(1.02);
-        }
-
-        @keyframes buttonSweep {
-            0% { left: -100%; }
-            50% { left: 200%; }
-            100% { left: 200%; }
-        }
-
-        .aura-btn {
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .aura-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transform: skewX(-20deg);
-            animation: buttonSweep 3s infinite linear;
-            z-index: -1;
-        }
+        .aura-text::before { content: '✦ '; }
 
         footer {
             background: #020617;
@@ -373,20 +298,14 @@
             border-top: 1px solid rgba(255,255,255,0.1);
         }
 
-        .social-links {
-            margin-bottom: 20px;
-        }
-
         .social-links a {
             font-size: 1.5rem;
             margin: 0 15px;
             color: var(--text-secondary);
+            transition: 0.3s;
         }
 
-        .social-links a:hover {
-            color: var(--accent-color);
-            transform: scale(1.2);
-        }
+        .social-links a:hover { color: var(--accent-color); transform: scale(1.2); }
 
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
@@ -434,14 +353,12 @@
             <div class="skill-tag"><i class="fas fa-satellite"></i> Satellite Systems</div>
             <div class="skill-tag"><i class="fas fa-microchip"></i> 3D Printing & Additive Manufacturing </div>
             <div class="skill-tag"><i class="fas fa-code"></i> Solid Works </div>
-             <div class="skill-tag"><i class="fas fa-code"></i> Solid Edge </div>
-             <div class="skill-tag"><i class="fas fa-code"></i> OnShape </div>
-             <div class="skill-tag"><i class="fas fa-code"></i> Autodesk Fusion </div>
+            <div class="skill-tag"><i class="fas fa-code"></i> Solid Edge </div>
+            <div class="skill-tag"><i class="fas fa-code"></i> OnShape </div>
+            <div class="skill-tag"><i class="fas fa-code"></i> Autodesk Fusion </div>
             <div class="skill-tag"><i class="fas fa-cube"></i> CubeSats & CanSat Development </div>
             <div class="skill-tag"><i class="fas fa-print"></i> Robotics & Automation </div>
             <div class="skill-tag"><i class="fas fa-code"></i> MATLAB </div>
-            <div class="skill-tag"><i class="fas fa-code"></i> Worked on Line Following Robot </div>
-            <div class="skill-tag"><i class="fas fa-code"></i> Member of Robotics Club </div>
         </div>
     </section>
 
@@ -449,83 +366,53 @@
         <h2>🚀 Featured Missions</h2>
         <div class="grid-container">
             <div class="card">
-                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation" loading="lazy">
+                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation">
                 <div class="card-content">
-                    <h3>Conference Presentation at IIT Kharagpur, Kolkata</h3>
-                    <p><strong>First Author & Presenter.</strong> Delivered advanced technical insights on CubeSat architecture and satellite applications at the National ISG–ISRS Conference.</p>
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
-                        <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; color: var(--text-secondary);">
-                            <p><strong>Overview:</strong> Contributed to broader technical discussions on emerging space technologies and remote-sensing methodologies.</p>
-                        </div>
-                    </details>
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Technical Presentation</span>
-                        <span>ISG - ISRS</span>
-                    </div>
+                    <h3>Conference Presentation at IIT Kharagpur</h3>
+                    <p>Delivered technical insights on CubeSat architecture at the National ISG–ISRS Conference.</p>
                 </div>
             </div>
-
             <div class="card">
-                <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite" loading="lazy">
+                <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite">
                 <div class="card-content">
                     <h3>ISRAAS Satellite Project</h3>
-                    <p><strong>Team Lead.</strong> Directed the complete engineering cycle to develop a lightweight CubeSat for border security and atmospheric monitoring.</p>
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>CubeSat</span>
-                        <span>Border Security</span>
-                        <span>Team Leadership</span>
-                    </div>
+                    <p>Team Lead for a lightweight CubeSat designed for border security.</p>
                 </div>
             </div>
-
             <div class="card">
-                <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND Autonomous UAV" loading="lazy">
+                <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND UAV">
                 <div class="card-content">
                     <h3>ASCEND – Autonomous UAV System</h3>
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Achievement: Concept Proposal Submitted | January 2026</p>
-                    <p><strong>Team Lead.</strong> Spearheaded the design of a GPS-denied autonomous quadrotor UAV system for the ISRO Robotics Challenge (IRoC-U 2026).</p>
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Pixhawk & ArduPilot</span>
-                        <span>SLAM Algorithms</span>
-                    </div>
+                    <p>GPS-denied navigation system for the ISRO Robotics Challenge (IRoC-U 2026).</p>
                 </div>
             </div>
-
             <div class="card">
-                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer" loading="lazy">
+                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer">
                 <div class="card-content">
                     <h3>ChocoPrint 3D</h3>
-                    <p><strong>Team Lead.</strong> Managed the development of a 3-axis chocolate 3D printer system, achieving precise thermal control.</p>
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>ATmega328P</span>
-                        <span>3D Printing</span>
-                    </div>
+                    <p>Developed a 3-axis chocolate 3D printer system with precise thermal control.</p>
                 </div>
             </div>
-
             <div class="card">
-                <img src="Project Image/e_yantra_iitBombay.jpg" alt="e-Yantra Robotics" loading="lazy">
+                <img src="Project Image/e_yantra_iitBombay.jpg" alt="e-Yantra Robotics">
                 <div class="card-content">
                     <h3>e-Yantra Robotics Competition 2025-26</h3>
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Achievement: Selected till semi finals</p>
-                    <p>Developing an autonomous farm-to-collection center delivery robot capable of navigating complex paths.</p>
+                    <p>Autonomous farm-to-collection center robot. National Semi-finalist.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="publications">
-        <h2>📚 Technical Research & Publications </h2>
+        <h2>📚 Publications</h2>
         <div class="grid-container">
             <div class="card">
                 <a href="NIRVANA_Paper.pdf" target="_blank">
-                    <img src="Project Image/Nirvana_frontpage.png" alt="NIRVANA Paper" loading="lazy">
+                    <img src="Project Image/Nirvana_frontpage.png" alt="NIRVANA Paper">
                 </a>
                 <div class="card-content">
                     <h3>NIRVANA – CubeSat Research</h3>
-                    <p><strong>First Author.</strong> Research detailing a low-cost 1U CubeSat built using 3D-printed PLA and IoT telemetry for environmental sensing.</p>
-                    <a href="NIRVANA_Paper.pdf" target="_blank" class="hero-btn aura-btn" style="padding: 8px 20px; font-size: 0.9rem;">Read Full Paper</a>
+                    <p>First Author on a paper detailing 1U CubeSat development using 3D-printed PLA.</p>
                 </div>
             </div>
         </div>
@@ -535,24 +422,73 @@
         <h2>🏆 Achievements</h2>
         <div class="grid-container">
             <div class="card">
-                <img src="Project Image/National_level_youngscientist_award.jpeg" alt="National Level Young Scientist" loading="lazy">
+                <img src="Project Image/National_level_youngscientist_award.jpeg" alt="National Young Scientist">
                 <div class="card-content">
                     <h3>National Young Scientist Award</h3>
-                    <p>Honored for innovative satellite system development and scientific research excellence.</p>
+                    <p>Honored for excellence in satellite system development and scientific research.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg" alt="ISG-ISRS Certificate" loading="lazy">
+                <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg" alt="ISG-ISRS Certificate">
                 <div class="card-content">
                     <h3>ISG-ISRS 2025 Certificate</h3>
-                    <p>Official Certification for technical presentation at the National Conference at IIT Kharagpur.</p>
+                    <p>Official Certification for presentation at IIT Kharagpur.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="Project Image/State_level_youngscientist_award.jpg" alt="State Young Scientist" loading="lazy">
+                <img src="Project Image/State_level_youngscientist_award.jpg" alt="State Young Scientist">
                 <div class="card-content">
                     <h3>State Young Scientist Award</h3>
-                    <p>Awarded for outstanding performance in science and engineering innovation.</p>
+                    <p>Recognized for outstanding engineering innovation at the state level.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Project Image/District_level_youngscientist_award.jpg" alt="District Young Scientist">
+                <div class="card-content">
+                    <h3>District Young Scientist Award</h3>
+                    <p>Exceptional scientific creativity recognized at the district level.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Project Image/Inspire_award_2019.jpg" alt="INSPIRE 2019">
+                <div class="card-content">
+                    <h3>INSPIRE Award 2019</h3>
+                    <p>Demonstrated early scientific aptitude in engineering concepts.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Project Image/inspire_award_2021.jpg" alt="INSPIRE 2021">
+                <div class="card-content">
+                    <h3>INSPIRE Award 2021</h3>
+                    <p>Continued excellence in scientific innovation and project-based research.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Project Image/SSTH_2021.jpg" alt="SSTH 2021">
+                <div class="card-content">
+                    <h3>SSTH 2021</h3>
+                    <p>Secured 2nd Prize in Sahyadri Science Talent Hunt.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Project Image/SSTH_2023.jpg" alt="SSTH 2023">
+                <div class="card-content">
+                    <h3>SSTH 2023</h3>
+                    <p>Secured 1st Prize in Sahyadri Science Talent Hunt.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Project Image/ENVISION_2025.jpg" alt="ENVISION 2025">
+                <div class="card-content">
+                    <h3>ENVISION 2025 Winner</h3>
+                    <p>1st Prize at the technical competition conducted at NIE Mysuru.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Project Image/Vishvakarma_certificate.jpg" alt="Vishvakarma Awards">
+                <div class="card-content">
+                    <h3>Vishvakarma Awards 2025</h3>
+                    <p>National Semifinalist (Maker Bhavan Foundation) for real-world problem solving.</p>
                 </div>
             </div>
         </div>
@@ -562,29 +498,19 @@
         <h2>📜 Professional Certifications</h2>
         <div class="grid-container">
             <div class="card">
-                <img src="Project Image/ISA_WinterTraining.png" alt="Remote Sensing and GIS Certificate" loading="lazy">
+                <img src="Project Image/ISA_WinterTraining.jpg" alt="Remote Sensing Certificate">
                 <div class="card-content">
                     <h3>Remote Sensing and GIS</h3>
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">India Space Academy (ISA) | Jan 2026</p>
-                    <p>Completed intensive training in the fundamentals of Remote Sensing and GIS, focused on satellite data interpretation for space missions.</p>
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Remote Sensing</span>
-                        <span>GIS</span>
-                    </div>
+                    <p style="color: var(--accent-color); font-weight: 600;">India Space Academy | Jan 2026</p>
+                    <p>Intensive training on satellite data interpretation and spatial analysis.</p>
                 </div>
             </div>
-
             <div class="card">
-                <img src="Project Image/Cyber_sequ.jpeg" alt="Certified Cybersecurity Associate Certificate" loading="lazy">
+                <img src="Project Image/Cyber_sequ.jpeg" alt="Cybersecurity Certificate">
                 <div class="card-content">
                     <h3>Certified Cybersecurity Associate (CCSA)</h3>
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Cyberverse Foundation</p>
-                    <p>Gained foundational knowledge in digital security, network protection, and ethical practices through an intensive hybrid training program.</p>
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Cybersecurity</span>
-                        <span>Network Security</span>
-                        <span>Information Protection</span>
-                    </div>
+                    <p style="color: var(--accent-color); font-weight: 600;">Cyberverse Foundation | Mar 2025</p>
+                    <p>Knowledge in digital security and network protection through intensive training.</p>
                 </div>
             </div>
         </div>
@@ -594,12 +520,11 @@
         <div class="card" style="text-align: center; max-width: 600px; margin: auto;">
             <div class="card-content">
                 <h3>Let's Connect</h3>
-                <div class="social-links" style="margin-top: 20px;">
+                <div class="social-links">
                     <a href="mailto:thamansn217@gmail.com"><i class="fas fa-envelope"></i></a>
                     <a href="https://www.linkedin.com/in/thaman-sn-552a34342/"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/ThamanSN"><i class="fab fa-github"></i></a>
                 </div>
-                <a href="Thaman_SN_Resume.pdf.pdf" target="_blank" class="hero-btn aura-btn">Download Resume</a>
             </div>
         </div>
     </section>
