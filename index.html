@@ -40,7 +40,7 @@
 
         /* --- Typography --- */
         h1, h2, h3 {
-            font-family: 'Orbitron', sans-serif; 
+            font-family: 'Orbitron', sans-serif; /* Space-tech font */
             color: var(--text-primary);
         }
 
@@ -171,7 +171,6 @@
             padding: 80px 10%;
         }
 
-        /* --- Skills Section --- */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
@@ -192,7 +191,6 @@
             margin-right: 8px;
         }
 
-        /* --- Grid Container --- */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -216,22 +214,27 @@
             border-color: var(--accent-color);
         }
 
-        /* Matching image sizes to Achievements section */
-        .card img, 
-        #awards .card img, 
-        #certifications .card img {
+        .card img {
             width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        #projects .card img {
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            padding: 10px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        #awards .card img, #certifications .card img {
             height: auto;
             max-height: 400px;
             object-fit: contain;
             padding: 15px;
             background: rgba(0,0,0,0.2);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        #projects .card img {
-            max-height: 500px;
-            padding: 10px;
         }
 
         #publications .grid-container {
@@ -251,6 +254,10 @@
             flex-direction: column;
         }
         
+        .card-content p {
+             flex-grow: 1;
+        }
+
         .card-content h3 {
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
@@ -261,7 +268,6 @@
             font-size: 0.9rem;
             color: var(--text-secondary);
             line-height: 1.6;
-            flex-grow: 1;
         }
 
         .tech-stack {
@@ -299,14 +305,6 @@
             transition: transform 0.3s;
         }
 
-        .aura-text::before { content: '✦ '; font-size: 0.9em; }
-        
-        @keyframes buttonSweep {
-            0% { left: -100%; }
-            50% { left: 200%; }
-            100% { left: 200%; }
-        }
-
         .aura-btn {
             position: relative;
             overflow: hidden;
@@ -337,12 +335,6 @@
             font-size: 1.5rem;
             margin: 0 15px;
             color: var(--text-secondary);
-            transition: 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-color);
-            transform: scale(1.2);
         }
 
         @media (max-width: 768px) {
@@ -376,6 +368,7 @@
                 I am a Mechanical Engineering student at The National Institute of Engineering, Mysuru, with a deep passion for technology and advanced engineering systems. 
                 My interests lie in development of new technology, autonomous and IoT systems, Emerging technology, Additive Manufacturing.
                 I have led and contributed to award-winning projects recognized at district, state, and national levels. 
+                I actively participate in research conferences and technical competitions to expand my technical depth and real-world problem-solving skills.
                 My goal is to contribute meaningfully to India’s technological advancement through innovation and dedication.
             </p>
             <div class="hero-buttons">
@@ -397,21 +390,107 @@
             <div class="skill-tag"><i class="fas fa-cube"></i> CubeSats & CanSat Development </div>
             <div class="skill-tag"><i class="fas fa-print"></i> Robotics & Automation </div>
             <div class="skill-tag"><i class="fas fa-code"></i> MATLAB </div>
+            <div class="skill-tag"><i class="fas fa-code"></i> Worked on Line Following Robot </div>
+            <div class="skill-tag"><i class="fas fa-code"></i> Member of Robotics Club </div>
         </div>
     </section>
 
     <section id="projects">
         <h2>🚀 Featured Missions</h2>
         <div class="grid-container">
+
             <div class="card">
-                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation">
+                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation" loading="lazy">
                 <div class="card-content">
                     <h3>Conference Presentation at IIT Kharagpur, Kolkata</h3>
-                    <p><strong>First Author & Presenter.</strong> Delivered advanced technical insights on CubeSat architecture and satellite applications.</p>
-                    <div class="tech-stack"><span>ISG - ISRS</span></div>
+                    <p><strong>First Author & Presenter.</strong> Delivered advanced technical insights on CubeSat architecture and satellite applications at the National ISG–ISRS Conference.</p>
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">View Project & Technical Details</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; color: var(--text-secondary);">
+                            <p><strong>Overview:</strong> Contributed to broader technical discussions on emerging space technologies and remote-sensing methodologies.</p>
+                            <p><strong>Impact:</strong> Engaged with leading researchers and professionals to validate concepts and expand knowledge in practical satellite technology.</p>
+                        </div>
+                    </details>
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>Technical Presentation</span>
+                        <span>ISG - ISRS</span>
+                    </div>
                 </div>
             </div>
+
+            <div class="card">
+                <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite" loading="lazy">
+                <div class="card-content">
+                    <h3>ISRAAS Satellite Project</h3>
+                    <p><strong>Team Lead.</strong> Directed the complete engineering cycle to develop a lightweight CubeSat for border security and atmospheric monitoring.</p>
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">View Project & Technical Details</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; color: var(--text-secondary);">
+                            <p><strong>Overview:</strong> Focused heavily on full system integration and structural analysis of a deployable CubeSat unit.</p>
+                            <p><strong>Responsibility:</strong> Directed a team through the complete engineering cycle from mission design to environmental implementation.</p>
+                        </div>
+                    </details>
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>CubeSat</span>
+                        <span>Environmental monitoring</span>
+                        <span>Border Security</span>
+                    </div>
+                </div>
             </div>
+
+            <div class="card">
+                <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND Autonomous UAV" loading="lazy">
+                <div class="card-content">
+                    <h3>ASCEND – Autonomous UAV System</h3>
+                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Achievement: Concept Proposal Submitted | January 2026</p>
+                    <p><strong>Team Lead.</strong> Spearheaded the design of a GPS-denied autonomous quadrotor UAV system for the ISRO Robotics Challenge (IRoC-U 2026).</p>
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">View Project & Technical Details</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; color: var(--text-secondary);">
+                            <p><strong>Solution:</strong> Vision-based navigation using OAK-D Pro stereo camera and Pixhawk controller for search-and-rescue in indoor environments.</p>
+                        </div>
+                    </details>
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>Pixhawk & ArduPilot</span>
+                        <span>OAK-D Pro Stereo</span>
+                        <span>SLAM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer" loading="lazy">
+                <div class="card-content">
+                    <h3>ChocoPrint 3D</h3>
+                    <p><strong>Team Lead.</strong> Managed the development of a 3-axis chocolate 3D printer system, achieving precise thermal control.</p>
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">View Project & Technical Details</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; color: var(--text-secondary);">
+                            <p><strong>Technical:</strong> Utilized ATmega328P with a CNC shield to accurately drive 3-axis motion and manage chocolate rheology.</p>
+                        </div>
+                    </details>
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>Mechatronics</span>
+                        <span>3D Printing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/e_yantra_iitBombay.jpg" alt="e-Yantra Robotics" loading="lazy">
+                <div class="card-content">
+                    <h3>e-Yantra Robotics Competition 2025-26</h3>
+                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Achievement: Selected till semi finals</p>
+                    <p><strong>Overview:</strong> Developing an autonomous farm delivery robot capable of color-coded item retrieval and path navigation.</p>
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>STM32</span>
+                        <span>Embedded C</span>
+                        <span>PID Control</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <section id="publications">
@@ -419,11 +498,16 @@
         <div class="grid-container">
             <div class="card">
                 <a href="NIRVANA_Paper.pdf" target="_blank">
-                    <img src="Project Image/Nirvana_frontpage.png" alt="NIRVANA Paper">
+                    <img src="Project Image/Nirvana_frontpage.png" alt="NIRVANA Paper" loading="lazy">
                 </a>
                 <div class="card-content">
-                    <h3>NIRVANA – "NIE Research Vehicle for Atmospheric Analysis"</h3>
-                    <p>Research paper detailing the development of a low-cost 1U CubeSat using 3D-printed PLA and IoT telemetry.</p>
+                    <h3>NIRVANA – "NIE Research Vehicle for Atmospheric and Navigation Analysis"</h3>
+                    <p><strong>First Author.</strong> Research paper detailing the development of a low-cost 1U CubeSat built using 3D-printed PLA and IoT telemetry.</p>
+                    <div class="tech-stack" style="margin-bottom: 15px;">
+                        <span>ISG-ISRS National Conference @ IIT Kharagpur</span>
+                        <span>Satellite Tech</span>
+                    </div>
+                    <a href="NIRVANA_Paper.pdf" target="_blank" class="hero-btn aura-btn" style="padding: 8px 20px; font-size: 0.9rem;">Click to Read Full Paper</a>
                 </div>
             </div>
         </div>
@@ -433,32 +517,44 @@
         <h2>🏆 Achievements</h2>
         <div class="grid-container">
             <div class="card">
-                <img src="Project Image/National_level_youngscientist_award.jpeg" alt="National Young Scientist">
-                <div class="card-content">
-                    <h3>National Young Scientist Award</h3>
-                    <p>Honored for innovative satellite system development and scientific research excellence.</p>
-                </div>
+                <img src="Project Image/National_level_youngscientist_award.jpeg" alt="National Young Scientist" loading="lazy">
+                <div class="card-content"><h3>National Young Scientist Award</h3><p>Honored at the national level for innovative satellite system development.</p></div>
             </div>
             <div class="card">
-                <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg" alt="ISG-ISRS Certificate">
-                <div class="card-content">
-                    <h3>ISG-ISRS 2025 Certificate</h3>
-                    <p>Official Certification for technical presentation at IIT Kharagpur.</p>
-                </div>
+                <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg" alt="ISG-ISRS Certificate" loading="lazy">
+                <div class="card-content"><h3>ISG-ISRS 2025 Certificate</h3><p>Official Certification for technical presentation at IIT Kharagpur.</p></div>
             </div>
             <div class="card">
-                <img src="Project Image/ENVISION_2025.jpg" alt="ENVISION 2025">
-                <div class="card-content">
-                    <h3>ENVISION 2025 Winner</h3>
-                    <p>Secured 1st Prize at ENVISION 2025 technical competition.</p>
-                </div>
+                <img src="Project Image/State_level_youngscientist_award.jpg" alt="State Young Scientist" loading="lazy">
+                <div class="card-content"><h3>State Young Scientist Award</h3><p>Awarded for outstanding performance in science innovation.</p></div>
             </div>
             <div class="card">
-                <img src="Project Image/Vishvakarma_certificate.jpg" alt="Vishvakarma Awards">
-                <div class="card-content">
-                    <h3>Vishvakarma Awards 2025</h3>
-                    <p>Semifinal Stage of the Maker Bhavan Foundation Vishwakarma Awards.</p>
-                </div>
+                <img src="Project Image/District_level_youngscientist_award.jpg" alt="District Young Scientist" loading="lazy">
+                <div class="card-content"><h3>District Young Scientist Award</h3><p>Recognized for exceptional scientific creativity.</p></div>
+            </div>
+            <div class="card">
+                <img src="Project Image/Inspire_award_2019.jpg" alt="INSPIRE 2019" loading="lazy">
+                <div class="card-content"><h3>INSPIRE Award 2019</h3><p>Demonstrated early scientific aptitude in engineering concepts.</p></div>
+            </div>
+            <div class="card">
+                <img src="Project Image/inspire_award_2021.jpg" alt="INSPIRE 2021" loading="lazy">
+                <div class="card-content"><h3>INSPIRE Award 2021</h3><p>Continued excellence in project-based research.</p></div>
+            </div>
+            <div class="card">
+                <img src="Project Image/SSTH_2021.jpg" alt="SSTH 2021" loading="lazy">
+                <div class="card-content"><h3>SSTH 2021</h3><p>Secured 2nd Prize in Sahyadri Science Talent Hunt.</p></div>
+            </div>
+            <div class="card">
+                <img src="Project Image/SSTH_2023.jpg" alt="SSTH 2023" loading="lazy">
+                <div class="card-content"><h3>SSTH 2023</h3><p>Secured 1st Prize in Sahyadri Science Talent Hunt.</p></div>
+            </div>
+            <div class="card">
+                <img src="Project Image/ENVISION_2025.jpg" alt="ENVISION 2025" loading="lazy">
+                <div class="card-content"><h3>ENVISION 2025 Winner</h3><p>1st Prize winner for innovative engineering solution at NIE Mysuru.</p></div>
+            </div>
+            <div class="card">
+                <img src="Project Image/Vishvakarma_certificate.jpg" alt="Vishvakarma Awards" loading="lazy">
+                <div class="card-content"><h3>Vishvakarma Awards 2025</h3><p>Advanced to Semifinal Stage out of 1,054 teams nationwide.</p></div>
             </div>
         </div>
     </section>
@@ -467,21 +563,20 @@
         <h2>📜 Professional Certifications</h2>
         <div class="grid-container">
             <div class="card">
-                <img src="Project Image/ISA_WinterTraining.png" alt="Remote Sensing and GIS Certificate">
+                <img src="Project Image/ISA_WinterTraining.png" alt="Remote Sensing" loading="lazy">
                 <div class="card-content">
                     <h3>Remote Sensing and GIS</h3>
                     <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">India Space Academy (ISA) | Jan 2026</p>
-                    <p>Completed intensive winter training focused on the fundamentals of Remote Sensing and GIS.</p>
+                    <p>Intensive training on satellite data interpretation and spatial analysis.</p>
                     <div class="tech-stack"><span>Remote Sensing</span><span>GIS</span></div>
                 </div>
             </div>
-
             <div class="card">
-                <img src="Project Image/Cyber_sequ.jpeg" alt="Certified Cybersecurity Associate Certificate" onerror="this.src='Cyber_sequ.jpeg'">
+                <img src="Cyber_sequ.jpeg" alt="Cybersecurity Certificate" loading="lazy">
                 <div class="card-content">
                     <h3>Certified Cybersecurity Associate (CCSA)</h3>
                     <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Cyberverse Foundation | March 2025</p>
-                    <p>Successfully completed the Certified Cybersecurity Associate program covering core security principles.</p>
+                    <p>Successfully completed program covering core cybersecurity principles.</p>
                     <div class="tech-stack"><span>Cybersecurity</span><span>CCSA</span></div>
                 </div>
             </div>
@@ -492,19 +587,17 @@
         <div class="card" style="text-align: center; max-width: 600px; margin: auto;">
             <div class="card-content">
                 <h3>Let's Connect</h3>
-                <div class="social-links" style="margin-top: 20px; margin-bottom: 20px;">
+                <div class="social-links" style="margin-top: 20px;">
                     <a href="mailto:thamansn217@gmail.com"><i class="fas fa-envelope"></i></a>
                     <a href="https://www.linkedin.com/in/thaman-sn-552a34342/"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/ThamanSN"><i class="fab fa-github"></i></a>
                 </div>
-                <a href="Thaman_SN_Resume.pdf.pdf" target="_blank" class="hero-btn aura-btn">Download Resume</a>
+                <a href="Thaman_SN_Resume.pdf.pdf" target="_blank" class="hero-btn aura-btn" style="margin-top:20px;">Download Resume</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>© 2026 Thaman S N. Driven by Curiosity, Powered by Engineering 🚀</p>
-    </footer>
+    <footer><p>© 2026 Thaman S N. Driven by Curiosity, Powered by Engineering 🚀</p></footer>
 
 </body>
 </html>
