@@ -201,6 +201,36 @@
             margin-top: 1rem;
         }
 
+        .hero-stats {
+            margin-top: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .hero-stat-item {
+            border: 1px solid rgba(114, 194, 255, 0.24);
+            border-radius: 12px;
+            padding: 12px 10px;
+            background: rgba(7, 27, 57, 0.38);
+        }
+
+        .hero-stat-item strong {
+            display: block;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent-soft);
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+
+        .hero-stat-item span {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
         .hero-btn {
             padding: 12px 26px;
             background: rgba(7, 27, 57, 0.7);
@@ -505,6 +535,7 @@
             section { padding: 66px 6%; }
             .grid-container { grid-template-columns: 1fr; gap: 1.4rem; }
             .hero .bio { font-size: 0.95rem; line-height: 1.75; }
+            .hero-stats { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -539,6 +570,21 @@
             <div class="hero-buttons">
                 <a href="#contact" class="hero-btn">Get in Touch</a>
                 <a href="Project Image/Thaman_SN_Resume.pdf.pdf" target="_blank" class="hero-btn aura-btn">Download Resume</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat-item">
+                    <strong class="countup" data-target="12" data-suffix="+">0</strong>
+                    <span>Engineering Projects</span>
+                </div>
+                <div class="hero-stat-item">
+                    <strong class="countup" data-target="5">0</strong>
+                    <span>National Events</span>
+                </div>
+                <div class="hero-stat-item">
+                    <strong class="countup" data-target="3">0</strong>
+                    <span>Research Domains</span>
+                </div>
             </div>
         </div>
     </section>
@@ -931,6 +977,34 @@
     <footer>
         <p>© 2026 Thaman S N. Driven by Curiosity, Powered by Engineering 🚀</p>
     </footer>
+
+    <script>
+        (function animateHeroCounters() {
+            const counters = document.querySelectorAll('.countup');
+            if (!counters.length) return;
+
+            counters.forEach(function (counter) {
+                const target = Number(counter.getAttribute('data-target')) || 0;
+                const suffix = counter.getAttribute('data-suffix') || '';
+                const duration = 1200;
+                const startTime = performance.now();
+
+                function step(now) {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const value = Math.floor(progress * target);
+                    counter.textContent = String(value) + suffix;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        counter.textContent = String(target) + suffix;
+                    }
+                }
+
+                requestAnimationFrame(step);
+            });
+        })();
+    </script>
 
 </body>
 </html>
