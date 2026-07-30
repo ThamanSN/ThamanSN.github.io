@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thaman S N | Engineering Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <title>Thaman S N | Engineering & Research Portfolio</title>
+    <!-- Modern Technical Typography: Space Grotesk (Headings) & Plus Jakarta Sans (Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <meta name="google-site-verification" content="1m-jVR0HrB5bJCQ3zwADsiA-th-Ia8Bjolj-LmWBLcw" />
-    <meta name="keywords" content="Thaman S N, Thaman SN, Thaman S.N., Mechanical Engineer, Portfolio, ISRO">
+    <meta name="keywords" content="Thaman S N, Thaman SN, Thaman S.N., Mechanical Engineer, Portfolio, ISRO, Robotics, Additive Manufacturing">
     <meta name="description" content="Official portfolio of Thaman S N, a Mechanical Engineer and aspiring ISRO Scientist.">
 
     <style>
         :root {
-            --bg-color: #070e1d;
-            --bg-elev-1: #0f1a33;
-            --bg-elev-2: #122445;
-            --card-bg: rgba(12, 26, 50, 0.72);
-            --accent-color: #40d9ff;
-            --accent-soft: #7cf0ff;
-            --highlight: #5eead4;
-            --text-primary: #eaf5ff;
-            --text-secondary: #9fb7d1;
-            --glass: rgba(7, 18, 40, 0.68);
-            --line: rgba(102, 186, 255, 0.24);
-            --shadow-strong: 0 18px 55px rgba(2, 8, 23, 0.55);
+            --bg-base: #090d16;
+            --bg-surface: #111827;
+            --bg-elevated: #1e293b;
+            --card-bg: rgba(17, 24, 39, 0.78);
+            --card-hover-bg: rgba(30, 41, 59, 0.88);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.35);
+            --accent-primary: #38bdf8;
+            --accent-soft: #7dd3fc;
+            --accent-teal: #2dd4bf;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-light: #cbd5e1;
+            --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 20px 40px -15px rgba(2, 132, 199, 0.25);
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --radius-sm: 6px;
         }
 
         * {
@@ -35,67 +42,54 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text-primary);
-            background:
-                radial-gradient(1200px circle at 15% 0%, rgba(64, 217, 255, 0.12), transparent 45%),
-                radial-gradient(900px circle at 85% 12%, rgba(94, 234, 212, 0.1), transparent 38%),
-                linear-gradient(160deg, var(--bg-color) 0%, var(--bg-elev-1) 56%, var(--bg-elev-2) 100%);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-base);
+            background-image: 
+                radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 20%, rgba(45, 212, 191, 0.06) 0%, transparent 35%),
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+            background-attachment: fixed;
             overflow-x: hidden;
-            line-height: 1.55;
-            position: relative;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
         }
 
         body.modal-open {
             overflow: hidden;
         }
 
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(92, 167, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(92, 167, 255, 0.05) 1px, transparent 1px);
-            background-size: 44px 44px;
-            mask-image: radial-gradient(circle at 50% 35%, black 35%, transparent 85%);
-            -webkit-mask-image: radial-gradient(circle at 50% 35%, black 35%, transparent 85%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
         /* --- Typography --- */
-        h1, h2, h3 {
-            font-family: 'Orbitron', sans-serif; /* Space-tech font */
-            color: var(--text-primary);
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--text-main);
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         h2 {
-            font-size: clamp(2rem, 4.2vw, 2.8rem);
-            margin-bottom: 2.7rem;
+            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+            margin-bottom: 2.8rem;
             text-align: center;
             position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
         }
 
         h2::after {
             content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 8%;
-            width: 84%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent-color), var(--highlight), transparent);
+            display: block;
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-teal));
+            margin: 14px auto 0;
+            border-radius: 4px;
         }
 
         a {
             text-decoration: none;
             color: inherit;
-            transition: 0.3s ease;
+            transition: all 0.25s ease;
         }
 
         /* --- Navigation --- */
@@ -103,120 +97,175 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: linear-gradient(180deg, rgba(6, 17, 38, 0.86), rgba(6, 17, 38, 0.64));
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            background: rgba(9, 13, 22, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             padding: 1rem 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--line);
-            box-shadow: 0 10px 28px rgba(2, 6, 20, 0.35);
+            border-bottom: 1px solid var(--border-subtle);
         }
 
         .logo {
-            font-size: 1.4rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--accent-color);
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            color: var(--text-main);
+            letter-spacing: -0.03em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent-primary);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
         }
 
         .nav-links a {
-            margin-left: 1.2rem;
-            font-size: 0.83rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            color: var(--text-secondary);
-            padding: 7px 10px;
+            color: var(--text-muted);
+            padding: 8px 14px;
             border-radius: 999px;
+            transition: all 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: var(--accent-color);
-            background: rgba(64, 217, 255, 0.12);
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         /* --- Hero Section --- */
         .hero {
-            min-height: 90vh;
+            min-height: 88vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 92px 20px 60px;
+            padding: 80px 20px 60px;
         }
 
         .hero-content {
-            max-width: 980px;
+            max-width: 960px;
             width: 100%;
-            padding: 2.2rem 2rem;
-            border: 1px solid var(--line);
-            border-radius: 26px;
-            background:
-                linear-gradient(160deg, rgba(10, 25, 51, 0.8), rgba(10, 20, 38, 0.65));
-            box-shadow: var(--shadow-strong);
-            animation: riseIn 0.9s ease-out;
+            padding: 3rem 2.5rem;
+            border: 1px solid var(--border-subtle);
+            border-radius: 24px;
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-card);
+            text-align: center;
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .hero-content img {
-            width: 280px; 
-            height: 280px;
+            width: 150px; 
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--accent-soft);
-            box-shadow: 0 0 0 8px rgba(64, 217, 255, 0.12), 0 20px 45px rgba(2, 8, 23, 0.55);
-            margin-bottom: 2rem;
+            border: 2px solid rgba(56, 189, 248, 0.4);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+            margin-bottom: 1.5rem;
         }
 
         .hero h1 {
-            font-size: clamp(2.45rem, 5.6vw, 3.9rem);
-            margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, #f8fdff 0%, #bce8ff 52%, #84d8ff 100%);
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            line-height: 1.15;
+            margin-bottom: 0.4rem;
+            background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 1.1px;
         }
 
         .hero .subtitle {
-            font-size: clamp(1rem, 2.4vw, 1.35rem);
-            color: var(--accent-soft);
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--accent-primary);
+            font-weight: 600;
             margin-bottom: 1.5rem;
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 2px;
-            text-transform: uppercase;
         }
 
         .hero .bio {
-            font-size: 1.02rem;
-            color: var(--text-secondary);
-            max-width: 760px;
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 740px;
             margin: 0 auto 2.5rem auto;
-            line-height: 1.88;
+            line-height: 1.8;
+            font-weight: 400;
         }
 
-        /* Hero Buttons Container */
+        /* Hero Buttons */
         .hero-buttons {
             display: flex;
-            gap: 15px;
+            gap: 14px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 1rem;
+            margin-bottom: 2.5rem;
         }
 
+        .hero-btn {
+            padding: 12px 28px;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-btn-primary {
+            background: var(--text-main);
+            color: var(--bg-base);
+            border: 1px solid var(--text-main);
+        }
+
+        .hero-btn-primary:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            color: var(--bg-base);
+            transform: translateY(-2px);
+        }
+
+        .hero-btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-main);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .hero-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Stats Grid */
         .hero-stats {
-            margin-top: 1.5rem;
             display: grid;
-            grid-template-columns: repeat(4, minmax(140px, 1fr));
+            grid-template-columns: repeat(4, minmax(130px, 1fr));
             gap: 12px;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 2rem;
         }
 
         .hero-stat-item {
-            border: 1px solid rgba(114, 194, 255, 0.24);
-            border-radius: 12px;
-            padding: 12px 10px;
-            background: rgba(7, 27, 57, 0.38);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 18px 14px;
+            background: rgba(255, 255, 255, 0.02);
             width: 100%;
             text-align: left;
             cursor: pointer;
@@ -224,36 +273,39 @@
             color: inherit;
             display: flex;
             flex-direction: column;
+            transition: all 0.25s ease;
         }
 
         .hero-stat-item strong {
             display: block;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            color: var(--accent-soft);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--text-main);
             line-height: 1.1;
             margin-bottom: 4px;
         }
 
         .hero-stat-item span {
             font-size: 0.78rem;
-            color: var(--text-secondary);
-            letter-spacing: 0.6px;
+            color: var(--text-muted);
+            font-weight: 600;
             text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .hero-stat-item:hover,
         .hero-stat-item:focus-visible {
-            transform: translateY(-2px);
-            background: rgba(10, 34, 70, 0.56);
-            border-color: rgba(124, 240, 255, 0.55);
-            box-shadow: 0 0 0 1px rgba(124, 240, 255, 0.14), 0 12px 26px rgba(2, 8, 23, 0.35);
+            background: rgba(56, 189, 248, 0.05);
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
         }
 
         .hero-stat-item:focus-visible {
             outline: none;
         }
 
+        /* --- Stats Modal --- */
         .stats-modal {
             position: fixed;
             inset: 0;
@@ -261,7 +313,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            background: rgba(3, 8, 20, 0.72);
+            background: rgba(9, 13, 22, 0.85);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             z-index: 2000;
@@ -275,11 +327,11 @@
             width: min(720px, 100%);
             max-height: min(82vh, 760px);
             overflow: auto;
-            padding: 1.5rem;
-            border-radius: 22px;
-            border: 1px solid rgba(124, 240, 255, 0.22);
-            background: linear-gradient(160deg, rgba(10, 25, 51, 0.96), rgba(8, 18, 36, 0.98));
-            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-hover);
+            background: #0f172a;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
         }
 
         .stats-modal-header {
@@ -287,43 +339,46 @@
             align-items: flex-start;
             justify-content: space-between;
             gap: 16px;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
         }
 
         .stats-modal-kicker {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 1.4px;
-            color: var(--accent-soft);
-            margin-bottom: 0.35rem;
+            letter-spacing: 0.1em;
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
         }
 
         .stats-modal-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: clamp(1.35rem, 3vw, 2rem);
-            color: var(--text-primary);
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            color: var(--text-main);
         }
 
         .stats-modal-close {
-            border: 1px solid rgba(124, 240, 255, 0.22);
-            background: rgba(7, 27, 57, 0.7);
-            color: var(--text-primary);
-            border-radius: 999px;
-            width: 40px;
-            height: 40px;
-            font-size: 1.2rem;
-            line-height: 1;
+            border: 1px solid var(--border-subtle);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.1rem;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .stats-modal-close:hover {
-            background: rgba(64, 217, 255, 0.18);
-            border-color: rgba(124, 240, 255, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .stats-modal-intro {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
         }
 
         .stats-modal-list {
@@ -333,37 +388,17 @@
         }
 
         .stats-modal-list li {
-            padding: 0.9rem 1rem;
-            border-radius: 14px;
-            border: 1px solid rgba(114, 194, 255, 0.18);
-            background: rgba(7, 27, 57, 0.46);
-            color: var(--text-primary);
-        }
-
-        .hero-btn {
-            padding: 12px 26px;
-            background: rgba(7, 27, 57, 0.7);
-            border: 1px solid rgba(124, 240, 255, 0.5);
-            color: #d9f7ff;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s ease;
-            display: inline-block;
-            box-shadow: 0 8px 18px rgba(3, 12, 28, 0.4);
-        }
-
-        .hero-btn:hover {
-            transform: translateY(-2px);
-            background: linear-gradient(130deg, rgba(64, 217, 255, 0.28), rgba(94, 234, 212, 0.2));
-            color: #ffffff;
-            border-color: var(--accent-soft);
-            box-shadow: 0 0 0 1px rgba(124, 240, 255, 0.3), 0 0 24px rgba(64, 217, 255, 0.25);
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-light);
+            font-weight: 500;
         }
 
         /* --- Sections General --- */
         section {
-            padding: 84px 8%;
+            padding: 90px 8%;
             max-width: 1320px;
             margin: 0 auto;
         }
@@ -373,188 +408,174 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
+            max-width: 960px;
+            margin: 0 auto;
         }
 
         .skill-tag {
-            background: linear-gradient(145deg, rgba(27, 53, 89, 0.55), rgba(15, 32, 60, 0.55));
-            padding: 11px 17px;
-            border-radius: 12px;
-            border: 1px solid rgba(114, 194, 255, 0.26);
+            background: var(--bg-surface);
+            padding: 12px 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
             font-size: 0.9rem;
-            transition: transform 0.25s ease, border-color 0.25s ease;
+            font-weight: 500;
+            color: var(--text-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s ease;
         }
 
         .skill-tag:hover {
+            border-color: var(--accent-primary);
+            color: var(--text-main);
             transform: translateY(-2px);
-            border-color: var(--accent-soft);
+            background: rgba(56, 189, 248, 0.05);
         }
 
         .skill-tag i {
-            color: var(--accent-color);
-            margin-right: 8px;
+            color: var(--accent-primary);
+            font-size: 1rem;
         }
 
-        /* --- Projects/Awards Grid --- */
+        /* --- Projects & Cards Grid --- */
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
             gap: 2rem;
         }
 
         .card {
             background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 18px;
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            border: 1px solid var(--line);
-            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-            position: relative;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex;
             flex-direction: column;
-            box-shadow: 0 10px 24px rgba(2, 8, 23, 0.28);
+            box-shadow: var(--shadow-card);
         }
 
         .card:hover {
-            transform: translateY(-9px);
-            box-shadow: 0 18px 34px rgba(2, 8, 23, 0.45);
-            border-color: rgba(124, 240, 255, 0.55);
+            transform: translateY(-6px);
+            border-color: var(--border-hover);
+            box-shadow: var(--shadow-hover);
+            background: var(--card-hover-bg);
         }
 
         .card img {
             width: 100%;
             height: 220px;
             object-fit: cover;
-            border-bottom: 1px solid rgba(114, 194, 255, 0.18);
+            border-bottom: 1px solid var(--border-subtle);
+            background: #090d16;
         }
 
-        /* Combined rules for project and blog images to keep style intact */
+        /* Keep visual framing intact for specific images */
         #projects .card img, #blog .card img {
             height: auto;
-            max-height: 500px;
+            max-height: 480px;
             object-fit: contain;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.18);
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.3);
         }
 
-        #awards .card img {
+        #awards .card img, #certifications .card img {
             height: auto;
-            max-height: 400px;
+            max-height: 380px;
             object-fit: contain;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.18);
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.3);
         }
 
-        #certifications .card img {
-            height: auto;
-            max-height: 400px;
-            object-fit: contain;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.18);
-        }
-
-        #internships .grid-container {
+        #internships .grid-container, #publications .grid-container {
             display: flex;
             justify-content: center;
         }
 
-        #internships .card {
-            max-width: 800px;
+        #internships .card, #publications .card {
+            max-width: 820px;
             width: 100%;
         }
 
-        #internships .card img {
+        #internships .card img, #publications .card img {
             height: auto;
-            max-height: 600px;
+            max-height: 520px;
             object-fit: contain;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.18);
-        }
-
-        #publications .grid-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        #publications .card {
-            max-width: 800px;
-            width: 100%;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.3);
         }
 
         #publications .card img {
-            height: auto;
-            max-height: 500px;
-            object-fit: contain;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.18);
             cursor: pointer;
             transition: transform 0.3s ease;
         }
         
         #publications .card img:hover {
-            transform: scale(1.02);
+            transform: scale(1.015);
         }
 
         .card-content {
-            padding: 1.4rem;
+            padding: 1.75rem;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
         
         .card-content p {
-             flex-grow: 1;
+            flex-grow: 1;
         }
 
         .card-content h3 {
-            font-size: 1.18rem;
-            margin-bottom: 0.6rem;
-            color: #cbf3ff;
-            line-height: 1.4;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+            line-height: 1.35;
         }
 
         .card-content p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.65;
         }
 
         .tech-stack {
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             display: flex;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
         }
 
         .tech-stack span {
             font-size: 0.75rem;
-            background: rgba(64, 217, 255, 0.12);
-            color: #c8f3ff;
-            padding: 4px 8px;
-            border-radius: 6px;
-            border: 1px solid rgba(114, 194, 255, 0.22);
+            font-weight: 600;
+            background: rgba(56, 189, 248, 0.08);
+            color: var(--accent-soft);
+            padding: 5px 10px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(56, 189, 248, 0.18);
+            letter-spacing: 0.02em;
         }
 
-        /* --- Futuristic Left-to-Right Highlight Animation --- */
-        @keyframes textShine {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 200% 50%; }
+        /* --- Interactive Accordion / Details --- */
+        details {
+            margin: 1.25rem 0;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 0.75rem 0;
         }
 
         .aura-text {
-            background: linear-gradient(90deg, #86b9e3 0%, var(--accent-color) 40%, var(--highlight) 50%, var(--accent-color) 60%, #86b9e3 100%);
-            background-size: 200% auto;
-            color: var(--accent-color);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: textShine 3.6s linear infinite;
-            font-weight: 700;
-            outline: none;
-            display: inline-block;
+            color: var(--accent-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
             cursor: pointer;
-            transition: transform 0.3s;
+            outline: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s ease;
         }
 
         .aura-text::-webkit-details-marker {
@@ -562,71 +583,61 @@
         }
         
         .aura-text::before {
-            content: '✦ ';
-            font-size: 0.9em;
+            content: '→';
+            font-size: 1em;
+            transition: transform 0.2s ease;
         }
         
         details[open] .aura-text::before {
-            content: '✧ ';
+            transform: rotate(90deg);
         }
 
         .aura-text:hover {
-            transform: scale(1.02);
+            color: var(--accent-soft);
         }
 
-        /* --- Sweeping Light Effect for Buttons --- */
-        @keyframes buttonSweep {
-            0% { left: -100%; }
-            50% { left: 200%; }
-            100% { left: 200%; }
-        }
-
-        .aura-btn {
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .aura-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(180, 243, 255, 0.34), transparent);
-            transform: skewX(-20deg);
-            animation: buttonSweep 3s infinite linear;
-            z-index: -1;
-        }
-
+        /* --- Footer --- */
         footer {
-            background: rgba(3, 10, 24, 0.84);
-            padding: 40px 10%;
+            background: #060911;
+            padding: 48px 10%;
             text-align: center;
-            border-top: 1px solid var(--line);
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
         .social-links {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         .social-links a {
-            font-size: 1.5rem;
-            margin: 0 15px;
-            color: var(--text-secondary);
-            display: inline-block;
+            font-size: 1.4rem;
+            color: var(--text-muted);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--border-subtle);
+            background: var(--bg-surface);
+            transition: all 0.2s ease;
         }
 
         .social-links a:hover {
-            color: var(--accent-color);
-            transform: scale(1.12) translateY(-2px);
+            color: var(--text-main);
+            border-color: var(--accent-primary);
+            background: rgba(56, 189, 248, 0.1);
+            transform: translateY(-3px);
         }
 
-        @keyframes riseIn {
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(16px);
             }
             to {
                 opacity: 1;
@@ -635,14 +646,14 @@
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.3rem; }
-            .hero-content { padding: 1.6rem 1.1rem; border-radius: 20px; }
-            .hero-content img { width: 210px; height: 210px; }
-            nav { padding: 0.9rem 1rem; }
+            h1 { font-size: 2.2rem; }
+            .hero-content { padding: 2rem 1.25rem; border-radius: 20px; }
+            .hero-content img { width: 120px; height: 120px; }
+            nav { padding: 1rem; }
             .nav-links { display: none; }
-            section { padding: 66px 6%; }
-            .grid-container { grid-template-columns: 1fr; gap: 1.4rem; }
-            .hero .bio { font-size: 0.95rem; line-height: 1.75; }
+            section { padding: 60px 6%; }
+            .grid-container { grid-template-columns: 1fr; gap: 1.5rem; }
+            .hero .bio { font-size: 0.95rem; line-height: 1.7; }
             .hero-stats { grid-template-columns: 1fr; }
         }
     </style>
@@ -677,8 +688,10 @@
                 My goal is to contribute meaningfully to India’s technological advancement through innovation and dedication.
             </p>
             <div class="hero-buttons">
-                <a href="#contact" class="hero-btn">Get in Touch</a>
-                <a href="Project Image/Thaman_SN_Resume.pdf.pdf" target="_blank" class="hero-btn aura-btn">Download Resume</a>
+                <a href="#contact" class="hero-btn hero-btn-primary">Get in Touch</a>
+                <a href="Project Image/Thaman_SN_Resume.pdf.pdf" target="_blank" class="hero-btn hero-btn-secondary">
+                    <i class="fas fa-file-arrow-down"></i> Download Resume
+                </a>
             </div>
 
             <div class="hero-stats">
@@ -717,14 +730,14 @@
     </div>
 
     <section id="about">
-        <h2>🛠 Technical Arsenal</h2>
+        <h2>Technical Arsenal</h2>
         <div class="skills-grid">
             <div class="skill-tag"><i class="fas fa-satellite"></i> Satellite Systems</div>
             <div class="skill-tag"><i class="fas fa-microchip"></i> 3D Printing & Additive Manufacturing </div>
             <div class="skill-tag"><i class="fas fa-code"></i> Solid Works </div>
-             <div class="skill-tag"><i class="fas fa-code"></i> Solid Edge </div>
-             <div class="skill-tag"><i class="fas fa-code"></i> OnShape </div>
-             <div class="skill-tag"><i class="fas fa-code"></i> Autodesk Fusion </div>
+            <div class="skill-tag"><i class="fas fa-code"></i> Solid Edge </div>
+            <div class="skill-tag"><i class="fas fa-code"></i> OnShape </div>
+            <div class="skill-tag"><i class="fas fa-code"></i> Autodesk Fusion </div>
             <div class="skill-tag"><i class="fas fa-cube"></i> CubeSats & CanSat Development </div>
             <div class="skill-tag"><i class="fas fa-print"></i> Robotics & Automation </div>
             <div class="skill-tag"><i class="fas fa-code"></i> MATLAB </div>
@@ -734,7 +747,7 @@
     </section>
 
     <section id="projects">
-        <h2>🚀 Featured Missions</h2>
+        <h2>Featured Missions</h2>
         <div class="grid-container">
 
             <div class="card">
@@ -743,9 +756,9 @@
                     <h3>Conference Presentation at IIT Kharagpur, Kolkata</h3>
                     <p><strong>First Author & Presenter.</strong> Delivered advanced technical insights on CubeSat architecture and satellite applications at the National ISG–ISRS Conference.</p>
                     
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                    <details>
                         <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
                             <p><strong>Overview:</strong> Contributed to broader technical discussions on emerging space technologies and remote-sensing methodologies.</p>
                             <p><strong>Impact:</strong> Engaged with leading researchers and professionals to validate concepts and expand knowledge in practical satellite technology.</p>
                         </div>
@@ -764,9 +777,9 @@
                     <h3>ISRAAS Satellite Project</h3>
                     <p><strong>Team Lead.</strong> Directed the complete engineering cycle to develop a lightweight CubeSat for border security and atmospheric monitoring.</p>
                     
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                    <details>
                         <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
                             <p><strong>Overview:</strong> Focused heavily on full system integration and structural analysis of a deployable CubeSat unit.</p>
                             <p><strong>Responsibility:</strong> Directed a team through the complete engineering cycle, successfully managing conceptual mission design to environmental application implementation.</p>
                         </div>
@@ -785,20 +798,20 @@
                 <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND Autonomous UAV" loading="lazy">
                 <div class="card-content">
                     <h3>ASCEND – Autonomous UAV System</h3>
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; flex-grow: 0;">
+                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; flex-grow: 0;">
                         Event: IRoC-U 2026 (ISRO Robotics Challenge) | Concept Proposal Submitted
                     </p>
                     <p><strong>Overview:</strong> Submitted a concept proposal for a GPS-denied autonomous quadrotor UAV system designed for indoor navigation and surveillance. The system focuses on vision-based navigation and sensor fusion for robust localization.</p>
                     
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                    <details>
                         <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
                             <p><strong>Problem Statement:</strong> GPS signals are unavailable or unreliable in indoor environments, underground facilities, and urban canyons, making traditional UAV navigation impossible. Critical applications like search-and-rescue, surveillance, and inspection require autonomous flight in such environments.</p>
                             
                             <p><strong>Solution:</strong> A vision-based autonomous navigation pipeline using OAK-D Pro stereo camera for depth perception and visual odometry, integrated with Pixhawk flight controller running ArduPilot firmware. Sensor fusion combines IMU, LiDAR/ultrasonic range sensors, and stereo vision for robust GPS-denied localization.</p>
                             
                             <div>
-                                <strong>Key Features:</strong>
+                                <strong style="color: var(--text-main);">Key Features:</strong>
                                 <ul style="margin-left: 20px; margin-top: 5px;">
                                     <li>GPS-denied autonomous navigation</li>
                                     <li>Stereo vision-based localization</li>
@@ -809,7 +822,7 @@
                             </div>
 
                             <div>
-                                <strong>Technical Details:</strong>
+                                <strong style="color: var(--text-main);">Technical Details:</strong>
                                 <ul style="margin-left: 20px; margin-top: 5px;">
                                     <li><strong>Vision-Based Navigation:</strong> OAK-D Pro stereo camera system providing depth perception, visual odometry, and obstacle detection.</li>
                                     <li><strong>Flight Control Architecture:</strong> Pixhawk flight controller with companion computer running ArduPilot firmware, enabling advanced autonomous flight modes and mission planning.</li>
@@ -837,16 +850,16 @@
                 <img src="Project Image/e_yantra_iitBombay.jpg" alt="e-Yantra Robotics Competition" loading="lazy">
                 <div class="card-content">
                     <h3>e-Yantra Robotics Competition 2025-26</h3>
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; flex-grow: 0;">Achievement: National-Level Competition by IIT Bombay | Selected till semi finals</p>
+                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; flex-grow: 0;">Achievement: National-Level Competition by IIT Bombay | Selected till semi finals</p>
                     <p><strong>Overview:</strong> Developing an autonomous farm-to-collection center delivery robot capable of navigating complex paths and color-coded item retrieval.</p>
                     
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                    <details>
                         <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
                             <p><strong>Problem Statement:</strong> Agricultural logistics requires efficient automation for transporting harvested crops from fields to collection centers. Traditional manual methods are time-consuming and labor-intensive, especially for large farms.</p>
                             <p><strong>Solution:</strong> An autonomous robot system using STM32 microcontroller with advanced line following algorithms that can navigate white/black lines, sharp curves, zigzag patterns, and dotted segments. IR array sensors enable color-coded crate identification and precise pickup/delivery operations.</p>
                             <div>
-                                <strong>Key Features:</strong>
+                                <strong style="color: var(--text-main);">Key Features:</strong>
                                 <ul style="margin-left: 20px; margin-top: 5px;">
                                     <li>Advanced line following for complex paths</li>
                                     <li>IR sensor-based crate identification</li>
@@ -860,7 +873,7 @@
                         </div>
                     </details>
 
-                    <a href="Project Image/eyrc.pdf" target="_blank" class="hero-btn aura-btn" style="padding: 8px 18px; font-size: 0.82rem; margin-bottom: 12px; align-self: flex-start;">Click to View Completion Letter</a>
+                    <a href="Project Image/eyrc.pdf" target="_blank" class="hero-btn hero-btn-secondary" style="padding: 8px 18px; font-size: 0.82rem; margin-bottom: 12px; align-self: flex-start;">View Completion Letter</a>
 
                     <div class="tech-stack" style="margin-top: auto;">
                         <span>STM32 Microcontroller</span>
@@ -876,14 +889,14 @@
     </section>
 
     <section id="internships">
-        <h2>🛰️ Internships & Field Experience</h2>
+        <h2>Internships & Field Experience</h2>
         <div class="grid-container">
             <div class="card">
                 <img src="Project Image/ISA_Internship_letter.png" alt="ISA Internship Completion Letter" loading="lazy">
                 <div class="card-content">
                     <h3>AI-Based Vegetation Health Assessment using NDVI</h3>
                     
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
+                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
                         India Space Academy Internship | Remote Sensing & GIS | Jan 2026
                     </p>
 
@@ -893,13 +906,12 @@
                         to automatically segment vegetation into multiple health categories.
                     </p>
 
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                    <details>
                         <summary class="aura-text">Click to View Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
-                            
+                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
                             <p><strong>Overview:</strong> Performed large-scale vegetation monitoring for Dakshina Kannada district using cloud-based geospatial analysis.</p>
                             
-                            <p><strong>Technical Work:</strong></p>
+                            <p><strong style="color: var(--text-main);">Technical Work:</strong></p>
                             <ul style="margin-left: 20px;">
                                 <li>Processed Sentinel-2 satellite imagery</li>
                                 <li>Computed NDVI using NIR (B8) and Red (B4) bands</li>
@@ -908,7 +920,7 @@
                                 <li>Calculated area statistics for each vegetation class</li>
                             </ul>
 
-                            <p><strong>Key Results:</strong></p>
+                            <p><strong style="color: var(--text-main);">Key Results:</strong></p>
                             <ul style="margin-left: 20px;">
                                 <li>Dense vegetation dominated ~3453 km²</li>
                                 <li>Post-monsoon NDVI showed significant vegetation improvement</li>
@@ -932,7 +944,7 @@
     </section>
 
     <section id="publications">
-        <h2>📚 Technical Research & Publications </h2>
+        <h2>Technical Research & Publications</h2>
         <div class="grid-container">
             
             <div class="card">
@@ -942,12 +954,12 @@
                 <div class="card-content">
                     <h3>NIRVANA – "NIE Research Vehicle for Atmospheric and Navigation Analysis"</h3>
                     <p><strong>First Author.</strong> A research paper detailing the development of NIRVANA, a low-cost 1U CubeSat built using 3D-printed PLA and commercial off-the-shelf (COTS) components. The study highlights its dual-microcontroller architecture (ESP32 & ATmega328P), real-time IoT telemetry for environmental sensing, and sustainable Earth observation. Click the image above or the button below to read the full document.</p>
-                    <div class="tech-stack" style="margin-bottom: 15px;">
+                    <div class="tech-stack" style="margin-bottom: 20px;">
                         <span>Research Publication ISG-ISRS National Conference @ IIT Kharagpur</span>
                         <span>Satellite Tech</span>
                         <span>IoT Telemetry</span>
                     </div>
-                    <a href="NIRVANA_Paper.pdf" target="_blank" class="hero-btn aura-btn" style="padding: 8px 20px; font-size: 0.9rem;">Click to Read Full Paper</a>
+                    <a href="NIRVANA_Paper.pdf" target="_blank" class="hero-btn hero-btn-secondary" style="padding: 10px 22px; font-size: 0.9rem; align-self: flex-start;">Read Full Paper</a>
                 </div>
             </div>
 
@@ -955,7 +967,7 @@
     </section>
 
     <section id="awards">
-        <h2>🏆 Achievements</h2>
+        <h2>Achievements</h2>
         <div class="grid-container">
             
             <div class="card">
@@ -970,7 +982,7 @@
                 <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg" alt="ISG-ISRS Certificate" loading="lazy">
                 <div class="card-content">
                     <h3>ISG-ISRS 2025 Certificate</h3>
-                    <p>Official Certification for technical presentation on space technologies at the national Conference at IIT kharagpur, Kolkata  .</p>
+                    <p>Official Certification for technical presentation on space technologies at the national Conference at IIT kharagpur, Kolkata .</p>
                 </div>
             </div>
             
@@ -1042,13 +1054,13 @@
     </section>
 
     <section id="certifications">
-        <h2>📜 Professional Certifications</h2>
+        <h2>Professional Certifications</h2>
         <div class="grid-container">
             <div class="card">
                 <img src="Project Image/ISA_WinterTraining.png" alt="Remote Sensing and GIS Certificate" loading="lazy">
                 <div class="card-content">
                     <h3>Remote Sensing and GIS</h3>
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">India Space Academy (ISA) | Jan 2026</p>
+                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">India Space Academy (ISA) | Jan 2026</p>
                     <p>Completed intensive winter training focused on the fundamentals of Remote Sensing and Geographic Information Systems (GIS). Gained insights into satellite data interpretation and spatial analysis, essential for modern space missions.</p>
                     
                     <div class="tech-stack" style="margin-top: auto;">
@@ -1064,7 +1076,7 @@
                 <img src="Project Image/Cyber_sequ.jpeg" alt="Cyber Security Certificate" loading="lazy">
                 <div class="card-content">
                     <h3>Cyber Security</h3>
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">College Skill Development Program | Mar 2025</p>
+                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">College Skill Development Program | Mar 2025</p>
                     <p>Completed a comprehensive Cyber Security course during the college skill development program. Gained practical knowledge in digital security, threat mitigation, and ethical network practices.</p>
                     
                     <div class="tech-stack" style="margin-top: auto;">
@@ -1080,27 +1092,27 @@
 
     <!-- ENGINEERING BLOG SECTION -->
     <section id="blog">
-        <h2>✍️ Engineering Blog</h2>
+        <h2>Engineering Blog</h2>
         <div class="grid-container">
 
             <!-- Private Local AI Micro-Server & Edge Infrastructure Blog Post -->
             <div class="card">
                 <img src="Project Image/myAi_3.jpeg" alt="Private Local AI Micro-Server Hardware Setup" loading="lazy">
                 <div class="card-content">
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
+                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
                         July 2026
                     </p>
                     <h3>Private Local AI Micro-Server & Edge Infrastructure</h3>
                     <p><strong>System Architect & Lead.</strong> Repurposed an unused Dell OptiPlex desktop into a 24/7 self-hosted LLM edge server. Engineered the complete local AI runtime pipeline using Ollama (Qwen2.5-Coder), Open WebUI, and encrypted Cloudflare Tunnels for secure multi-device access without port forwarding.</p>
                     
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                    <details>
                         <summary class="aura-text">Explore More: Full Technical Report & System Gallery</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 14px; color: var(--text-secondary);">
+                        <div style="margin-top: 14px; line-height: 1.6; display: flex; flex-direction: column; gap: 14px; color: var(--text-muted);">
                             <p><strong>Overview:</strong> Built a production-grade private AI infrastructure from scratch using spare hardware. Rather than relying on cloud subscriptions, this project demonstrates end-to-end ownership of hardware constraints, local inference optimization, networking, and security.</p>
                             
                             <div>
-                                <strong style="color: var(--text-primary);">Key Architectural Achievements:</strong>
-                                <ul style="margin-left: 20px; margin-top: 5px;">
+                                <strong style="color: var(--text-main);">Key Architectural Achievements:</strong>
+                                <ul style="margin-left: 20px; margin-top: 6px;">
                                     <li><strong>Local LLM Deployment & Benchmarking:</strong> Configured and deployed open-source code models (<code>Qwen2.5-Coder</code>, <code>DeepSeek-Coder</code>) via Ollama, evaluating RAM bandwidth and CPU utilization to optimize real-time inference speed.</li>
                                     <li><strong>Full-Stack Web Hosting & Security:</strong> Self-hosted an Open WebUI server environment on Windows, implementing Role-Based Access Controls (RBAC), user authentication, and admin security settings to prevent unauthorized access.</li>
                                     <li><strong>Secure Remote Tunneling:</strong> Established an encrypted remote gateway using Cloudflare Tunnels (<code>cloudflared</code>) over HTTP/2, enabling seamless multi-device access (Desktop Web & PWA Mobile) without opening risky inbound router ports.</li>
@@ -1108,31 +1120,31 @@
                                 </ul>
                             </div>
 
-                            <div style="margin-top: 5px;">
-                                <strong style="color: var(--text-primary); display: block; margin-bottom: 10px;">Project Gallery & Pipeline Walkthrough:</strong>
+                            <div style="margin-top: 6px;">
+                                <strong style="color: var(--text-main); display: block; margin-bottom: 12px;">Project Gallery & Pipeline Walkthrough:</strong>
                                 
                                 <!-- Gallery Item 1 -->
-                                <div style="margin-bottom: 15px; background: rgba(0, 0, 0, 0.25); padding: 10px; border-radius: 10px; border: 1px solid rgba(114, 194, 255, 0.15);">
-                                    <img src="Project Image/myAi_3.jpeg" alt="Complete PC Setup running 24/7" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 6px; padding: 0; background: transparent;">
-                                    <span style="font-size: 0.8rem; color: #bce8ff; display: block; text-align: center;">1. Hardware Infrastructure — Repurposed Dell OptiPlex desktop operating as a 24/7 dedicated edge micro-server.</span>
+                                <div style="margin-bottom: 16px; background: rgba(0, 0, 0, 0.35); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                                    <img src="Project Image/myAi_3.jpeg" alt="Complete PC Setup running 24/7" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 8px; padding: 0; background: transparent;">
+                                    <span style="font-size: 0.8rem; color: var(--text-light); display: block; text-align: center;">1. Hardware Infrastructure — Repurposed Dell OptiPlex desktop operating as a 24/7 dedicated edge micro-server.</span>
                                 </div>
 
                                 <!-- Gallery Item 2 -->
-                                <div style="margin-bottom: 15px; background: rgba(0, 0, 0, 0.25); padding: 10px; border-radius: 10px; border: 1px solid rgba(114, 194, 255, 0.15);">
-                                    <img src="Project Image/myAi_2.jpeg" alt="Cloudflare Tunnel Network Logs" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 6px; padding: 0; background: transparent;">
-                                    <span style="font-size: 0.8rem; color: #bce8ff; display: block; text-align: center;">2. Networking Pipeline — Live <code>cloudflared</code> terminal logs confirming secure DNS, UDP, TCP, and HTTP/2 encrypted tunnel connectivity.</span>
+                                <div style="margin-bottom: 16px; background: rgba(0, 0, 0, 0.35); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                                    <img src="Project Image/myAi_2.jpeg" alt="Cloudflare Tunnel Network Logs" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 8px; padding: 0; background: transparent;">
+                                    <span style="font-size: 0.8rem; color: var(--text-light); display: block; text-align: center;">2. Networking Pipeline — Live <code>cloudflared</code> terminal logs confirming secure DNS, UDP, TCP, and HTTP/2 encrypted tunnel connectivity.</span>
                                 </div>
 
                                 <!-- Gallery Item 3 -->
-                                <div style="margin-bottom: 15px; background: rgba(0, 0, 0, 0.25); padding: 10px; border-radius: 10px; border: 1px solid rgba(114, 194, 255, 0.15);">
-                                    <img src="Project Image/myAi_4.jpeg" alt="Self-Hosted Open WebUI Dashboard" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 6px; padding: 0; background: transparent;">
-                                    <span style="font-size: 0.8rem; color: #bce8ff; display: block; text-align: center;">3. Web Portal Interface — Authenticated Open WebUI desktop portal for real-time model interaction and system administration.</span>
+                                <div style="margin-bottom: 16px; background: rgba(0, 0, 0, 0.35); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                                    <img src="Project Image/myAi_4.jpeg" alt="Self-Hosted Open WebUI Dashboard" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 8px; padding: 0; background: transparent;">
+                                    <span style="font-size: 0.8rem; color: var(--text-light); display: block; text-align: center;">3. Web Portal Interface — Authenticated Open WebUI desktop portal for real-time model interaction and system administration.</span>
                                 </div>
 
                                 <!-- Gallery Item 4 -->
-                                <div style="margin-bottom: 5px; background: rgba(0, 0, 0, 0.25); padding: 10px; border-radius: 10px; border: 1px solid rgba(114, 194, 255, 0.15);">
-                                    <img src="Project Image/myAi_1.jpeg" alt="Mobile App PWA Interface" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 6px; padding: 0; background: transparent;">
-                                    <span style="font-size: 0.8rem; color: #bce8ff; display: block; text-align: center;">4. Mobile PWA Deployment — Seamless remote access to local LLMs on mobile devices from anywhere in the world.</span>
+                                <div style="margin-bottom: 4px; background: rgba(0, 0, 0, 0.35); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                                    <img src="Project Image/myAi_1.jpeg" alt="Mobile App PWA Interface" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 8px; padding: 0; background: transparent;">
+                                    <span style="font-size: 0.8rem; color: var(--text-light); display: block; text-align: center;">4. Mobile PWA Deployment — Seamless remote access to local LLMs on mobile devices from anywhere in the world.</span>
                                 </div>
                             </div>
                         </div>
@@ -1153,21 +1165,21 @@
             <div class="card">
                 <img src="Project Image/GD_Rover.png" alt="Generative Design Mars Rover" loading="lazy">
                 <div class="card-content">
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
+                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
                         June 2026
                     </p>
                     <h3>Generative Design: Mars Rover Chassis</h3>
                     <p><strong>Design Lead.</strong> Engineered a mass-optimized 6-wheeled rover suspension system using Autodesk Fusion's generative design capabilities to maximize the strength-to-weight ratio for extraterrestrial exploration.</p>
                     
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                    <details>
                         <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
                             <p><strong>Problem Statement:</strong> Excess mass in planetary rovers exponentially increases launch costs. Traditional structural components are often over-engineered and lack organic load-path optimization.</p>
                             
                             <p><strong>Solution:</strong> Applied generative design to a classic Rocker-Bogie kinematic model. By defining strict preserve regions for the DC motor mounts and central shafts, alongside specific load cases and obstacle geometries, the algorithm generated an organic, lattice-like structural chassis. This approach drastically reduces weight while maintaining strict structural integrity for traversing dynamic, uneven terrain.</p>
                             
                             <div>
-                                <strong>Key Features:</strong>
+                                <strong style="color: var(--text-main);">Key Features:</strong>
                                 <ul style="margin-left: 20px; margin-top: 5px;">
                                     <li>Generative design structural optimization</li>
                                     <li>6-Wheel Rocker-Bogie kinematics integration</li>
@@ -1192,15 +1204,15 @@
             <div class="card">
                 <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer" loading="lazy">
                 <div class="card-content">
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
+                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
                         December 2025
                     </p>
                     <h3>Engineering a 3-Axis Chocolate 3D Printer: Thermal Control & Kinematics</h3>
                     <p>A deep dive into developing the ChocoPrint 3D. This post covers the challenges of fluid extrusion and how we utilized dual-microcontroller coordination (ATmega328P + CNC Shield) to manage the unique rheological properties of chocolate.</p>
                     
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                    <details>
                         <summary class="aura-text">View Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
                             <p><strong>Technical Overview:</strong> Utilized an ATmega328P paired with a CNC shield to accurately drive the 3-axis motion kinematics.</p>
                             <p><strong>Solution:</strong> Developed dual microcontroller coordination to handle the unique rheological properties of chocolate, balancing thermal management with feed-rate control.</p>
                         </div>
@@ -1218,15 +1230,15 @@
             <div class="card">
                 <img src="Project Image/roboarm.jpeg" alt="4-DOF Robotic Arm Setup" loading="lazy">
                 <div class="card-content">
-                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
+                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
                         October 2025
                     </p>
                     <h3>Kinematics and Control: Building a 4-DOF Articulated Robotic Arm</h3>
                     <p>An overview of assembling and programming a physical robotic manipulator for pick-and-place operations. Discusses implementing forward and inverse kinematics, power distribution via custom SMPS, and precise PWM joint actuation.</p>
                     
-                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                    <details>
                         <summary class="aura-text">View Technical Details</summary>
-                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary);">
+                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
                             <p><strong>Overview:</strong> Developed a functional physical prototype, managing the mechanical assembly, power distribution via a dedicated SMPS, and electronics integration.</p>
                             <p><strong>Technical Application:</strong> Implemented forward and inverse kinematics to accurately control the base, shoulder, elbow, and end-effector. Programmed the microcontroller to translate spatial coordinates into precise PWM signals for smooth joint actuation and trajectory planning.</p>
                         </div>
@@ -1244,17 +1256,17 @@
     </section>
 
     <section id="contact">
-        <div class="card" style="text-align: center; max-width: 600px; margin: auto;">
-            <div class="card-content">
-                <h3>Let's Connect</h3>
-                <p>Open to research collaborations.</p>
-                <div class="social-links" style="margin-top: 20px;">
-                    <a href="mailto:thamansn217@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/thaman-sn-552a34342/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/ThamanSN"><i class="fab fa-github"></i></a>
-                </div>
-                <a href="Project Image/Thaman_SN_Resume.pdf.pdf" target="_blank" class="hero-btn aura-btn">Download Resume</a>
+        <div class="card" style="text-align: center; max-width: 600px; margin: 0 auto; padding: 2.5rem 1.5rem;">
+            <h3>Let's Connect</h3>
+            <p style="color: var(--text-muted); margin-top: 6px; margin-bottom: 1.5rem;">Open to research collaborations and engineering inquiries.</p>
+            <div class="social-links">
+                <a href="mailto:thamansn217@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/thaman-sn-552a34342/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ThamanSN" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
+            <a href="Project Image/Thaman_SN_Resume.pdf.pdf" target="_blank" class="hero-btn hero-btn-primary" style="margin-top: 10px;">
+                <i class="fas fa-file-arrow-down"></i> Download Resume
+            </a>
         </div>
     </section>
 
