@@ -336,6 +336,30 @@
             overflow: hidden;
         }
 
+        /* --- About Page Components --- */
+        .profile-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            margin-bottom: 3.5rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .profile-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--cyan-primary);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+            margin: 0 auto;
+        }
+
         /* --- Clickable Google Map Affiliation Cards --- */
         .affiliation-grid {
             display: grid;
@@ -689,6 +713,7 @@
             .nav-links { display: none; }
             .hero-title { font-size: 2.2rem; }
             .page-view { padding: 40px 5% 60px; }
+            .profile-card { grid-template-columns: 1fr; text-align: center; justify-items: center; padding: 1.8rem 1.2rem; }
             .case-study-container { padding: 1.8rem 1.2rem; }
         }
     </style>
@@ -715,7 +740,7 @@
     <!-- ================= PAGE 1: HOME ================= -->
     <section id="page-home" class="page-view active-view">
         <div class="hero-banner">
-            <h1 class="hero-title">I build <span>advanced mechatronic</span>  & automation systems</h1>
+            <h1 class="hero-title">I build <span>advanced mechatronic</span> space-tech & automation systems</h1>
             <p class="hero-subtitle">From satellite CubeSats and autonomous UAV flight dynamics to self-hosted local AI micro-servers and additive manufacturing.</p>
             
             <div class="hero-pills">
@@ -1045,6 +1070,22 @@
         <h2 class="section-title">About Me</h2>
         <p class="section-subtitle">Mechanical Engineer, UAV Flight Dynamics Enthusiast, and Space-Tech Systems Builder</p>
 
+        <!-- EXECUTIVE PROFILE & BIO CARD -->
+        <div class="profile-card">
+            <img src="Project Image/My_Image.jpeg" alt="Thaman S N Profile">
+            <div>
+                <h3>Thaman S N</h3>
+                <p style="color: var(--cyan-accent); font-weight: 600; margin-bottom: 1rem;">Mechanical Engineering Student | President, Raptor Dynamics</p>
+                <p style="color: var(--text-sub); margin-bottom: 1.5rem;">
+                    I am a Mechanical Engineering student at The National Institute of Engineering (NIE), Mysuru. My work bridges core mechanical design, autonomous aerial robotics, space systems (CubeSats/CanSats), and edge AI infrastructure. I am dedicated to engineering resilient hardware systems that solve real-world problems.
+                </p>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="Project Image/Thaman_SN_Resume.pdf.pdf" target="_blank" class="btn btn-cyan"><i class="fas fa-file-pdf"></i> Download Resume</a>
+                    <a href="mailto:thamansn217@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email Me</a>
+                </div>
+            </div>
+        </div>
+
         <!-- CLICKABLE GOOGLE MAPS AFFILIATION CARDS -->
         <h3 style="margin-bottom: 1rem; color: var(--text-main);"><i class="fas fa-map-marker-alt" style="color: var(--cyan-accent);"></i> Current Affiliation & Status (Click blocks for Google Map locations)</h3>
         <div class="affiliation-grid">
@@ -1068,7 +1109,7 @@
 
             <a href="https://maps.google.com/?q=Mysuru+Karnataka+India" target="_blank" class="affiliation-box">
                 <strong>📍 Residence <i class="fas fa-external-link-alt"></i></strong>
-                <span>Mysuru</span>
+                <span>Mysuru / Bengaluru</span>
                 <small>Karnataka, India</small>
             </a>
         </div>
