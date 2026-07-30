@@ -291,7 +291,7 @@
             letter-spacing: 0.05em;
         }
 
-        /* --- Compact Executive Grid for Home Page --- */
+        /* --- Compact Executive Text-Only Grid for Home Page --- */
         .compact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -303,9 +303,10 @@
             background: var(--bg-card);
             border-radius: var(--radius-lg);
             border: 1px solid var(--border-glow);
-            overflow: hidden;
+            padding: 1.5rem 1.6rem;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             transition: all 0.25s ease;
             box-shadow: var(--shadow-card);
             cursor: pointer;
@@ -318,34 +319,17 @@
             background: var(--bg-card-hover);
         }
 
-        .compact-card img {
-            width: 100%;
-            height: 170px;
-            object-fit: contain;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.45);
-            border-bottom: 1px solid var(--border-glow);
-        }
-
-        .compact-card-content {
-            padding: 1.25rem 1.4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-
-        .compact-card-content h3 {
-            font-size: 1.15rem;
+        .compact-card h3 {
+            font-size: 1.18rem;
             color: var(--text-main);
-            margin-bottom: 0.45rem;
+            margin-bottom: 0.5rem;
             line-height: 1.35;
         }
 
-        .compact-card-content p {
-            font-size: 0.88rem;
+        .compact-card p {
+            font-size: 0.9rem;
             color: var(--text-muted);
-            line-height: 1.55;
+            line-height: 1.6;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -731,7 +715,7 @@
     <!-- ================= PAGE 1: HOME ================= -->
     <section id="page-home" class="page-view active-view">
         <div class="hero-banner">
-            <h1 class="hero-title">I build <span>advanced mechatronic </span>  space-tech & automation systems</h1>
+            <h1 class="hero-title">I build <span>advanced mechatronic</span> space-tech & automation systems</h1>
             <p class="hero-subtitle">From satellite CubeSats and autonomous UAV flight dynamics to self-hosted local AI micro-servers and additive manufacturing.</p>
             
             <div class="hero-pills">
@@ -768,99 +752,69 @@
             </div>
         </div>
 
-        <!-- ALL-MISSIONS COMPACT DASHBOARD GRID (10 Compact Cards) -->
+        <!-- ALL-MISSIONS COMPACT DASHBOARD GRID (10 Compact Text-Only Cards) -->
         <h2 class="section-title">Featured Missions</h2>
         <p class="section-subtitle">Click any project card to open its complete case study report</p>
 
         <div class="compact-grid">
             <!-- 1. ISRAAS Satellite -->
             <div class="compact-card" onclick="openCaseStudy('israas')">
-                <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite" loading="lazy">
-                <div class="compact-card-content">
-                    <h3>ISRAAS Satellite Project</h3>
-                    <p>Directed the engineering cycle for a lightweight deployable CubeSat built for border security and atmospheric telemetry monitoring.</p>
-                </div>
+                <h3>ISRAAS Satellite Project</h3>
+                <p>Directed the engineering cycle for a lightweight deployable CubeSat built for border security and atmospheric telemetry monitoring.</p>
             </div>
 
             <!-- 2. ASCEND UAV -->
             <div class="compact-card" onclick="openCaseStudy('ascend')">
-                <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND UAV System" loading="lazy">
-                <div class="compact-card-content">
-                    <h3>ASCEND – Autonomous UAV System</h3>
-                    <p>Vision-based GPS-denied autonomous quadrotor navigation using OAK-D Pro stereo odometry and multi-sensor SLAM localization.</p>
-                </div>
+                <h3>ASCEND – Autonomous UAV System</h3>
+                <p>Vision-based GPS-denied autonomous quadrotor navigation using OAK-D Pro stereo odometry and multi-sensor SLAM localization.</p>
             </div>
 
             <!-- 3. Private Local AI -->
             <div class="compact-card" onclick="openCaseStudy('ai-microserver')">
-                <img src="Project Image/myAi_3.jpeg" alt="Private Local AI Micro-Server" loading="lazy">
-                <div class="compact-card-content">
-                    <h3>Private Local AI Micro-Server</h3>
-                    <p>Repurposed bare-metal hardware into a 24/7 self-hosted LLM edge server with encrypted Cloudflare Tunnels and Open WebUI.</p>
-                </div>
+                <h3>Private Local AI Micro-Server</h3>
+                <p>Repurposed bare-metal hardware into a 24/7 self-hosted LLM edge server with encrypted Cloudflare Tunnels and Open WebUI.</p>
             </div>
 
             <!-- 4. e-Yantra Robotics -->
             <div class="compact-card" onclick="openCaseStudy('eyantra')">
-                <img src="Project Image/e_yantra_iitBombay.jpg" alt="e-Yantra Robotics" loading="lazy">
-                <div class="compact-card-content">
-                    <h3>e-Yantra Robotics Competition 2025-26</h3>
-                    <p>Autonomous farm-to-collection center delivery robot featuring STM32 control, PID line following, and IR crate identification.</p>
-                </div>
+                <h3>e-Yantra Robotics Competition 2025-26</h3>
+                <p>Autonomous farm-to-collection center delivery robot featuring STM32 control, PID line following, and IR crate identification.</p>
             </div>
 
             <!-- 5. IIT Kharagpur Conference Presentation -->
             <div class="compact-card" onclick="openCaseStudy('iitkgp')">
-                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="IIT Kharagpur Conference Presentation" loading="lazy">
-                <div class="compact-card-content">
-                    <h3>Conference Presentation at IIT Kharagpur</h3>
-                    <p>First-author research presentation on low-cost CubeSat structural architecture and remote-sensing environmental payloads.</p>
-                </div>
+                <h3>Conference Presentation at IIT Kharagpur</h3>
+                <p>First-author research presentation on low-cost CubeSat structural architecture and remote-sensing environmental payloads.</p>
             </div>
 
             <!-- 6. NIRVANA Research Paper -->
             <div class="compact-card" onclick="openCaseStudy('nirvana')">
-                <img src="Project Image/Nirvana_frontpage.png" alt="NIRVANA Research Paper" loading="lazy">
-                <div class="compact-card-content">
-                    <h3>NIRVANA – Atmospheric Analysis CubeSat</h3>
-                    <p>First-author technical paper on a 3D-printed 1U CubeSat featuring dual ESP32/ATmega328P flight telemetry architecture.</p>
-                </div>
+                <h3>NIRVANA – Atmospheric Analysis CubeSat</h3>
+                <p>First-author technical paper on a 3D-printed 1U CubeSat featuring dual ESP32/ATmega328P flight telemetry architecture.</p>
             </div>
 
             <!-- 7. AI Vegetation Assessment (NDVI) -->
             <div class="compact-card" onclick="openCaseStudy('ndvi')">
-                <img src="Project Image/ISA_Internship_letter.png" alt="AI-Based Vegetation Assessment" loading="lazy">
-                <div class="compact-card-content">
-                    <h3>AI-Based Vegetation Assessment (NDVI)</h3>
-                    <p>Processed Sentinel-2 satellite imagery over ~3,453 km² in Google Earth Engine with automated AI health classification.</p>
-                </div>
+                <h3>AI-Based Vegetation Assessment (NDVI)</h3>
+                <p>Processed Sentinel-2 satellite imagery over ~3,453 km² in Google Earth Engine with automated AI health classification.</p>
             </div>
 
             <!-- 8. Mars Rover Chassis -->
             <div class="compact-card" onclick="openCaseStudy('rover')">
-                <img src="Project Image/GD_Rover.png" alt="Generative Design Mars Rover" loading="lazy">
-                <div class="compact-card-content">
-                    <h3>Generative Design: Mars Rover Chassis</h3>
-                    <p>Mass-optimized 6-wheeled Rocker-Bogie suspension engineered in Autodesk Fusion for aerospace payload constraints.</p>
-                </div>
+                <h3>Generative Design: Mars Rover Chassis</h3>
+                <p>Mass-optimized 6-wheeled Rocker-Bogie suspension engineered in Autodesk Fusion for aerospace payload constraints.</p>
             </div>
 
             <!-- 9. Chocolate 3D Printer -->
             <div class="compact-card" onclick="openCaseStudy('chocoprint')">
-                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer" loading="lazy">
-                <div class="compact-card-content">
-                    <h3>3-Axis Chocolate 3D Printer</h3>
-                    <p>Mechatronic fluid extrusion system using dual-microcontroller coordination for real-time thermal and feed-rate control.</p>
-                </div>
+                <h3>3-Axis Chocolate 3D Printer</h3>
+                <p>Mechatronic fluid extrusion system using dual-microcontroller coordination for real-time thermal and feed-rate control.</p>
             </div>
 
             <!-- 10. 4-DOF Robotic Arm -->
             <div class="compact-card" onclick="openCaseStudy('roboarm')">
-                <img src="Project Image/roboarm.jpeg" alt="4-DOF Articulated Robotic Arm" loading="lazy">
-                <div class="compact-card-content">
-                    <h3>4-DOF Articulated Robotic Arm</h3>
-                    <p>Spatial kinematic manipulator featuring custom SMPS power distribution and mathematically modeled PWM trajectory control.</p>
-                </div>
+                <h3>4-DOF Articulated Robotic Arm</h3>
+                <p>Spatial kinematic manipulator featuring custom SMPS power distribution and mathematically modeled PWM trajectory control.</p>
             </div>
         </div>
 
