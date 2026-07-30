@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thaman S N | Engineering & Research Portfolio</title>
-    <!-- Fonts: Space Grotesk for bold modern headers, Plus Jakarta Sans for body text -->
+    <title>Thaman S N | Engineering & Space-Tech Portfolio</title>
+    <!-- Modern Space & Technical Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <meta name="google-site-verification" content="1m-jVR0HrB5bJCQ3zwADsiA-th-Ia8Bjolj-LmWBLcw" />
     <meta name="keywords" content="Thaman S N, Thaman SN, Thaman S.N., Mechanical Engineer, Portfolio, ISRO, Raptor Dynamics, Satellite Systems">
-    <meta name="description" content="Official portfolio of Thaman S N, Mechanical Engineering student at NIE Mysuru, President of Raptor Dynamics, and aspiring Space-Tech Innovator.">
+    <meta name="description" content="Official portfolio of Thaman S N, Mechanical Engineering student at NIE Mysuru, Founding President of Raptor Dynamics, and aspiring Space-Tech Innovator.">
 
     <style>
         :root {
             --bg-dark: #070a13;
-            --bg-card: rgba(15, 23, 42, 0.65);
-            --bg-card-hover: rgba(30, 41, 59, 0.85);
+            --bg-card: rgba(15, 23, 42, 0.72);
+            --bg-card-hover: rgba(30, 41, 59, 0.9);
             --border-glow: rgba(56, 189, 248, 0.18);
             --border-hover: rgba(56, 189, 248, 0.45);
             --cyan-primary: #38bdf8;
@@ -28,7 +28,7 @@
             --radius-lg: 16px;
             --radius-md: 10px;
             --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
-            --shadow-cyan: 0 0 25px rgba(56, 189, 248, 0.2);
+            --shadow-cyan: 0 0 25px rgba(56, 189, 248, 0.22);
         }
 
         * {
@@ -94,7 +94,7 @@
             background: rgba(7, 10, 19, 0.88);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            padding: 1rem 8%;
+            padding: 1rem 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -103,7 +103,7 @@
 
         .nav-logo {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--text-main);
             display: flex;
@@ -123,15 +123,16 @@
 
         .nav-links {
             display: flex;
-            gap: 0.4rem;
+            gap: 0.3rem;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .nav-link {
-            font-size: 0.88rem;
+            font-size: 0.84rem;
             font-weight: 600;
             color: var(--text-muted);
-            padding: 8px 16px;
+            padding: 8px 14px;
             border-radius: 999px;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -171,6 +172,7 @@
             align-items: center;
             gap: 8px;
             transition: all 0.25s ease;
+            border: none;
         }
 
         .btn-cyan {
@@ -289,6 +291,57 @@
             letter-spacing: 0.05em;
         }
 
+        /* --- Clickable Google Map Affiliation Cards --- */
+        .affiliation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 3.5rem;
+        }
+
+        .affiliation-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: var(--radius-md);
+            padding: 18px 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .affiliation-box:hover {
+            border-color: var(--cyan-accent);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-cyan);
+            background: var(--bg-card-hover);
+        }
+
+        .affiliation-box strong {
+            color: var(--cyan-accent);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .affiliation-box span {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .affiliation-box small {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
         /* --- Cards & Grid System --- */
         .grid-container {
             display: grid;
@@ -305,6 +358,7 @@
             flex-direction: column;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-card);
+            cursor: pointer;
         }
 
         .card:hover {
@@ -317,7 +371,7 @@
         .card img {
             width: 100%;
             height: auto;
-            max-height: 380px;
+            max-height: 340px;
             object-fit: contain;
             padding: 12px;
             background: rgba(0, 0, 0, 0.4);
@@ -332,8 +386,8 @@
         }
 
         .card-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
             color: var(--text-main);
         }
 
@@ -344,21 +398,21 @@
             margin-bottom: 1rem;
         }
 
-        /* Problem / Solution / Impact Formatting */
+        /* Problem / Solution / Impact Formatting inside cards */
         .psi-block {
             background: rgba(0, 0, 0, 0.25);
             border-radius: var(--radius-md);
-            padding: 12px 14px;
+            padding: 10px 14px;
             border-left: 3px solid var(--cyan-primary);
-            margin-bottom: 1rem;
-            font-size: 0.88rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.85rem;
         }
 
         .psi-block strong {
             color: var(--cyan-accent);
             display: block;
-            margin-bottom: 4px;
-            font-size: 0.82rem;
+            margin-bottom: 3px;
+            font-size: 0.78rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
@@ -371,106 +425,107 @@
             padding-top: 1rem;
         }
 
-        /* Category Filter Bar */
-        .filter-bar {
+        /* --- Dedicated Case Study SPA View (`#page-case-study`) --- */
+        .case-study-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-hover);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .cs-header {
+            border-bottom: 1px solid var(--border-glow);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cs-badges {
             display: flex;
-            justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .cs-title {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .cs-subtitle {
+            font-size: 1.1rem;
+            color: var(--cyan-accent);
+            font-weight: 600;
+        }
+
+        .cs-section {
             margin-bottom: 2.5rem;
         }
 
-        .filter-btn {
-            background: rgba(255, 255, 255, 0.04);
-            color: var(--text-muted);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 8px 18px;
-            border-radius: 999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .filter-btn:hover, .filter-btn.active {
-            color: var(--text-main);
-            background: rgba(56, 189, 248, 0.15);
-            border-color: var(--cyan-primary);
-        }
-
-        /* --- Accordions / Expandable Details --- */
-        details {
-            margin: 1rem 0;
-            border-top: 1px solid var(--border-glow);
-            border-bottom: 1px solid var(--border-glow);
-            padding: 0.75rem 0;
-        }
-
-        summary.aura-text {
-            color: var(--cyan-accent);
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            outline: none;
+        .cs-section h3 {
+            font-size: 1.35rem;
+            color: var(--cyan-primary);
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
-        summary.aura-text::-webkit-details-marker { display: none; }
-
-        summary.aura-text::before {
-            content: '✦';
-            font-size: 0.8em;
-            color: var(--teal-accent);
-        }
-
-        /* --- About Page Components --- */
-        .profile-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glow);
-            border-radius: var(--radius-lg);
-            padding: 2.5rem;
+        .cs-checklist {
             display: grid;
-            grid-template-columns: 220px 1fr;
-            gap: 2.5rem;
-            align-items: center;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 12px;
+            list-style: none;
         }
 
-        .profile-card img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--cyan-primary);
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
-        }
-
-        .affiliation-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-            margin-bottom: 3rem;
-        }
-
-        .affiliation-box {
+        .cs-checklist li {
             background: rgba(0, 0, 0, 0.3);
             border: 1px solid var(--border-glow);
+            padding: 12px 16px;
             border-radius: var(--radius-md);
-            padding: 16px 20px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .affiliation-box strong {
-            color: var(--cyan-accent);
-            display: block;
+        .cs-checklist li i {
+            color: var(--teal-accent);
+            font-size: 1rem;
+        }
+
+        .cs-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 1rem;
+        }
+
+        .cs-gallery-item {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-glow);
+            border-radius: var(--radius-md);
+            padding: 12px;
+            text-align: center;
+        }
+
+        .cs-gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .cs-gallery-item span {
             font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 4px;
+            color: var(--text-sub);
         }
 
-        /* Journey Timeline */
+        /* --- Journey Timeline --- */
         .timeline {
             position: relative;
             padding-left: 24px;
@@ -480,7 +535,7 @@
 
         .timeline-item {
             position: relative;
-            margin-bottom: 2rem;
+            margin-bottom: 2.2rem;
         }
 
         .timeline-item::before {
@@ -497,9 +552,11 @@
 
         .timeline-year {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--cyan-accent);
+            display: block;
+            margin-bottom: 4px;
         }
 
         /* --- Stats Modal --- */
@@ -584,11 +641,11 @@
         }
 
         @media (max-width: 768px) {
-            nav { padding: 1rem 5%; }
-            .nav-links { display: none; } /* On mobile nav links hide or fold */
-            .profile-card { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+            nav { padding: 1rem 4%; }
+            .nav-links { display: none; }
             .hero-title { font-size: 2.2rem; }
             .page-view { padding: 40px 5% 60px; }
+            .case-study-container { padding: 1.8rem 1.2rem; }
         }
     </style>
 </head>
@@ -602,6 +659,8 @@
         <div class="nav-links">
             <span class="nav-link active" data-page="home" onclick="switchView('home')">Home</span>
             <span class="nav-link" data-page="projects" onclick="switchView('projects')">Projects</span>
+            <span class="nav-link" data-page="research" onclick="switchView('research')">Research</span>
+            <span class="nav-link" data-page="internships" onclick="switchView('internships')">Internships</span>
             <span class="nav-link" data-page="about" onclick="switchView('about')">About</span>
             <span class="nav-link" data-page="achievements" onclick="switchView('achievements')">Achievements</span>
             <span class="nav-link" data-page="blog" onclick="switchView('blog')">Blog</span>
@@ -651,15 +710,15 @@
 
         <!-- FEATURED PROJECTS PREVIEW -->
         <h2 class="section-title">Featured Missions</h2>
-        <p class="section-subtitle">A glimpse of my recent aerospace, UAV, and robotics work</p>
+        <p class="section-subtitle">Click any project card to open its complete case study report</p>
 
         <div class="grid-container">
             <!-- ISRAAS Satellite -->
-            <div class="card">
+            <div class="card" onclick="openCaseStudy('israas')">
                 <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite" loading="lazy">
                 <div class="card-content">
                     <h3>ISRAAS Satellite Project</h3>
-                    <p><strong>Team Lead.</strong> Directed the engineering cycle to develop a lightweight CubeSat for border security and atmospheric monitoring.</p>
+                    <p><strong>Team Lead.</strong> Directed the complete engineering cycle to develop a lightweight deployable CubeSat for border security and atmospheric monitoring.</p>
                     <div class="tech-stack">
                         <span class="tag-pill">CubeSat</span>
                         <span class="tag-pill">Border Security</span>
@@ -669,12 +728,12 @@
             </div>
 
             <!-- ASCEND UAV -->
-            <div class="card">
+            <div class="card" onclick="openCaseStudy('ascend')">
                 <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND UAV System" loading="lazy">
                 <div class="card-content">
                     <h3>ASCEND – Autonomous UAV System</h3>
                     <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">IRoC-U 2026 (ISRO Robotics Challenge)</p>
-                    <p>Vision-based GPS-denied autonomous quadrotor navigation using stereo vision and sensor fusion.</p>
+                    <p>Vision-based GPS-denied autonomous quadrotor navigation using stereo vision and SLAM sensor fusion.</p>
                     <div class="tech-stack">
                         <span class="tag-pill">Pixhawk & ArduPilot</span>
                         <span class="tag-pill">OAK-D Pro</span>
@@ -684,8 +743,8 @@
             </div>
 
             <!-- Private Local AI -->
-            <div class="card">
-                <img src="Project Image/myAi_3.jpeg" alt="Private Local AI Server" loading="lazy">
+            <div class="card" onclick="openCaseStudy('ai-microserver')">
+                <img src="Project Image/My_Image.jpeg" alt="Private Local AI Micro-Server" loading="lazy" style="max-height: 260px;">
                 <div class="card-content">
                     <h3>Private Local AI Micro-Server</h3>
                     <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">Edge Infrastructure & Security</p>
@@ -707,53 +766,23 @@
     <!-- ================= PAGE 2: PROJECTS ================= -->
     <section id="page-projects" class="page-view">
         <h2 class="section-title">Projects & Flagship Builds</h2>
-        <p class="section-subtitle">Complete portfolio across satellite tech, UAV flight dynamics, AI systems, and robotics</p>
+        <p class="section-subtitle">Click any engineering build to view its full architectural whitepaper</p>
 
-        <div class="filter-bar">
-            <button class="filter-btn active" onclick="filterProjects('all')">All</button>
-            <button class="filter-btn" onclick="filterProjects('aerospace')">Space & Satellite</button>
-            <button class="filter-btn" onclick="filterProjects('uav')">UAVs & Robotics</button>
-            <button class="filter-btn" onclick="filterProjects('ai')">AI & Remote Sensing</button>
-        </div>
-
-        <div class="grid-container" id="projects-grid">
-
-            <!-- Card 1: IIT Kharagpur Presentation -->
-            <div class="card" data-category="aerospace">
-                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Conference Presentation" loading="lazy">
-                <div class="card-content">
-                    <h3>Conference Presentation at IIT Kharagpur, Kolkata</h3>
-                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">First Author & Presenter | ISG-ISRS National Conference</p>
-                    
-                    <div class="psi-block">
-                        <strong>🎯 Scope & Impact</strong>
-                        Delivered technical insights on low-cost 1U CubeSat architecture, structural integrity, and telemetry sensors to space science researchers.
-                    </div>
-
-                    <div class="tech-stack">
-                        <span class="tag-pill">Technical Presentation</span>
-                        <span class="tag-pill">ISG - ISRS</span>
-                        <span class="tag-pill">IIT Kharagpur</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2: ISRAAS Satellite -->
-            <div class="card" data-category="aerospace">
+        <div class="grid-container">
+            <!-- Card 1: ISRAAS Satellite -->
+            <div class="card" onclick="openCaseStudy('israas')">
                 <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite" loading="lazy">
                 <div class="card-content">
                     <h3>ISRAAS Satellite Project</h3>
                     <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">Team Lead | CubeSat System Engineering</p>
-
                     <div class="psi-block">
                         <strong>🎯 Problem</strong>
                         Need for deployable, lightweight satellite payloads for tactical border security and atmospheric telemetry.
                     </div>
                     <div class="psi-block">
                         <strong>🔧 Solution</strong>
-                        Led full engineering cycle design of a lightweight deployable CubeSat integrating structural COTS components and environmental sensor arrays.
+                        Led full engineering cycle design of a lightweight deployable CubeSat integrating COTS structural frames and sensor arrays.
                     </div>
-
                     <div class="tech-stack">
                         <span class="tag-pill">CubeSat</span>
                         <span class="tag-pill">Border Security</span>
@@ -762,30 +791,20 @@
                 </div>
             </div>
 
-            <!-- Card 3: ASCEND UAV -->
-            <div class="card" data-category="uav">
+            <!-- Card 2: ASCEND UAV -->
+            <div class="card" onclick="openCaseStudy('ascend')">
                 <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND UAV" loading="lazy">
                 <div class="card-content">
                     <h3>ASCEND – Autonomous UAV System</h3>
                     <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">IRoC-U 2026 (ISRO Robotics Challenge) Proposal</p>
-
                     <div class="psi-block">
                         <strong>🎯 Problem</strong>
                         GPS signals are unavailable or jammed in indoor environments and urban canyons, making traditional UAV navigation impossible.
                     </div>
                     <div class="psi-block">
                         <strong>🔧 Solution</strong>
-                        Vision-based navigation pipeline using OAK-D Pro stereo camera for visual odometry, integrated with Pixhawk flight controller running ArduPilot firmware and SLAM fusion.
+                        Vision-based navigation pipeline using OAK-D Pro stereo camera for visual odometry, integrated with Pixhawk flight controller.
                     </div>
-
-                    <details>
-                        <summary class="aura-text">View Detailed Architecture & Sensor Fusion</summary>
-                        <div style="padding: 10px 0; color: var(--text-muted); font-size: 0.88rem;">
-                            <p><strong>Sensor Fusion:</strong> Combines IMU, LiDAR range sensors, and OAK-D Pro depth perception for real-time localization.</p>
-                            <p><strong>Protocol:</strong> MAVLink high-speed telemetry with companion computer data processing.</p>
-                        </div>
-                    </details>
-
                     <div class="tech-stack">
                         <span class="tag-pill">Pixhawk & ArduPilot</span>
                         <span class="tag-pill">OAK-D Pro</span>
@@ -795,24 +814,20 @@
                 </div>
             </div>
 
-            <!-- Card 4: e-Yantra Robotics -->
-            <div class="card" data-category="uav">
+            <!-- Card 3: e-Yantra Robotics -->
+            <div class="card" onclick="openCaseStudy('eyantra')">
                 <img src="Project Image/e_yantra_iitBombay.jpg" alt="e-Yantra Robotics" loading="lazy">
                 <div class="card-content">
                     <h3>e-Yantra Robotics Competition 2025-26</h3>
                     <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">National Semi-Finalist | IIT Bombay</p>
-
                     <div class="psi-block">
                         <strong>🎯 Problem</strong>
                         Agricultural logistics requires efficient automation for transporting harvested crops from fields to collection centers.
                     </div>
                     <div class="psi-block">
                         <strong>🔧 Solution</strong>
-                        Autonomous delivery robot built on STM32 microcontroller with PID-optimized line following, IR array sensors, and CoppeliaSim simulation testing.
+                        Autonomous delivery robot built on STM32 microcontroller with PID-optimized line following and IR array sensors.
                     </div>
-
-                    <a href="Project Image/eyrc.pdf" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.8rem; margin-bottom: 12px; width: fit-content;">View Completion Letter</a>
-
                     <div class="tech-stack">
                         <span class="tag-pill">STM32</span>
                         <span class="tag-pill">Embedded C</span>
@@ -822,63 +837,180 @@
                 </div>
             </div>
 
-            <!-- Card 5: Remote Sensing & GIS -->
-            <div class="card" data-category="ai">
-                <img src="Project Image/ISA_Internship_letter.png" alt="Vegetation Health Assessment" loading="lazy">
+            <!-- Card 4: 3D Chocolate Printer -->
+            <div class="card" onclick="openCaseStudy('chocoprint')">
+                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer" loading="lazy">
+                <div class="card-content">
+                    <h3>3-Axis Chocolate 3D Printer: Thermal Control</h3>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">December 2025 | Additive Manufacturing</p>
+                    <div class="psi-block">
+                        <strong>🎯 Problem</strong>
+                        Food additive manufacturing suffers from nozzle clogging and poor layer adhesion due to non-newtonian fluid properties.
+                    </div>
+                    <div class="psi-block">
+                        <strong>🔧 Solution</strong>
+                        Dual-microcontroller coordination (ATmega328P + CNC Shield) managing real-time thermal extrusion and kinematics.
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tag-pill">Mechatronics</span>
+                        <span class="tag-pill">Thermal Control</span>
+                        <span class="tag-pill">3D Printing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: 4-DOF Robotic Arm -->
+            <div class="card" onclick="openCaseStudy('roboarm')">
+                <img src="Project Image/roboarm.jpeg" alt="4-DOF Robotic Arm" loading="lazy">
+                <div class="card-content">
+                    <h3>4-DOF Articulated Robotic Arm</h3>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">October 2025 | Robotics & Kinematics</p>
+                    <div class="psi-block">
+                        <strong>🎯 Problem</strong>
+                        Precise spatial pick-and-place automation requires deterministic joint trajectory control and stable power delivery.
+                    </div>
+                    <div class="psi-block">
+                        <strong>🔧 Solution</strong>
+                        Custom SMPS power distribution, forward/inverse kinematic algorithms, and calibrated PWM joint actuation.
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tag-pill">Kinematics</span>
+                        <span class="tag-pill">Microcontrollers</span>
+                        <span class="tag-pill">PWM Control</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Generative Design Rover -->
+            <div class="card" onclick="openCaseStudy('rover')">
+                <img src="Project Image/GD_Rover.png" alt="Generative Design Mars Rover" loading="lazy">
+                <div class="card-content">
+                    <h3>Generative Design: Mars Rover Chassis</h3>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">June 2026 | CAD & Mass Optimization</p>
+                    <div class="psi-block">
+                        <strong>🎯 Problem</strong>
+                        Excess mass in planetary exploration rovers exponentially increases aerospace launch costs.
+                    </div>
+                    <div class="psi-block">
+                        <strong>🔧 Solution</strong>
+                        Applied Autodesk Fusion generative design to a 6-wheel Rocker-Bogie kinematic model for maximum strength-to-weight ratio.
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tag-pill">Autodesk Fusion</span>
+                        <span class="tag-pill">Generative Design</span>
+                        <span class="tag-pill">Rocker-Bogie</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PAGE 3: RESEARCH & PUBLICATIONS ================= -->
+    <section id="page-research" class="page-view">
+        <h2 class="section-title">Research Works & Publications</h2>
+        <p class="section-subtitle">Conference proceedings, space science presentations, and technical whitepapers</p>
+
+        <div class="grid-container">
+            <!-- IIT Kharagpur Conference Presentation -->
+            <div class="card" onclick="openCaseStudy('iitkgp')">
+                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="IIT Kharagpur Presentation" loading="lazy">
+                <div class="card-content">
+                    <h3>Conference Presentation at IIT Kharagpur, Kolkata</h3>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">First Author & Presenter | National ISG-ISRS Conference 2025</p>
+                    <div class="psi-block">
+                        <strong>🎯 Scope & Research Focus</strong>
+                        Delivered advanced technical insights on CubeSat structural architecture, remote-sensing methodologies, and environmental sensor payloads.
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tag-pill">Technical Presentation</span>
+                        <span class="tag-pill">ISG - ISRS</span>
+                        <span class="tag-pill">IIT Kharagpur</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NIRVANA Research Paper -->
+            <div class="card" onclick="openCaseStudy('nirvana')">
+                <img src="Project Image/Nirvana_frontpage.png" alt="NIRVANA Research Paper" loading="lazy">
+                <div class="card-content">
+                    <h3>NIRVANA – NIE Research Vehicle for Atmospheric Analysis</h3>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">First Author | Technical Publication</p>
+                    <div class="psi-block">
+                        <strong>🎯 Research Contribution</strong>
+                        A comprehensive paper detailing the design of a low-cost 1U CubeSat built using 3D-printed PLA and COTS components with dual ESP32/ATmega328P architecture.
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tag-pill">CubeSat Paper</span>
+                        <span class="tag-pill">Dual-Microcontroller</span>
+                        <span class="tag-pill">IoT Telemetry</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PAGE 4: INTERNSHIPS ================= -->
+    <section id="page-internships" class="page-view">
+        <h2 class="section-title">Internships & Field Experience</h2>
+        <p class="section-subtitle">Practical space-tech training and remote sensing applications</p>
+
+        <div class="grid-container">
+            <!-- India Space Academy Internship -->
+            <div class="card" onclick="openCaseStudy('ndvi')">
+                <img src="Project Image/ISA_Internship_letter.png" alt="ISA Internship Completion" loading="lazy">
                 <div class="card-content">
                     <h3>AI-Based Vegetation Health Assessment (NDVI)</h3>
-                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">India Space Academy Internship | Jan 2026</p>
-
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">India Space Academy (ISA) Internship | Remote Sensing & GIS | Jan 2026</p>
                     <div class="psi-block">
-                        <strong>💡 Impact</strong>
-                        Processed Sentinel-2 satellite imagery over ~3,453 km² using Google Earth Engine, computing NDVI bands and implementing AI rule-classification for automated vegetation zoning.
+                        <strong>🎯 Project Scope</strong>
+                        Satellite-based vegetation health analysis over ~3,453 km² using Sentinel-2 imagery in Google Earth Engine.
                     </div>
-
+                    <div class="psi-block">
+                        <strong>🔧 Implementation</strong>
+                        Computed NDVI bands and implemented AI-inspired rule classification to automatically segment vegetation into health categories.
+                    </div>
                     <div class="tech-stack">
                         <span class="tag-pill">Google Earth Engine</span>
                         <span class="tag-pill">Sentinel-2</span>
                         <span class="tag-pill">NDVI</span>
-                        <span class="tag-pill">GIS</span>
+                        <span class="tag-pill">Remote Sensing</span>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- ================= PAGE 3: ABOUT ================= -->
+    <!-- ================= PAGE 5: ABOUT ================= -->
     <section id="page-about" class="page-view">
         <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Hardware Engineer, UAV Enthusiast, and Space-Tech Researcher</p>
+        <p class="section-subtitle">Mechanical Engineer, UAV Flight Dynamics Enthusiast, and Space-Tech Systems Builder</p>
 
-        <div class="profile-card">
-            <img src="Project Image/My_Image.jpeg" alt="Thaman S N Profile">
-            <div>
-                <h3>Thaman S N</h3>
-                <p style="color: var(--cyan-accent); font-weight: 600; margin-bottom: 1rem;">Mechanical Engineering Student | President, Raptor Dynamics</p>
-                <p style="color: var(--text-sub); margin-bottom: 1.5rem;">
-                    I am an engineering student at The National Institute of Engineering (NIE), Mysuru. My work bridges core mechanical design, autonomous aerial robotics, space systems (CubeSats/CanSats), and edge AI infrastructure.
-                </p>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                    <a href="Project Image/Thaman_SN_Resume.pdf.pdf" target="_blank" class="btn btn-cyan"><i class="fas fa-file-pdf"></i> Download Full Resume</a>
-                    <a href="mailto:thamansn217@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email Me</a>
-                </div>
-            </div>
-        </div>
-
+        <!-- CLICKABLE GOOGLE MAPS AFFILIATION CARDS -->
+        <h3 style="margin-bottom: 1rem; color: var(--text-main);"><i class="fas fa-map-marker-alt" style="color: var(--cyan-accent);"></i> Current Affiliation & Status (Click blocks for Google Map locations)</h3>
         <div class="affiliation-grid">
-            <div class="affiliation-box">
-                <strong>🏫 Institution</strong>
-                NIE Mysuru (Mechanical Dept.)
-            </div>
-            <div class="affiliation-box">
-                <strong>🛸 Club Leadership</strong>
-                President, Raptor Dynamics
-            </div>
-            <div class="affiliation-box">
-                <strong>📍 Location</strong>
-                Bengaluru / Mysuru, Karnataka
-            </div>
+            <a href="https://maps.google.com/?q=The+National+Institute+of+Engineering+Mysuru" target="_blank" class="affiliation-box">
+                <strong>🏫 Institution <i class="fas fa-external-link-alt"></i></strong>
+                <span>NIE, Mysore</span>
+                <small>The National Institute of Engineering, Mysuru</small>
+            </a>
+
+            <a href="https://maps.google.com/?q=The+National+Institute+of+Engineering+Mysuru" target="_blank" class="affiliation-box">
+                <strong>🤖 Robotics Club <i class="fas fa-external-link-alt"></i></strong>
+                <span>Member (1st Sem – 3rd Sem)</span>
+                <small>NIE Robotics Club Campus Lab</small>
+            </a>
+
+            <a href="https://maps.google.com/?q=The+National+Institute+of+Engineering+Mysuru" target="_blank" class="affiliation-box">
+                <strong>🛸 Raptor Dynamics <i class="fas fa-external-link-alt"></i></strong>
+                <span>Founding President (4th Sem – 8th Sem)</span>
+                <small>Collegiate UAV & Aerospace Organization</small>
+            </a>
+
+            <a href="https://maps.google.com/?q=Mysuru+Karnataka+India" target="_blank" class="affiliation-box">
+                <strong>📍 Residence <i class="fas fa-external-link-alt"></i></strong>
+                <span>Mysuru / Bengaluru</span>
+                <small>Karnataka, India</small>
+            </a>
         </div>
 
         <h3 style="margin-bottom: 1.5rem; color: var(--text-main);">Engineering Journey & Timeline</h3>
@@ -895,20 +1027,40 @@
                 <span class="timeline-year">2023 & 2021 — Early Innovation Honors</span>
                 <p style="color: var(--text-sub);">Secured 1st Prize in SSTH 2023 and 2nd Prize in SSTH 2021; awarded INSPIRE Award 2021 and 2019 by Govt. of India.</p>
             </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2022 & Earlier — Young Scientist & Science Honors</span>
+                <p style="color: var(--text-sub);">Awarded District Level Young Scientist Award, State Level Young Scientist Award, and National Level Young Scientist Award for early scientific aptitude, creative engineering, and project execution.</p>
+            </div>
         </div>
     </section>
 
-    <!-- ================= PAGE 4: ACHIEVEMENTS ================= -->
+    <!-- ================= PAGE 6: ACHIEVEMENTS ================= -->
     <section id="page-achievements" class="page-view">
         <h2 class="section-title">Exhibitions & Achievements</h2>
-        <p class="section-subtitle">National awards, research honors, and technical competition victories</p>
+        <p class="section-subtitle">Recognition for innovation across aerospace, robotics, and scientific research</p>
 
         <div class="grid-container">
             <div class="card">
-                <img src="Project Image/National_level_youngscientist_award.jpeg" alt="National Young Scientist Award" loading="lazy">
+                <img src="Project Image/National_level_youngscientist_award.jpeg" alt="National Young Scientist" loading="lazy">
                 <div class="card-content">
                     <h3>National Young Scientist Award</h3>
-                    <p>Honored at the national level for satellite system development and scientific research excellence.</p>
+                    <p>Honored at the national level for innovative satellite system development and scientific research excellence.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/State_level_youngscientist_award.jpg" alt="State Young Scientist" loading="lazy">
+                <div class="card-content">
+                    <h3>State Young Scientist Award</h3>
+                    <p>Awarded for outstanding performance in science and engineering innovation at the state level.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/District_level_youngscientist_award.jpg" alt="District Young Scientist" loading="lazy">
+                <div class="card-content">
+                    <h3>District Young Scientist Award</h3>
+                    <p>Recognized for exceptional scientific creativity and project execution at the district level.</p>
                 </div>
             </div>
 
@@ -937,82 +1089,68 @@
             </div>
 
             <div class="card">
+                <img src="Project Image/SSTH_2021.jpg" alt="SSTH 2021" loading="lazy">
+                <div class="card-content">
+                    <h3>SSTH 2021 — Second Prize</h3>
+                    <p>Secured 2nd Prize in Sahyadri Science Talent Hunt 2021, demonstrating analytical problem-solving skills.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/inspire_award_2021.jpg" alt="INSPIRE 2021" loading="lazy">
+                <div class="card-content">
+                    <h3>INSPIRE Award 2021</h3>
+                    <p>Recognized under the INSPIRE initiative by Govt. of India for continued scientific innovation.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/Inspire_award_2019.jpg" alt="INSPIRE 2019" loading="lazy">
+                <div class="card-content">
+                    <h3>INSPIRE Award 2019</h3>
+                    <p>Selected under the INSPIRE Award scheme for early scientific aptitude and innovative thinking.</p>
+                </div>
+            </div>
+
+            <div class="card">
                 <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg" alt="ISG-ISRS Certificate" loading="lazy">
                 <div class="card-content">
                     <h3>ISG-ISRS 2025 Certificate</h3>
                     <p>Official Certification for presentation on space technologies at IIT Kharagpur.</p>
                 </div>
             </div>
-
-            <div class="card">
-                <img src="Project Image/State_level_youngscientist_award.jpg" alt="State Young Scientist" loading="lazy">
-                <div class="card-content">
-                    <h3>State Young Scientist Award</h3>
-                    <p>Awarded for outstanding performance in engineering innovation at the state level.</p>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- ================= PAGE 5: BLOG ================= -->
+    <!-- ================= PAGE 7: BLOG ================= -->
     <section id="page-blog" class="page-view">
         <h2 class="section-title">Engineering Blog & Build Logs</h2>
-        <p class="section-subtitle">Deep dives into self-hosted edge infrastructure, generative design, and mechatronics</p>
+        <p class="section-subtitle">Click any article to open the complete technical whitepaper</p>
 
         <div class="grid-container">
-
-            <!-- Private Local AI Micro-Server FLAGSHIP POST -->
-            <div class="card" style="grid-column: 1 / -1;">
-                <img src="Project Image/myAi_3.jpeg" alt="Private Local AI Hardware Setup" loading="lazy" style="max-height: 420px;">
+            <!-- Blog 1: AI Server -->
+            <div class="card" onclick="openCaseStudy('ai-microserver')" style="grid-column: 1 / -1;">
+                <img src="Project Image/My_Image.jpeg" alt="AI Server" loading="lazy" style="max-height: 260px;">
                 <div class="card-content">
                     <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">July 2026 | Infrastructure & Security</p>
                     <h3>Private Local AI Micro-Server & Edge Infrastructure</h3>
-                    <p><strong>System Architect & Lead.</strong> Repurposed an unused Dell OptiPlex desktop into a 24/7 self-hosted LLM edge server. Engineered the complete local AI runtime pipeline using Ollama (Qwen2.5-Coder), Open WebUI, and encrypted Cloudflare Tunnels for secure multi-device access without port forwarding.</p>
-                    
-                    <details open>
-                        <summary class="aura-text">Explore More: Full Technical Report & System Gallery</summary>
-                        <div style="margin-top: 14px; color: var(--text-muted); font-size: 0.92rem;">
-                            <p style="margin-bottom: 12px;"><strong>Overview:</strong> Built a production-grade private AI infrastructure using spare bare-metal hardware. Rather than relying on cloud subscriptions, this project demonstrates end-to-end control over hardware resource constraints, inference optimization, and secure global tunneling.</p>
-
-                            <!-- Gallery Grid -->
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 15px;">
-                                <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; border: 1px solid var(--border-glow);">
-                                    <img src="Project Image/myAi_3.jpeg" alt="Setup" style="width:100%; height:180px; object-fit:contain; padding:0; background:none;">
-                                    <span style="font-size:0.75rem; color:var(--text-sub); display:block; text-align:center; margin-top:6px;">1. 24/7 Bare-Metal Hardware Setup</span>
-                                </div>
-                                <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; border: 1px solid var(--border-glow);">
-                                    <img src="Project Image/myAi_2.jpeg" alt="Cloudflare Tunnel" style="width:100%; height:180px; object-fit:contain; padding:0; background:none;">
-                                    <span style="font-size:0.75rem; color:var(--text-sub); display:block; text-align:center; margin-top:6px;">2. Cloudflare Tunnel Connectivity Logs</span>
-                                </div>
-                                <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; border: 1px solid var(--border-glow);">
-                                    <img src="Project Image/myAi_4.jpeg" alt="Web UI" style="width:100%; height:180px; object-fit:contain; padding:0; background:none;">
-                                    <span style="font-size:0.75rem; color:var(--text-sub); display:block; text-align:center; margin-top:6px;">3. Authenticated Open WebUI Dashboard</span>
-                                </div>
-                                <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; border: 1px solid var(--border-glow);">
-                                    <img src="Project Image/myAi_1.jpeg" alt="Mobile App" style="width:100%; height:180px; object-fit:contain; padding:0; background:none;">
-                                    <span style="font-size:0.75rem; color:var(--text-sub); display:block; text-align:center; margin-top:6px;">4. Remote Mobile Access (PWA Interface)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
-
+                    <p>Repurposed an unused Dell OptiPlex desktop into a 24/7 self-hosted LLM edge server running Ollama (Qwen2.5-Coder), Open WebUI, and Cloudflare Tunnels. <strong>Click to view the 4-part hardware & UI screenshot gallery.</strong></p>
                     <div class="tech-stack">
                         <span class="tag-pill">Ollama</span>
                         <span class="tag-pill">Cloudflare Tunnels</span>
                         <span class="tag-pill">Open WebUI</span>
                         <span class="tag-pill">Edge Computing</span>
-                        <span class="tag-pill">Python</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Blog 2: Generative Design Rover -->
-            <div class="card">
+            <!-- Blog 2: Rover Chassis -->
+            <div class="card" onclick="openCaseStudy('rover')">
                 <img src="Project Image/GD_Rover.png" alt="Generative Design Mars Rover" loading="lazy">
                 <div class="card-content">
-                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">June 2026 | CAD & Mass Optimization</p>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">June 2026 | CAD & Optimization</p>
                     <h3>Generative Design: Mars Rover Chassis</h3>
-                    <p>Mass-optimized 6-wheeled rover suspension engineered using Autodesk Fusion generative design algorithms for extraterrestrial payload constraints.</p>
+                    <p>Mass-optimized 6-wheeled rover suspension engineered using Autodesk Fusion generative design algorithms.</p>
                     <div class="tech-stack">
                         <span class="tag-pill">Autodesk Fusion</span>
                         <span class="tag-pill">Generative Design</span>
@@ -1021,13 +1159,13 @@
                 </div>
             </div>
 
-            <!-- Blog 3: Chocolate 3D Printer -->
-            <div class="card">
+            <!-- Blog 3: Chocolate Printer -->
+            <div class="card" onclick="openCaseStudy('chocoprint')">
                 <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer" loading="lazy">
                 <div class="card-content">
                     <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">December 2025 | Additive Mfg</p>
                     <h3>3-Axis Chocolate 3D Printer: Thermal Control</h3>
-                    <p>Fluid extrusion challenges solved using dual-microcontroller coordination (ATmega328P + CNC Shield) for precise thermal and feed-rate management.</p>
+                    <p>Fluid extrusion challenges solved using dual-microcontroller coordination for thermal and feed-rate management.</p>
                     <div class="tech-stack">
                         <span class="tag-pill">Mechatronics</span>
                         <span class="tag-pill">Thermal Control</span>
@@ -1036,13 +1174,13 @@
                 </div>
             </div>
 
-            <!-- Blog 4: 4-DOF Robotic Arm -->
-            <div class="card">
+            <!-- Blog 4: Robotic Arm -->
+            <div class="card" onclick="openCaseStudy('roboarm')">
                 <img src="Project Image/roboarm.jpeg" alt="4-DOF Robotic Arm" loading="lazy">
                 <div class="card-content">
                     <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">October 2025 | Robotics</p>
                     <h3>4-DOF Articulated Robotic Arm</h3>
-                    <p>Kinematic manipulator design featuring custom power distribution via SMPS, forward/inverse kinematics, and PWM joint actuation.</p>
+                    <p>Kinematic manipulator design featuring custom power distribution via SMPS and forward/inverse kinematics.</p>
                     <div class="tech-stack">
                         <span class="tag-pill">Kinematics</span>
                         <span class="tag-pill">Microcontrollers</span>
@@ -1050,11 +1188,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- ================= PAGE 6: CONTACT ================= -->
+    <!-- ================= PAGE 8: CONTACT ================= -->
     <section id="page-contact" class="page-view">
         <h2 class="section-title">Let's Build Something Amazing</h2>
         <p class="section-subtitle">Open to space-tech collaborations, research projects, and engineering opportunities</p>
@@ -1084,20 +1221,16 @@
         </div>
     </section>
 
-    <!-- STATS MODAL POPUP -->
-    <div class="stats-modal" id="statsModal" hidden>
-        <div class="stats-modal-panel">
-            <div class="stats-modal-header">
-                <div>
-                    <span style="font-size:0.75rem; text-transform:uppercase; color:var(--cyan-accent); font-weight:700;">Snapshot Details</span>
-                    <h3 id="statsModalTitle" style="font-size:1.5rem;">Engineering Highlights</h3>
-                </div>
-                <button class="stats-modal-close" onclick="closeModal()">&times;</button>
-            </div>
-            <p id="statsModalIntro" style="color:var(--text-muted); margin-bottom:1rem;"></p>
-            <ul id="statsModalList" style="list-style:none; display:grid; gap:10px;"></ul>
+    <!-- ================= PAGE 9: DEDICATED CASE STUDY SPA VIEW (`#page-case-study`) ================= -->
+    <section id="page-case-study" class="page-view">
+        <button class="btn btn-outline" onclick="switchView(lastActiveView || 'projects')" style="margin-bottom: 2rem;">
+            <i class="fas fa-arrow-left"></i> Back to Projects / Overview
+        </button>
+
+        <div class="case-study-container" id="cs-render-box">
+            <!-- Dynamically populated by openCaseStudy(id) -->
         </div>
-    </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
@@ -1109,10 +1242,17 @@
         <p>© 2026 Thaman S N. Driven by Curiosity, Powered by Engineering 🚀</p>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- JAVASCRIPT ENGINE -->
     <script>
-        // 1. SPA View Switching
+        let lastActiveView = 'home';
+
+        // 1. SPA Navigation Switching
         function switchView(pageId) {
+            const currentActive = document.querySelector('.page-view.active-view');
+            if (currentActive && currentActive.id !== 'page-case-study') {
+                lastActiveView = currentActive.id.replace('page-', '');
+            }
+
             document.querySelectorAll('.page-view').forEach(view => view.classList.remove('active-view'));
             const targetView = document.getElementById('page-' + pageId);
             if (targetView) {
@@ -1130,23 +1270,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 2. Category Filtering on Projects Page
-        function filterProjects(category) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            const cards = document.querySelectorAll('#projects-grid .card');
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // 3. Counter Animation
+        // 2. Counter Animation
         (function animateCounters() {
             const counters = document.querySelectorAll('.countup');
             counters.forEach(counter => {
@@ -1165,94 +1289,322 @@
             });
         })();
 
-        // 4. Modal Logic
-        const modal = document.getElementById('statsModal');
-        const modalTitle = document.getElementById('statsModalTitle');
-        const modalIntro = document.getElementById('statsModalIntro');
-        const modalList = document.getElementById('statsModalList');
-
-        const statData = {
-            projects: {
-                title: 'Engineering Projects',
-                intro: 'Major project work and technical builds across satellite, UAV, and robotics domains.',
-                items: [
-                    'Conference Presentation at IIT Kharagpur, Kolkata',
-                    'ISRAAS Satellite Project (Deployable CubeSat)',
-                    'ASCEND – Autonomous UAV System (ISRO Challenge)',
-                    'Generative Design: Mars Rover Chassis',
-                    'e-Yantra Robotics Competition 2025-26',
-                    'AI-Based Vegetation Health Assessment (NDVI)',
-                    'Private Local AI Micro-Server & Edge Infrastructure',
-                    'NIRVANA CubeSat Research Work',
-                    '3-Axis Chocolate 3D Printer',
-                    '4-DOF Articulated Robotic Arm'
-                ]
+        // 3. COMPLETE CASE STUDY ENGINE (Structured exactly like Sinchan Rao's portfolio)
+        const projectCaseStudies = {
+            'israas': {
+                title: 'ISRAAS Satellite Project',
+                subtitle: 'Deployable CubeSat for Border Security & Environmental Telemetry',
+                category: 'Space & Satellite Engineering',
+                event: 'ISRAAS National Satellite Mission',
+                achievement: 'Team Lead & Chief Structural Engineer',
+                overview: 'Directed the complete engineering cycle to develop a lightweight deployable CubeSat for tactical border security and atmospheric monitoring. The system integrates advanced structural frames with multi-sensor telemetry payloads.',
+                features: [
+                    'Deployable 1U CubeSat form factor',
+                    'Real-time atmospheric telemetry sensing',
+                    'Border security surveillance payload integration',
+                    'COTS structural frame optimization',
+                    'Full team leadership and systems integration'
+                ],
+                problem: 'Traditional surveillance systems are limited by terrestrial obstacles and lack rapid deployment capabilities for tactical border security and continuous environmental telemetry.',
+                solution: 'Engineered a deployable CubeSat unit incorporating lightweight structural materials and high-efficiency sensor payloads, ensuring rapid deployment and stable atmospheric telemetry transmission.',
+                techDetails: 'Full structural finite element analysis (FEA) and system integration of onboard power distribution, communications transceiver, and atmospheric sensors.',
+                gallery: [
+                    { img: 'Project Image/ISRAAS-Satellite Image.jpeg', caption: 'ISRAAS Satellite System Architecture & Payload Frame' }
+                ],
+                stack: ['CubeSat', 'Border Security', 'Environmental Telemetry', 'Systems Engineering'],
+                impact: 'Successfully designed and validated a deployable CubeSat architecture capable of providing critical environmental and tactical border surveillance data.'
             },
-            events: {
-                title: 'National Events',
-                intro: 'Research conferences, competitions, and technical programs.',
-                items: [
-                    'ISG-ISRS National Conference at IIT Kharagpur',
-                    'ISRO Robotics Challenge (IRoC-U 2026)',
-                    'e-Yantra Robotics Competition by IIT Bombay',
-                    'India Space Academy Remote Sensing Training',
-                    'ENVISION 2025 Technical Competition',
-                    'Maker Bhavan Foundation Vishvakarma Awards 2025'
-                ]
+            'ascend': {
+                title: 'ASCEND – Autonomous UAV System',
+                subtitle: 'Vision-Based GPS-Denied Autonomous Quadrotor Navigation',
+                category: 'UAV Flight Dynamics & Robotics',
+                event: 'ISRO Robotics Challenge (IRoC-U 2026)',
+                achievement: 'Concept Proposal Submitted to ISRO',
+                overview: 'A GPS-denied autonomous quadrotor UAV system designed for indoor navigation and surveillance. The system focuses on stereo vision-based odometry and multi-sensor SLAM localization.',
+                features: [
+                    'GPS-denied autonomous indoor navigation',
+                    'OAK-D Pro stereo camera visual odometry',
+                    'SLAM mapping for complex environments',
+                    'Pixhawk + ArduPilot flight controller integration',
+                    'Multi-sensor fusion (IMU + LiDAR + Vision)'
+                ],
+                problem: 'GPS signals are unavailable or unreliable in indoor environments, underground facilities, and urban canyons, making traditional autonomous UAV navigation impossible.',
+                solution: 'Implemented a vision-based autonomous navigation pipeline using an OAK-D Pro stereo camera for depth perception and odometry, integrated with a Pixhawk flight controller running ArduPilot firmware.',
+                techDetails: 'Sensor fusion architecture combining high-rate IMU data, LiDAR rangefinding, and stereo vision using SLAM algorithms to maintain centimeter-accurate localization without GPS.',
+                gallery: [
+                    { img: 'Project Image/isro_dronechallenge.jpg', caption: 'ASCEND Autonomous UAV Quadrotor & Vision Sensor Payload' }
+                ],
+                stack: ['Pixhawk & ArduPilot', 'OAK-D Pro Stereo', 'LiDAR Sensors', 'ROS & Python', 'SLAM Algorithms'],
+                impact: 'Demonstrated advanced understanding of autonomous aerial robotics, computer vision, and GPS-denied navigation for mission-critical search-and-rescue applications.'
             },
-            domains: {
-                title: 'Research Domains',
-                intro: 'Core technical focus areas.',
-                items: [
-                    'Satellite Systems & CubeSats',
-                    'Autonomous Robotics & UAV Flight Dynamics',
-                    'Edge AI Infrastructure & Systems Security',
-                    'Remote Sensing & Geospatial Analytics (GIS)',
-                    'Additive Manufacturing & Generative Design'
-                ]
+            'ai-microserver': {
+                title: 'Private Local AI Micro-Server & Edge Infrastructure',
+                subtitle: 'Self-Hosted LLM Portal with Encrypted Cloudflare Tunneling',
+                category: 'Edge Computing & System Architecture',
+                event: 'Personal Lab & Edge Infrastructure Build',
+                achievement: '24/7 Production Server Uptime',
+                overview: 'Repurposed an unused Dell OptiPlex desktop into a 24/7 self-hosted LLM edge server. Engineered the complete local AI runtime pipeline using Ollama (Qwen2.5-Coder), Open WebUI, and encrypted Cloudflare Tunnels for secure multi-device access without opening risky router ports.',
+                features: [
+                    '24/7 bare-metal local LLM micro-server',
+                    'Open-source code models (Qwen2.5-Coder & DeepSeek-Coder)',
+                    'Encrypted remote tunneling via Cloudflare (HTTP/2)',
+                    'Role-Based Access Controls (RBAC) & authentication',
+                    'Zero inbound router port-forwarding required'
+                ],
+                problem: 'Commercial cloud AI subscriptions pose privacy risks, ongoing costs, and dependency on external servers, while local PCs often sit unused without serving remote workloads.',
+                solution: 'Configured a Dell OptiPlex as a dedicated edge micro-server running Ollama and an authenticated Open WebUI dashboard, tunneled securely through Cloudflare over HTTP/2 for global PWA mobile access.',
+                techDetails: 'Resolved C++ Redistributable runtime DLL errors, PyTorch CPU constraints, and Windows Defender Firewall socket rules to ensure stable 24/7 server uptime.',
+                gallery: [
+                    { img: 'Project Image/myAi_3.jpeg', caption: '1. Hardware Infrastructure — Complete Dell OptiPlex PC setup running 24/7 as an edge micro-server.' },
+                    { img: 'Project Image/myAi_2.jpeg', caption: '2. Networking Pipeline — Live cloudflared terminal logs confirming secure DNS, UDP, TCP, and HTTP/2 tunnel connectivity.' },
+                    { img: 'Project Image/myAi_4.jpeg', caption: '3. Web Portal Interface — Self-hosted Open WebUI desktop dashboard for real-time model interaction.' },
+                    { img: 'Project Image/myAi_1.jpeg', caption: '4. Mobile PWA Deployment — Seamless remote access to local LLMs on mobile devices from anywhere in the world.' }
+                ],
+                stack: ['Ollama', 'Cloudflare Tunnels', 'Open WebUI', 'Edge Computing', 'Python & REST API', 'Windows Server Management'],
+                impact: 'Established a zero-cost, privacy-focused, globally accessible AI development server with 100% data ownership.'
             },
-            awards: {
-                title: 'Prize Money & Recognition',
-                intro: 'Honors and prize milestones.',
-                items: [
-                    'National Young Scientist Award',
-                    'ENVISION 2025 First Prize Winner',
-                    'SSTH 2023 First Prize Winner',
-                    'SSTH 2021 Second Prize Winner',
-                    'INSPIRE Award Winner (2021 & 2019)',
-                    'Vishvakarma Awards 2025 Semi-Finalist'
-                ]
+            'eyantra': {
+                title: 'e-Yantra Robotics Competition 2025-26',
+                subtitle: 'Autonomous Farm-to-Collection Center Delivery Robot',
+                category: 'Autonomous Robotics & Mechatronics',
+                event: 'National Robotics Competition by IIT Bombay',
+                achievement: 'National Semi-Finalist',
+                overview: 'Developing an autonomous farm-to-collection center delivery robot capable of navigating complex agricultural paths, sharp curves, zigzag patterns, and color-coded crate retrieval.',
+                features: [
+                    'Advanced PID line following for complex paths',
+                    'IR array sensors for color-coded crate identification',
+                    'STM32 microcontroller embedded architecture',
+                    'PID-optimized motor speed and steering control',
+                    'Iterative validation using CoppeliaSim simulation'
+                ],
+                problem: 'Agricultural logistics requires efficient automation for transporting harvested crops from fields to collection centers without manual labor bottlenecks.',
+                solution: 'Designed an autonomous robot system driven by an STM32 microcontroller with PID control algorithms to smoothly track white/black lines and execute automated crate pickup.',
+                techDetails: 'Real-time sensor fusion from IR arrays, PWM motor driver regulation, and simulation verification inside CoppeliaSim before physical deployment.',
+                gallery: [
+                    { img: 'Project Image/e_yantra_iitBombay.jpg', caption: 'e-Yantra IIT Bombay Robotics Competition Prototype & Path Arena' }
+                ],
+                stack: ['STM32 Microcontroller', 'Embedded C', 'CoppeliaSim', 'IR Array Sensors', 'PID Control'],
+                impact: 'Validated advanced embedded control algorithms and autonomous crate manipulation in India’s premier collegiate robotics competition.'
+            },
+            'iitkgp': {
+                title: 'Conference Presentation at IIT Kharagpur, Kolkata',
+                subtitle: 'National ISG–ISRS Space Technology Conference',
+                category: 'Space Science & Research Publications',
+                event: 'National ISG–ISRS Conference 2025',
+                achievement: 'First Author & Presenter',
+                overview: 'Delivered advanced technical insights on CubeSat architecture, structural telemetry, and remote-sensing satellite applications at the National ISG–ISRS Conference held at IIT Kharagpur.',
+                features: [
+                    'First author technical research presentation',
+                    'CubeSat structural and telemetry architecture',
+                    'Remote-sensing satellite application analysis',
+                    'Peer engagement with leading space researchers'
+                ],
+                problem: 'Emerging space researchers need open forums to validate low-cost CubeSat architectures against national aerospace standards.',
+                solution: 'Presented a peer-reviewed technical paper and slide deck detailing small-satellite telemetry and structural frame optimization.',
+                techDetails: 'Comparative analysis of 1U CubeSat materials, telemetry link budgets, and earth-observation sensor payloads.',
+                gallery: [
+                    { img: 'Project Image/ISG-ISRS_2025_Presentaion Image.jpeg', caption: 'Technical Presentation at National ISG-ISRS Conference, IIT Kharagpur' }
+                ],
+                stack: ['Technical Presentation', 'ISG - ISRS', 'Satellite Architecture', 'Research Publication'],
+                impact: 'Established national recognition for NIE Mysuru’s satellite research initiatives among aerospace scientists.'
+            },
+            'nirvana': {
+                title: 'NIRVANA – NIE Research Vehicle for Atmospheric Analysis',
+                subtitle: 'Low-Cost 1U CubeSat with Dual-Microcontroller Telemetry',
+                category: 'Space Science & Research Publications',
+                event: 'Technical Publication & Whitepaper',
+                achievement: 'First Author Research Paper',
+                overview: 'A research paper detailing the development of NIRVANA, a low-cost 1U CubeSat built using 3D-printed PLA and commercial off-the-shelf (COTS) components with a dual-microcontroller architecture.',
+                features: [
+                    'Dual-microcontroller architecture (ESP32 & ATmega328P)',
+                    '3D-printed PLA structural frame integration',
+                    'Real-time IoT telemetry for environmental sensing',
+                    'Sustainable Earth observation payload'
+                ],
+                problem: 'Conventional CubeSat components are prohibitively expensive for iterative collegiate research and atmospheric telemetry testing.',
+                solution: 'Engineered a COTS-based 1U CubeSat leveraging additive manufacturing for the chassis and a dual microcontroller setup to divide flight telemetry and sensor processing.',
+                techDetails: 'ESP32 handles wireless telemetry and downlink protocols while ATmega328P manages deterministic sensor sampling for temperature, pressure, and humidity.',
+                gallery: [
+                    { img: 'Project Image/Nirvana_frontpage.png', caption: 'NIRVANA Research Paper Front Page & System Architecture' }
+                ],
+                stack: ['CubeSat Paper', 'Dual-Microcontroller', 'IoT Telemetry', '3D Printed PLA'],
+                impact: 'Provided an open-source, cost-effective blueprint for collegiate atmospheric satellite testing.'
+            },
+            'ndvi': {
+                title: 'AI-Based Vegetation Health Assessment (NDVI)',
+                subtitle: 'Satellite Geospatial Analysis using Sentinel-2 & Google Earth Engine',
+                category: 'Remote Sensing & GIS Internships',
+                event: 'India Space Academy (ISA) Winter Training',
+                achievement: 'Completed Intensive Internship — Jan 2026',
+                overview: 'Conducted satellite-based vegetation health analysis using Sentinel-2 imagery in Google Earth Engine. Computed NDVI to assess vegetation density and implemented AI-inspired classification techniques to automatically segment vegetation into health categories.',
+                features: [
+                    'Sentinel-2 multispectral imagery processing',
+                    'NDVI computation using NIR (B8) and Red (B4) bands',
+                    'Seasonal vegetation analysis (Pre & Post Monsoon)',
+                    'AI-based rule classification for vegetation zoning',
+                    'Area statistics mapping across ~3,453 km²'
+                ],
+                problem: 'Manual environmental monitoring across large districts is slow and incapable of tracking rapid seasonal vegetation changes.',
+                solution: 'Utilized cloud-based Google Earth Engine scripts to process Sentinel-2 data, generate NDVI heatmaps, and automate health classification.',
+                techDetails: 'Computed NDVI = (NIR - Red) / (NIR + Red). Classified vegetation into Dense (~3,453 km²), Moderate, and Sparse zones across Dakshina Kannada district.',
+                gallery: [
+                    { img: 'Project Image/ISA_Internship_letter.png', caption: 'India Space Academy (ISA) Official Internship Completion Letter' }
+                ],
+                stack: ['Google Earth Engine', 'Sentinel-2', 'NDVI Analysis', 'Remote Sensing', 'GIS'],
+                impact: 'Demonstrated real-world AI and remote sensing integration for regional agricultural and forestry monitoring.'
+            },
+            'rover': {
+                title: 'Generative Design: Mars Rover Chassis',
+                subtitle: 'Mass-Optimized 6-Wheeled Rocker-Bogie Suspension',
+                category: 'Additive Manufacturing & CAD',
+                event: 'Engineering Blog & Build Log — June 2026',
+                achievement: 'Design Lead',
+                overview: 'Engineered a mass-optimized 6-wheeled rover suspension system using Autodesk Fusion generative design capabilities to maximize the strength-to-weight ratio for extraterrestrial exploration.',
+                features: [
+                    'Generative design structural CAD optimization',
+                    '6-Wheel Rocker-Bogie kinematics integration',
+                    'Precise definition of preserve and obstacle geometries',
+                    'Mass reduction targeting aerospace payload constraints'
+                ],
+                problem: 'Excess mass in planetary rovers exponentially increases launch costs, while traditional machined chassis lack organic load-path efficiency.',
+                solution: 'Applied generative design algorithms to generate an organic, lattice-like structural chassis that reduces weight by over 30% while preserving load integrity.',
+                techDetails: 'Defined strict preserve regions for DC motor mounts and central suspension shafts under dynamic planetary obstacle load cases.',
+                gallery: [
+                    { img: 'Project Image/GD_Rover.png', caption: 'Autodesk Fusion Generative Design Mars Rover Chassis Assembly' }
+                ],
+                stack: ['Autodesk Fusion', 'Generative Design', 'Rocker-Bogie Kinematics', 'CAD Assembly', 'Mass Optimization'],
+                impact: 'Created a next-generation lightweight rover structure suitable for metal additive manufacturing.'
+            },
+            'chocoprint': {
+                title: '3-Axis Chocolate 3D Printer: Thermal Control & Kinematics',
+                subtitle: 'Mechatronic Extrusion System for Non-Newtonian Fluids',
+                category: 'Additive Manufacturing & Mechatronics',
+                event: 'Engineering Blog & Build Log — Dec 2025',
+                achievement: 'Lead Mechatronics Builder',
+                overview: 'A deep dive into developing the ChocoPrint 3D. This project solved the challenges of fluid extrusion using dual-microcontroller coordination (ATmega328P + CNC Shield) to manage chocolate rheology.',
+                features: [
+                    '3-axis Cartesian CNC motion kinematics',
+                    'ATmega328P + CNC Shield stepper control',
+                    'Real-time thermal syringe heating regulation',
+                    'Viscosity and extrusion feed-rate synchronization'
+                ],
+                problem: 'Chocolate acts as a non-Newtonian fluid that clogs nozzles if thermal control deviates by even 1°C during deposition.',
+                solution: 'Integrated a dedicated PID heating element around the syringe extruder coordinated with G-code feed-rates.',
+                techDetails: 'Custom firmware balancing stepper motor steps-per-mm with syringe plunger advancement.',
+                gallery: [
+                    { img: 'Project Image/Chocolate 3D printing_vishvakarma.jpeg', caption: 'ChocoPrint 3D Printer Assembly & Extrusion Prototype' }
+                ],
+                stack: ['Mechatronics', 'Thermal Control', '3D Printing', 'ATmega328P', 'CNC Shield'],
+                impact: 'Successfully achieved uniform multi-layer chocolate prints with high dimensional accuracy.'
+            },
+            'roboarm': {
+                title: 'Kinematics and Control: 4-DOF Articulated Robotic Arm',
+                subtitle: 'Spatial Manipulator with Custom SMPS Power Distribution',
+                category: 'Robotics & Control Systems',
+                event: 'Engineering Blog & Build Log — Oct 2025',
+                achievement: 'Robotics Builder',
+                overview: 'Assembled and programmed a physical 4-DOF robotic manipulator for pick-and-place operations, implementing forward/inverse kinematics and custom SMPS power distribution.',
+                features: [
+                    '4-DOF articulated manipulator arm',
+                    'Forward and inverse kinematic algorithms',
+                    'Custom Switch Mode Power Supply (SMPS) build',
+                    'Calibrated PWM servo joint actuation'
+                ],
+                problem: 'Servo voltage drop under heavy torque loads causes jerky joint movement and kinematic inaccuracy.',
+                solution: 'Built a stable high-current SMPS power distribution board paired with mathematically modeled inverse kinematics.',
+                techDetails: 'Microcontroller translates spatial (X, Y, Z) coordinates into precise PWM pulse widths for base, shoulder, elbow, and gripper.',
+                gallery: [
+                    { img: 'Project Image/roboarm.jpeg', caption: '4-DOF Robotic Arm Prototype & Embedded Driver Setup' }
+                ],
+                stack: ['Kinematics', 'Microcontrollers', 'PWM Control', 'SMPS Design', 'Robotics'],
+                impact: 'Delivered a smooth, deterministic robotic pick-and-place system for lab automation.'
             }
         };
 
-        document.querySelectorAll('.stat-trigger').forEach(trigger => {
-            trigger.addEventListener('click', () => {
-                const key = trigger.dataset.stat;
-                const data = statData[key];
-                if (!data) return;
+        function openCaseStudy(id) {
+            const data = projectCaseStudies[id];
+            if (!data) return;
 
-                modalTitle.textContent = data.title;
-                modalIntro.textContent = data.intro;
-                modalList.innerHTML = '';
-                data.items.forEach(item => {
-                    const li = document.createElement('li');
-                    li.style.cssText = 'background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.08);';
-                    li.textContent = item;
-                    modalList.appendChild(li);
-                });
-                modal.hidden = false;
-                document.body.classList.add('modal-open');
+            let checklistHTML = '';
+            data.features.forEach(feat => {
+                checklistHTML += `<li><i class="fas fa-check-circle"></i> ${feat}</li>`;
             });
-        });
 
-        function closeModal() {
-            modal.hidden = true;
-            document.body.classList.remove('modal-open');
+            let galleryHTML = '';
+            data.gallery.forEach(item => {
+                galleryHTML += `
+                    <div class="cs-gallery-item">
+                        <img src="${item.img}" alt="Project Visual">
+                        <span>${item.caption}</span>
+                    </div>
+                `;
+            });
+
+            let stackHTML = '';
+            data.stack.forEach(tech => {
+                stackHTML += `<span class="tag-pill">${tech}</span>`;
+            });
+
+            const renderBox = document.getElementById('cs-render-box');
+            renderBox.innerHTML = `
+                <div class="cs-header">
+                    <div class="cs-badges">
+                        <span class="tag-pill">${data.category}</span>
+                        <span class="tag-pill" style="border-color: var(--teal-accent); color: var(--teal-accent);">${data.event}</span>
+                    </div>
+                    <h2 class="cs-title">${data.title}</h2>
+                    <p class="cs-subtitle">${data.subtitle}</p>
+                    <p style="color: var(--text-muted); margin-top: 6px; font-size: 0.95rem;"><i class="fas fa-trophy" style="color: #fbbf24;"></i> <strong>Achievement:</strong> ${data.achievement}</p>
+                </div>
+
+                <div class="cs-section">
+                    <h3><i class="fas fa-info-circle"></i> Overview</h3>
+                    <p style="color: var(--text-sub); font-size: 1.05rem; line-height: 1.8;">${data.overview}</p>
+                </div>
+
+                <div class="cs-section">
+                    <h3><i class="fas fa-list-check"></i> Key Features</h3>
+                    <ul class="cs-checklist">${checklistHTML}</ul>
+                </div>
+
+                <div class="cs-section">
+                    <h3><i class="fas fa-bullseye"></i> Problem Statement</h3>
+                    <div class="psi-block" style="font-size: 1rem; line-height: 1.7; padding: 16px 20px;">
+                        <strong>🎯 The Problem</strong>
+                        ${data.problem}
+                    </div>
+                </div>
+
+                <div class="cs-section">
+                    <h3><i class="fas fa-wrench"></i> Solution & Engineering Architecture</h3>
+                    <div class="psi-block" style="border-color: var(--teal-accent); font-size: 1rem; line-height: 1.7; padding: 16px 20px;">
+                        <strong style="color: var(--teal-accent);">🔧 Our Solution</strong>
+                        ${data.solution}
+                    </div>
+                    <p style="color: var(--text-muted); margin-top: 14px; line-height: 1.7;"><strong>Technical Implementation:</strong> ${data.techDetails}</p>
+                </div>
+
+                <div class="cs-section">
+                    <h3><i class="fas fa-images"></i> Technical Visualizations & Gallery</h3>
+                    <div class="cs-gallery">${galleryHTML}</div>
+                </div>
+
+                <div class="cs-section">
+                    <h3><i class="fas fa-microchip"></i> Technologies Used</h3>
+                    <div class="tech-stack" style="gap: 10px;">${stackHTML}</div>
+                </div>
+
+                <div class="cs-section" style="margin-bottom: 0;">
+                    <h3><i class="fas fa-lightbulb"></i> Impact & Results</h3>
+                    <div class="psi-block" style="border-color: #fbbf24; background: rgba(251, 191, 36, 0.08); font-size: 1rem; line-height: 1.7; padding: 16px 20px;">
+                        <strong style="color: #fbbf24;">💡 Demonstrated Impact</strong>
+                        ${data.impact}
+                    </div>
+                </div>
+            `;
+
+            switchView('case-study');
         }
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
     </script>
 </body>
 </html>
