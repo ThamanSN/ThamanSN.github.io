@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thaman S N | Engineering & Automation Portfolio</title>
+    <title>Thaman S N | Engineering & Space-Tech Portfolio</title>
     <!-- Modern Space & Technical Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -291,6 +291,67 @@
             letter-spacing: 0.05em;
         }
 
+        /* --- Compact Executive Grid for Home Page --- */
+        .compact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .compact-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-glow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.25s ease;
+            box-shadow: var(--shadow-card);
+            cursor: pointer;
+        }
+
+        .compact-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-cyan);
+            background: var(--bg-card-hover);
+        }
+
+        .compact-card img {
+            width: 100%;
+            height: 170px;
+            object-fit: contain;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.45);
+            border-bottom: 1px solid var(--border-glow);
+        }
+
+        .compact-card-content {
+            padding: 1.25rem 1.4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .compact-card-content h3 {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin-bottom: 0.45rem;
+            line-height: 1.35;
+        }
+
+        .compact-card-content p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
         /* --- Clickable Google Map Affiliation Cards --- */
         .affiliation-grid {
             display: grid;
@@ -342,7 +403,7 @@
             margin-top: 4px;
         }
 
-        /* --- Cards & Grid System --- */
+        /* --- Standard Cards & Grid System (Projects/Research/Blog Pages) --- */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -398,7 +459,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Problem / Solution / Impact Formatting inside cards */
         .psi-block {
             background: rgba(0, 0, 0, 0.25);
             border-radius: var(--radius-md);
@@ -671,7 +731,7 @@
     <!-- ================= PAGE 1: HOME ================= -->
     <section id="page-home" class="page-view active-view">
         <div class="hero-banner">
-            <h1 class="hero-title">I build <span>advanced mechatronic</span> space-tech & automation systems</h1>
+            <h1 class="hero-title">I build <span>advanced mechatronic </span>  space-tech & automation systems</h1>
             <p class="hero-subtitle">From satellite CubeSats and autonomous UAV flight dynamics to self-hosted local AI micro-servers and additive manufacturing.</p>
             
             <div class="hero-pills">
@@ -708,58 +768,104 @@
             </div>
         </div>
 
-        <!-- FEATURED PROJECTS PREVIEW -->
+        <!-- ALL-MISSIONS COMPACT DASHBOARD GRID (10 Compact Cards) -->
         <h2 class="section-title">Featured Missions</h2>
         <p class="section-subtitle">Click any project card to open its complete case study report</p>
 
-        <div class="grid-container">
-            <!-- ISRAAS Satellite -->
-            <div class="card" onclick="openCaseStudy('israas')">
+        <div class="compact-grid">
+            <!-- 1. ISRAAS Satellite -->
+            <div class="compact-card" onclick="openCaseStudy('israas')">
                 <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite" loading="lazy">
-                <div class="card-content">
+                <div class="compact-card-content">
                     <h3>ISRAAS Satellite Project</h3>
-                    <p><strong>Team Lead.</strong> Directed the complete engineering cycle to develop a lightweight deployable CubeSat for border security and atmospheric monitoring.</p>
-                    <div class="tech-stack">
-                        <span class="tag-pill">CubeSat</span>
-                        <span class="tag-pill">Border Security</span>
-                        <span class="tag-pill">Team Leadership</span>
-                    </div>
+                    <p>Directed the engineering cycle for a lightweight deployable CubeSat built for border security and atmospheric telemetry monitoring.</p>
                 </div>
             </div>
 
-            <!-- ASCEND UAV -->
-            <div class="card" onclick="openCaseStudy('ascend')">
+            <!-- 2. ASCEND UAV -->
+            <div class="compact-card" onclick="openCaseStudy('ascend')">
                 <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND UAV System" loading="lazy">
-                <div class="card-content">
+                <div class="compact-card-content">
                     <h3>ASCEND – Autonomous UAV System</h3>
-                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">IRoC-U 2026 (ISRO Robotics Challenge)</p>
-                    <p>Vision-based GPS-denied autonomous quadrotor navigation using stereo vision and SLAM sensor fusion.</p>
-                    <div class="tech-stack">
-                        <span class="tag-pill">Pixhawk & ArduPilot</span>
-                        <span class="tag-pill">OAK-D Pro</span>
-                        <span class="tag-pill">SLAM</span>
-                    </div>
+                    <p>Vision-based GPS-denied autonomous quadrotor navigation using OAK-D Pro stereo odometry and multi-sensor SLAM localization.</p>
                 </div>
             </div>
 
-            <!-- Private Local AI (Corrected: using myAi_3.jpeg instead of My_Image.jpeg) -->
-            <div class="card" onclick="openCaseStudy('ai-microserver')">
-                <img src="Project Image/myAi_3.jpeg" alt="Private Local AI Micro-Server" loading="lazy" style="max-height: 260px;">
-                <div class="card-content">
+            <!-- 3. Private Local AI -->
+            <div class="compact-card" onclick="openCaseStudy('ai-microserver')">
+                <img src="Project Image/myAi_3.jpeg" alt="Private Local AI Micro-Server" loading="lazy">
+                <div class="compact-card-content">
                     <h3>Private Local AI Micro-Server</h3>
-                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">Edge Infrastructure & Security</p>
-                    <p>Self-hosted 24/7 LLM edge server running Ollama and Open WebUI with encrypted Cloudflare Tunnels.</p>
-                    <div class="tech-stack">
-                        <span class="tag-pill">Ollama</span>
-                        <span class="tag-pill">Cloudflare Tunnels</span>
-                        <span class="tag-pill">Open WebUI</span>
-                    </div>
+                    <p>Repurposed bare-metal hardware into a 24/7 self-hosted LLM edge server with encrypted Cloudflare Tunnels and Open WebUI.</p>
+                </div>
+            </div>
+
+            <!-- 4. e-Yantra Robotics -->
+            <div class="compact-card" onclick="openCaseStudy('eyantra')">
+                <img src="Project Image/e_yantra_iitBombay.jpg" alt="e-Yantra Robotics" loading="lazy">
+                <div class="compact-card-content">
+                    <h3>e-Yantra Robotics Competition 2025-26</h3>
+                    <p>Autonomous farm-to-collection center delivery robot featuring STM32 control, PID line following, and IR crate identification.</p>
+                </div>
+            </div>
+
+            <!-- 5. IIT Kharagpur Conference Presentation -->
+            <div class="compact-card" onclick="openCaseStudy('iitkgp')">
+                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="IIT Kharagpur Conference Presentation" loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Conference Presentation at IIT Kharagpur</h3>
+                    <p>First-author research presentation on low-cost CubeSat structural architecture and remote-sensing environmental payloads.</p>
+                </div>
+            </div>
+
+            <!-- 6. NIRVANA Research Paper -->
+            <div class="compact-card" onclick="openCaseStudy('nirvana')">
+                <img src="Project Image/Nirvana_frontpage.png" alt="NIRVANA Research Paper" loading="lazy">
+                <div class="compact-card-content">
+                    <h3>NIRVANA – Atmospheric Analysis CubeSat</h3>
+                    <p>First-author technical paper on a 3D-printed 1U CubeSat featuring dual ESP32/ATmega328P flight telemetry architecture.</p>
+                </div>
+            </div>
+
+            <!-- 7. AI Vegetation Assessment (NDVI) -->
+            <div class="compact-card" onclick="openCaseStudy('ndvi')">
+                <img src="Project Image/ISA_Internship_letter.png" alt="AI-Based Vegetation Assessment" loading="lazy">
+                <div class="compact-card-content">
+                    <h3>AI-Based Vegetation Assessment (NDVI)</h3>
+                    <p>Processed Sentinel-2 satellite imagery over ~3,453 km² in Google Earth Engine with automated AI health classification.</p>
+                </div>
+            </div>
+
+            <!-- 8. Mars Rover Chassis -->
+            <div class="compact-card" onclick="openCaseStudy('rover')">
+                <img src="Project Image/GD_Rover.png" alt="Generative Design Mars Rover" loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Generative Design: Mars Rover Chassis</h3>
+                    <p>Mass-optimized 6-wheeled Rocker-Bogie suspension engineered in Autodesk Fusion for aerospace payload constraints.</p>
+                </div>
+            </div>
+
+            <!-- 9. Chocolate 3D Printer -->
+            <div class="compact-card" onclick="openCaseStudy('chocoprint')">
+                <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer" loading="lazy">
+                <div class="compact-card-content">
+                    <h3>3-Axis Chocolate 3D Printer</h3>
+                    <p>Mechatronic fluid extrusion system using dual-microcontroller coordination for real-time thermal and feed-rate control.</p>
+                </div>
+            </div>
+
+            <!-- 10. 4-DOF Robotic Arm -->
+            <div class="compact-card" onclick="openCaseStudy('roboarm')">
+                <img src="Project Image/roboarm.jpeg" alt="4-DOF Articulated Robotic Arm" loading="lazy">
+                <div class="compact-card-content">
+                    <h3>4-DOF Articulated Robotic Arm</h3>
+                    <p>Spatial kinematic manipulator featuring custom SMPS power distribution and mathematically modeled PWM trajectory control.</p>
                 </div>
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 2.5rem;">
-            <button class="btn btn-outline" onclick="switchView('projects')">Explore All Projects & Details →</button>
+        <div style="text-align: center; margin-top: 1rem;">
+            <button class="btn btn-outline" onclick="switchView('projects')">Explore Detailed Architecture & Filters →</button>
         </div>
     </section>
 
@@ -1128,7 +1234,7 @@
         <p class="section-subtitle">Click any article to open the complete technical whitepaper</p>
 
         <div class="grid-container">
-            <!-- Blog 1: AI Server (Corrected: using myAi_3.jpeg instead of My_Image.jpeg) -->
+            <!-- Blog 1: AI Server -->
             <div class="card" onclick="openCaseStudy('ai-microserver')" style="grid-column: 1 / -1;">
                 <img src="Project Image/myAi_3.jpeg" alt="AI Server" loading="lazy" style="max-height: 260px;">
                 <div class="card-content">
