@@ -4,34 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thaman S N | Engineering & Research Portfolio</title>
-    <!-- Modern Technical Typography: Space Grotesk (Headings) & Plus Jakarta Sans (Body) -->
+    <!-- Fonts: Space Grotesk for bold modern headers, Plus Jakarta Sans for body text -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <meta name="google-site-verification" content="1m-jVR0HrB5bJCQ3zwADsiA-th-Ia8Bjolj-LmWBLcw" />
-    <meta name="keywords" content="Thaman S N, Thaman SN, Thaman S.N., Mechanical Engineer, Portfolio, ISRO, Robotics, Additive Manufacturing">
-    <meta name="description" content="Official portfolio of Thaman S N, a Mechanical Engineer and aspiring ISRO Scientist.">
+    <meta name="keywords" content="Thaman S N, Thaman SN, Thaman S.N., Mechanical Engineer, Portfolio, ISRO, Raptor Dynamics, Satellite Systems">
+    <meta name="description" content="Official portfolio of Thaman S N, Mechanical Engineering student at NIE Mysuru, President of Raptor Dynamics, and aspiring Space-Tech Innovator.">
 
     <style>
         :root {
-            --bg-base: #090d16;
-            --bg-surface: #111827;
-            --bg-elevated: #1e293b;
-            --card-bg: rgba(17, 24, 39, 0.78);
-            --card-hover-bg: rgba(30, 41, 59, 0.88);
-            --border-subtle: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(56, 189, 248, 0.35);
-            --accent-primary: #38bdf8;
-            --accent-soft: #7dd3fc;
-            --accent-teal: #2dd4bf;
+            --bg-dark: #070a13;
+            --bg-card: rgba(15, 23, 42, 0.65);
+            --bg-card-hover: rgba(30, 41, 59, 0.85);
+            --border-glow: rgba(56, 189, 248, 0.18);
+            --border-hover: rgba(56, 189, 248, 0.45);
+            --cyan-primary: #38bdf8;
+            --cyan-accent: #00d2ff;
+            --teal-accent: #2dd4bf;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --text-light: #cbd5e1;
-            --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-            --shadow-hover: 0 20px 40px -15px rgba(2, 132, 199, 0.25);
+            --text-sub: #cbd5e1;
             --radius-lg: 16px;
             --radius-md: 10px;
-            --radius-sm: 6px;
+            --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+            --shadow-cyan: 0 0 25px rgba(56, 189, 248, 0.2);
         }
 
         * {
@@ -44,16 +41,15 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             color: var(--text-main);
-            background-color: var(--bg-base);
+            background-color: var(--bg-dark);
             background-image: 
-                radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 90% 20%, rgba(45, 212, 191, 0.06) 0%, transparent 35%),
-                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+                radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 85% 30%, rgba(45, 212, 191, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 15% 70%, rgba(14, 165, 233, 0.08) 0%, transparent 50%);
             background-attachment: fixed;
-            overflow-x: hidden;
+            min-height: 100vh;
             line-height: 1.65;
+            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -65,25 +61,23 @@
         h1, h2, h3, h4 {
             font-family: 'Space Grotesk', sans-serif;
             color: var(--text-main);
-            font-weight: 700;
             letter-spacing: -0.02em;
         }
 
-        h2 {
-            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-            margin-bottom: 2.8rem;
+        h2.section-title {
+            font-size: clamp(2rem, 3.8vw, 2.6rem);
             text-align: center;
-            position: relative;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        h2::after {
-            content: '';
-            display: block;
-            width: 48px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-teal));
-            margin: 14px auto 0;
-            border-radius: 4px;
+        p.section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 2.8rem;
         }
 
         a {
@@ -92,217 +86,420 @@
             transition: all 0.25s ease;
         }
 
-        /* --- Navigation --- */
+        /* --- Sticky Navigation Bar --- */
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(9, 13, 22, 0.85);
+            background: rgba(7, 10, 19, 0.88);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            padding: 1rem 6%;
+            padding: 1rem 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--border-subtle);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .logo {
+        .nav-logo {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.25rem;
             font-weight: 700;
             color: var(--text-main);
-            letter-spacing: -0.03em;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            cursor: pointer;
         }
 
-        .logo::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: var(--accent-primary);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent-primary);
+        .nav-logo-badge {
+            background: linear-gradient(135deg, var(--cyan-accent), var(--teal-accent));
+            color: #000;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 800;
         }
 
         .nav-links {
             display: flex;
-            gap: 0.5rem;
+            gap: 0.4rem;
             align-items: center;
         }
 
-        .nav-links a {
-            font-size: 0.85rem;
+        .nav-link {
+            font-size: 0.88rem;
             font-weight: 600;
             color: var(--text-muted);
-            padding: 8px 14px;
+            padding: 8px 16px;
             border-radius: 999px;
+            cursor: pointer;
             transition: all 0.2s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--text-main);
-            background: rgba(255, 255, 255, 0.05);
+        .nav-link:hover, .nav-link.active {
+            color: var(--cyan-accent);
+            background: rgba(56, 189, 248, 0.12);
         }
 
-        /* --- Hero Section --- */
-        .hero {
-            min-height: 88vh;
-            display: flex;
+        /* --- SPA View Switching --- */
+        .page-view {
+            display: none;
+            padding: 60px 8% 90px;
+            max-width: 1320px;
+            margin: 0 auto;
+            animation: fadeInView 0.4s ease-out forwards;
+        }
+
+        .page-view.active-view {
+            display: block;
+        }
+
+        @keyframes fadeInView {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Buttons & Pills --- */
+        .btn {
+            padding: 12px 26px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            cursor: pointer;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            padding: 80px 20px 60px;
+            gap: 8px;
+            transition: all 0.25s ease;
         }
 
-        .hero-content {
-            max-width: 960px;
-            width: 100%;
-            padding: 3rem 2.5rem;
-            border: 1px solid var(--border-subtle);
-            border-radius: 24px;
-            background: rgba(17, 24, 39, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            box-shadow: var(--shadow-card);
+        .btn-cyan {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: #fff;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
+        }
+
+        .btn-cyan:hover {
+            box-shadow: 0 6px 28px rgba(56, 189, 248, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--cyan-primary);
+            color: var(--cyan-accent);
+            transform: translateY(-2px);
+        }
+
+        .tag-pill {
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--cyan-primary);
+            padding: 5px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* --- Hero Section (Home) --- */
+        .hero-banner {
             text-align: center;
-            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 40px 0 60px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .hero-content img {
-            width: 150px; 
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid rgba(56, 189, 248, 0.4);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 3.8rem);
+        .hero-title {
+            font-size: clamp(2.4rem, 5vw, 4rem);
             line-height: 1.15;
-            margin-bottom: 0.4rem;
-            background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero .subtitle {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            color: var(--accent-primary);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero .bio {
-            font-size: 1.05rem;
-            color: var(--text-light);
-            max-width: 740px;
-            margin: 0 auto 2.5rem auto;
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-sub);
+            margin-bottom: 2rem;
             line-height: 1.8;
-            font-weight: 400;
         }
 
-        /* Hero Buttons */
-        .hero-buttons {
+        .hero-pills {
             display: flex;
-            gap: 14px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 2.5rem;
+            gap: 10px;
+            margin-bottom: 2rem;
         }
 
-        .hero-btn {
-            padding: 12px 28px;
-            border-radius: 999px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .hero-btn-primary {
-            background: var(--text-main);
-            color: var(--bg-base);
-            border: 1px solid var(--text-main);
-        }
-
-        .hero-btn-primary:hover {
-            background: var(--accent-primary);
-            border-color: var(--accent-primary);
-            color: var(--bg-base);
-            transform: translateY(-2px);
-        }
-
-        .hero-btn-secondary {
-            background: rgba(255, 255, 255, 0.04);
-            color: var(--text-main);
-            border: 1px solid var(--border-subtle);
-        }
-
-        .hero-btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Stats Grid */
-        .hero-stats {
+        /* Stats Grid Callout */
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(4, minmax(130px, 1fr));
-            gap: 12px;
-            border-top: 1px solid var(--border-subtle);
-            padding-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 3rem 0;
         }
 
-        .hero-stat-item {
-            border: 1px solid var(--border-subtle);
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
             border-radius: var(--radius-lg);
-            padding: 18px 14px;
-            background: rgba(255, 255, 255, 0.02);
-            width: 100%;
+            padding: 22px 18px;
             text-align: left;
             cursor: pointer;
-            font: inherit;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
             transition: all 0.25s ease;
         }
 
-        .hero-stat-item strong {
-            display: block;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.7rem;
-            font-weight: 700;
-            color: var(--text-main);
-            line-height: 1.1;
-            margin-bottom: 4px;
+        .stat-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-cyan);
+            background: var(--bg-card-hover);
         }
 
-        .hero-stat-item span {
-            font-size: 0.78rem;
+        .stat-card strong {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            color: var(--cyan-accent);
+            display: block;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .stat-card span {
+            font-size: 0.82rem;
             color: var(--text-muted);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
 
-        .hero-stat-item:hover,
-        .hero-stat-item:focus-visible {
-            background: rgba(56, 189, 248, 0.05);
-            border-color: var(--border-hover);
-            transform: translateY(-3px);
+        /* --- Cards & Grid System --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
         }
 
-        .hero-stat-item:focus-visible {
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-glow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-card);
+        }
+
+        .card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-cyan);
+            background: var(--bg-card-hover);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            max-height: 380px;
+            object-fit: contain;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.4);
+            border-bottom: 1px solid var(--border-glow);
+        }
+
+        .card-content {
+            padding: 1.75rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+            margin-bottom: 1rem;
+        }
+
+        /* Problem / Solution / Impact Formatting */
+        .psi-block {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: var(--radius-md);
+            padding: 12px 14px;
+            border-left: 3px solid var(--cyan-primary);
+            margin-bottom: 1rem;
+            font-size: 0.88rem;
+        }
+
+        .psi-block strong {
+            color: var(--cyan-accent);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tech-stack {
+            margin-top: auto;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding-top: 1rem;
+        }
+
+        /* Category Filter Bar */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            color: var(--text-main);
+            background: rgba(56, 189, 248, 0.15);
+            border-color: var(--cyan-primary);
+        }
+
+        /* --- Accordions / Expandable Details --- */
+        details {
+            margin: 1rem 0;
+            border-top: 1px solid var(--border-glow);
+            border-bottom: 1px solid var(--border-glow);
+            padding: 0.75rem 0;
+        }
+
+        summary.aura-text {
+            color: var(--cyan-accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
             outline: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        summary.aura-text::-webkit-details-marker { display: none; }
+
+        summary.aura-text::before {
+            content: '✦';
+            font-size: 0.8em;
+            color: var(--teal-accent);
+        }
+
+        /* --- About Page Components --- */
+        .profile-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--cyan-primary);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+        }
+
+        .affiliation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 3rem;
+        }
+
+        .affiliation-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-glow);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+        }
+
+        .affiliation-box strong {
+            color: var(--cyan-accent);
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        /* Journey Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 24px;
+            border-left: 2px solid var(--border-glow);
+            margin: 2rem 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--cyan-accent);
+            box-shadow: 0 0 10px var(--cyan-accent);
+        }
+
+        .timeline-year {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--cyan-accent);
         }
 
         /* --- Stats Modal --- */
@@ -313,15 +510,12 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            background: rgba(9, 13, 22, 0.85);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            background: rgba(7, 10, 19, 0.85);
+            backdrop-filter: blur(16px);
             z-index: 2000;
         }
 
-        .stats-modal[hidden] {
-            display: none;
-        }
+        .stats-modal[hidden] { display: none; }
 
         .stats-modal-panel {
             width: min(720px, 100%);
@@ -331,650 +525,414 @@
             border-radius: 20px;
             border: 1px solid var(--border-hover);
             background: #0f172a;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
         }
 
         .stats-modal-header {
             display: flex;
-            align-items: flex-start;
             justify-content: space-between;
-            gap: 16px;
+            align-items: flex-start;
             margin-bottom: 1.25rem;
-        }
-
-        .stats-modal-kicker {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent-primary);
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .stats-modal-title {
-            font-size: clamp(1.4rem, 3vw, 1.8rem);
-            color: var(--text-main);
         }
 
         .stats-modal-close {
-            border: 1px solid var(--border-subtle);
             background: rgba(255, 255, 255, 0.05);
-            color: var(--text-main);
-            border-radius: 50%;
+            border: 1px solid var(--border-glow);
+            color: #fff;
             width: 36px;
             height: 36px;
-            font-size: 1.1rem;
+            border-radius: 50%;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .stats-modal-close:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .stats-modal-intro {
-            color: var(--text-muted);
-            margin-bottom: 1.25rem;
-            font-size: 0.95rem;
-        }
-
-        .stats-modal-list {
-            list-style: none;
-            display: grid;
-            gap: 10px;
-        }
-
-        .stats-modal-list li {
-            padding: 1rem 1.25rem;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-subtle);
-            background: rgba(255, 255, 255, 0.02);
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        /* --- Sections General --- */
-        section {
-            padding: 90px 8%;
-            max-width: 1320px;
-            margin: 0 auto;
-        }
-
-        /* --- Skills Section --- */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        .skill-tag {
-            background: var(--bg-surface);
-            padding: 12px 20px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-subtle);
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--text-light);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.2s ease;
-        }
-
-        .skill-tag:hover {
-            border-color: var(--accent-primary);
-            color: var(--text-main);
-            transform: translateY(-2px);
-            background: rgba(56, 189, 248, 0.05);
-        }
-
-        .skill-tag i {
-            color: var(--accent-primary);
-            font-size: 1rem;
-        }
-
-        /* --- Projects & Cards Grid --- */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--border-subtle);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            display: flex;
-            flex-direction: column;
-            box-shadow: var(--shadow-card);
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-hover);
-            background: var(--card-hover-bg);
-        }
-
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--border-subtle);
-            background: #090d16;
-        }
-
-        /* Keep visual framing intact for specific images */
-        #projects .card img, #blog .card img {
-            height: auto;
-            max-height: 480px;
-            object-fit: contain;
-            padding: 12px;
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        #awards .card img, #certifications .card img {
-            height: auto;
-            max-height: 380px;
-            object-fit: contain;
-            padding: 16px;
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        #internships .grid-container, #publications .grid-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        #internships .card, #publications .card {
-            max-width: 820px;
-            width: 100%;
-        }
-
-        #internships .card img, #publications .card img {
-            height: auto;
-            max-height: 520px;
-            object-fit: contain;
-            padding: 16px;
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        #publications .card img {
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        
-        #publications .card img:hover {
-            transform: scale(1.015);
-        }
-
-        .card-content {
-            padding: 1.75rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .card-content p {
-            flex-grow: 1;
-        }
-
-        .card-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-main);
-            line-height: 1.35;
-        }
-
-        .card-content p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.65;
-        }
-
-        .tech-stack {
-            margin-top: 1.5rem;
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .tech-stack span {
-            font-size: 0.75rem;
-            font-weight: 600;
-            background: rgba(56, 189, 248, 0.08);
-            color: var(--accent-soft);
-            padding: 5px 10px;
-            border-radius: var(--radius-sm);
-            border: 1px solid rgba(56, 189, 248, 0.18);
-            letter-spacing: 0.02em;
-        }
-
-        /* --- Interactive Accordion / Details --- */
-        details {
-            margin: 1.25rem 0;
-            border-top: 1px solid var(--border-subtle);
-            border-bottom: 1px solid var(--border-subtle);
-            padding: 0.75rem 0;
-        }
-
-        .aura-text {
-            color: var(--accent-primary);
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            outline: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: color 0.2s ease;
-        }
-
-        .aura-text::-webkit-details-marker {
-            display: none;
-        }
-        
-        .aura-text::before {
-            content: '→';
-            font-size: 1em;
-            transition: transform 0.2s ease;
-        }
-        
-        details[open] .aura-text::before {
-            transform: rotate(90deg);
-        }
-
-        .aura-text:hover {
-            color: var(--accent-soft);
+            font-size: 1.2rem;
         }
 
         /* --- Footer --- */
         footer {
-            background: #060911;
-            padding: 48px 10%;
+            background: #04060c;
+            padding: 40px 8%;
             text-align: center;
-            border-top: 1px solid var(--border-subtle);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             color: var(--text-muted);
             font-size: 0.9rem;
         }
 
         .social-links {
-            margin-bottom: 24px;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 16px;
+            margin-bottom: 20px;
         }
 
         .social-links a {
-            font-size: 1.4rem;
-            color: var(--text-muted);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid var(--border-glow);
+            background: var(--bg-card);
+            color: var(--text-sub);
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            border: 1px solid var(--border-subtle);
-            background: var(--bg-surface);
-            transition: all 0.2s ease;
+            font-size: 1.2rem;
         }
 
         .social-links a:hover {
-            color: var(--text-main);
-            border-color: var(--accent-primary);
-            background: rgba(56, 189, 248, 0.1);
+            color: var(--cyan-accent);
+            border-color: var(--cyan-primary);
             transform: translateY(-3px);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(16px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            box-shadow: var(--shadow-cyan);
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            .hero-content { padding: 2rem 1.25rem; border-radius: 20px; }
-            .hero-content img { width: 120px; height: 120px; }
-            nav { padding: 1rem; }
-            .nav-links { display: none; }
-            section { padding: 60px 6%; }
-            .grid-container { grid-template-columns: 1fr; gap: 1.5rem; }
-            .hero .bio { font-size: 0.95rem; line-height: 1.7; }
-            .hero-stats { grid-template-columns: 1fr; }
+            nav { padding: 1rem 5%; }
+            .nav-links { display: none; } /* On mobile nav links hide or fold */
+            .profile-card { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+            .hero-title { font-size: 2.2rem; }
+            .page-view { padding: 40px 5% 60px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- STICKY NAVBAR -->
     <nav>
-        <div class="logo">Thaman S N</div>
+        <div class="nav-logo" onclick="switchView('home')">
+            <span class="nav-logo-badge">TSN</span> Thaman S N
+        </div>
         <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#internships">Internships</a>
-            <a href="#publications">Publications</a>
-            <a href="#awards">Awards</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
+            <span class="nav-link active" data-page="home" onclick="switchView('home')">Home</span>
+            <span class="nav-link" data-page="projects" onclick="switchView('projects')">Projects</span>
+            <span class="nav-link" data-page="about" onclick="switchView('about')">About</span>
+            <span class="nav-link" data-page="achievements" onclick="switchView('achievements')">Achievements</span>
+            <span class="nav-link" data-page="blog" onclick="switchView('blog')">Blog</span>
+            <span class="nav-link" data-page="contact" onclick="switchView('contact')">Contact</span>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <img src="Project Image/My_Image.jpeg" alt="Thaman S N Profile">
-            <h1>Thaman S N</h1>
+    <!-- ================= PAGE 1: HOME ================= -->
+    <section id="page-home" class="page-view active-view">
+        <div class="hero-banner">
+            <h1 class="hero-title">I build <span>advanced mechatronic</span> & space-tech systems</h1>
+            <p class="hero-subtitle">From satellite CubeSats and autonomous UAV flight dynamics to self-hosted local AI micro-servers and additive manufacturing.</p>
             
-            <p class="subtitle">Mechanical Engineer | President, Raptor Dynamics</p>
-            <p class="bio">
-                I am a Mechanical Engineering student at The National Institute of Engineering, Mysuru, with a deep passion for technology and advanced engineering systems. 
-                My interests lie in development of new technology, autonomous and IoT systems, Emerging technology, Additive Manufacturing.
-                I have led and contributed to award-winning projects recognized at district, state, and national levels. 
-                I actively participate in research conferences and technical competitions to expand my technical depth and real-world problem-solving skills.
-                My goal is to contribute meaningfully to India’s technological advancement through innovation and dedication.
-            </p>
-            <div class="hero-buttons">
-                <a href="#contact" class="hero-btn hero-btn-primary">Get in Touch</a>
-                <a href="Project Image/Thaman_SN_Resume.pdf.pdf" target="_blank" class="hero-btn hero-btn-secondary">
-                    <i class="fas fa-file-arrow-down"></i> Download Resume
-                </a>
+            <div class="hero-pills">
+                <span class="tag-pill"><i class="fas fa-satellite"></i> Satellite Tech</span>
+                <span class="tag-pill"><i class="fas fa-drone"></i> Autonomous UAVs</span>
+                <span class="tag-pill"><i class="fas fa-microchip"></i> Embedded Systems</span>
+                <span class="tag-pill"><i class="fas fa-brain"></i> Edge AI</span>
+                <span class="tag-pill"><i class="fas fa-cube"></i> Additive Mfg</span>
             </div>
 
-            <div class="hero-stats">
-                <button type="button" class="hero-stat-item stat-trigger" data-stat="projects" aria-label="View engineering projects list">
-                    <strong class="countup" data-target="12" data-suffix="+">0</strong>
-                    <span>Engineering Projects</span>
-                </button>
-                <button type="button" class="hero-stat-item stat-trigger" data-stat="events" aria-label="View national events list">
-                    <strong class="countup" data-target="5">0</strong>
-                    <span>National Events</span>
-                </button>
-                <button type="button" class="hero-stat-item stat-trigger" data-stat="domains" aria-label="View research domains list">
-                    <strong class="countup" data-target="3">0</strong>
-                    <span>Research Domains</span>
-                </button>
-                <button type="button" class="hero-stat-item stat-trigger" data-stat="awards" aria-label="View prize money and awards list">
-                    <strong class="countup" data-target="50000" data-suffix="+">0</strong>
-                    <span>Prize Money Won</span>
-                </button>
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-cyan" onclick="switchView('projects')"><i class="fas fa-rocket"></i> View Projects</button>
+                <button class="btn btn-outline" onclick="switchView('contact')">Contact Me</button>
             </div>
         </div>
-    </section>
 
-    <div class="stats-modal" id="statsModal" aria-hidden="true" hidden>
-        <div class="stats-modal-panel" role="dialog" aria-modal="true" aria-labelledby="statsModalTitle">
-            <div class="stats-modal-header">
-                <div>
-                    <p class="stats-modal-kicker">Profile Snapshot</p>
-                    <h3 class="stats-modal-title" id="statsModalTitle">Engineering Projects</h3>
-                </div>
-                <button type="button" class="stats-modal-close" aria-label="Close details">&times;</button>
+        <!-- STATS CALLOUT ROW -->
+        <div class="stats-grid">
+            <div class="stat-card stat-trigger" data-stat="projects">
+                <strong class="countup" data-target="12" data-suffix="+">0</strong>
+                <span>Engineering Projects</span>
             </div>
-            <p class="stats-modal-intro" id="statsModalIntro"></p>
-            <ul class="stats-modal-list" id="statsModalList"></ul>
+            <div class="stat-card stat-trigger" data-stat="events">
+                <strong class="countup" data-target="5">0</strong>
+                <span>National Events</span>
+            </div>
+            <div class="stat-card stat-trigger" data-stat="domains">
+                <strong class="countup" data-target="3">0</strong>
+                <span>Research Domains</span>
+            </div>
+            <div class="stat-card stat-trigger" data-stat="awards">
+                <strong class="countup" data-target="50000" data-suffix="+">0</strong>
+                <span>Prize Money Won</span>
+            </div>
         </div>
-    </div>
 
-    <section id="about">
-        <h2>Technical Arsenal</h2>
-        <div class="skills-grid">
-            <div class="skill-tag"><i class="fas fa-satellite"></i> Satellite Systems</div>
-            <div class="skill-tag"><i class="fas fa-microchip"></i> 3D Printing & Additive Manufacturing </div>
-            <div class="skill-tag"><i class="fas fa-code"></i> Solid Works </div>
-            <div class="skill-tag"><i class="fas fa-code"></i> Solid Edge </div>
-            <div class="skill-tag"><i class="fas fa-code"></i> OnShape </div>
-            <div class="skill-tag"><i class="fas fa-code"></i> Autodesk Fusion </div>
-            <div class="skill-tag"><i class="fas fa-cube"></i> CubeSats & CanSat Development </div>
-            <div class="skill-tag"><i class="fas fa-print"></i> Robotics & Automation </div>
-            <div class="skill-tag"><i class="fas fa-code"></i> MATLAB </div>
-            <div class="skill-tag"><i class="fas fa-code"></i> Worked on Line Following Robot </div>
-            <div class="skill-tag"><i class="fas fa-code"></i> Member of Robotics Club </div>
-        </div>
-    </section>
+        <!-- FEATURED PROJECTS PREVIEW -->
+        <h2 class="section-title">Featured Missions</h2>
+        <p class="section-subtitle">A glimpse of my recent aerospace, UAV, and robotics work</p>
 
-    <section id="projects">
-        <h2>Featured Missions</h2>
         <div class="grid-container">
-
-            <div class="card">
-                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Presentation" loading="lazy">
-                <div class="card-content">
-                    <h3>Conference Presentation at IIT Kharagpur, Kolkata</h3>
-                    <p><strong>First Author & Presenter.</strong> Delivered advanced technical insights on CubeSat architecture and satellite applications at the National ISG–ISRS Conference.</p>
-                    
-                    <details>
-                        <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
-                            <p><strong>Overview:</strong> Contributed to broader technical discussions on emerging space technologies and remote-sensing methodologies.</p>
-                            <p><strong>Impact:</strong> Engaged with leading researchers and professionals to validate concepts and expand knowledge in practical satellite technology.</p>
-                        </div>
-                    </details>
-
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Technical Presentation</span>
-                        <span>ISG - ISRS</span>
-                    </div>
-                </div>
-            </div>
-
+            <!-- ISRAAS Satellite -->
             <div class="card">
                 <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite" loading="lazy">
                 <div class="card-content">
                     <h3>ISRAAS Satellite Project</h3>
-                    <p><strong>Team Lead.</strong> Directed the complete engineering cycle to develop a lightweight CubeSat for border security and atmospheric monitoring.</p>
-                    
-                    <details>
-                        <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
-                            <p><strong>Overview:</strong> Focused heavily on full system integration and structural analysis of a deployable CubeSat unit.</p>
-                            <p><strong>Responsibility:</strong> Directed a team through the complete engineering cycle, successfully managing conceptual mission design to environmental application implementation.</p>
-                        </div>
-                    </details>
-
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>CubeSat</span>
-                        <span>Environmental monitoring</span>
-                        <span>Border Security</span>
-                        <span>Team Leadership</span>
+                    <p><strong>Team Lead.</strong> Directed the engineering cycle to develop a lightweight CubeSat for border security and atmospheric monitoring.</p>
+                    <div class="tech-stack">
+                        <span class="tag-pill">CubeSat</span>
+                        <span class="tag-pill">Border Security</span>
+                        <span class="tag-pill">Team Leadership</span>
                     </div>
                 </div>
             </div>
 
+            <!-- ASCEND UAV -->
             <div class="card">
-                <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND Autonomous UAV" loading="lazy">
+                <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND UAV System" loading="lazy">
                 <div class="card-content">
                     <h3>ASCEND – Autonomous UAV System</h3>
-                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; flex-grow: 0;">
-                        Event: IRoC-U 2026 (ISRO Robotics Challenge) | Concept Proposal Submitted
-                    </p>
-                    <p><strong>Overview:</strong> Submitted a concept proposal for a GPS-denied autonomous quadrotor UAV system designed for indoor navigation and surveillance. The system focuses on vision-based navigation and sensor fusion for robust localization.</p>
-                    
-                    <details>
-                        <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
-                            <p><strong>Problem Statement:</strong> GPS signals are unavailable or unreliable in indoor environments, underground facilities, and urban canyons, making traditional UAV navigation impossible. Critical applications like search-and-rescue, surveillance, and inspection require autonomous flight in such environments.</p>
-                            
-                            <p><strong>Solution:</strong> A vision-based autonomous navigation pipeline using OAK-D Pro stereo camera for depth perception and visual odometry, integrated with Pixhawk flight controller running ArduPilot firmware. Sensor fusion combines IMU, LiDAR/ultrasonic range sensors, and stereo vision for robust GPS-denied localization.</p>
-                            
-                            <div>
-                                <strong style="color: var(--text-main);">Key Features:</strong>
-                                <ul style="margin-left: 20px; margin-top: 5px;">
-                                    <li>GPS-denied autonomous navigation</li>
-                                    <li>Stereo vision-based localization</li>
-                                    <li>SLAM mapping for indoor environments</li>
-                                    <li>Pixhawk + ArduPilot integration</li>
-                                    <li>Multi-sensor fusion framework</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <strong style="color: var(--text-main);">Technical Details:</strong>
-                                <ul style="margin-left: 20px; margin-top: 5px;">
-                                    <li><strong>Vision-Based Navigation:</strong> OAK-D Pro stereo camera system providing depth perception, visual odometry, and obstacle detection.</li>
-                                    <li><strong>Flight Control Architecture:</strong> Pixhawk flight controller with companion computer running ArduPilot firmware, enabling advanced autonomous flight modes and mission planning.</li>
-                                    <li><strong>Sensor Fusion Framework:</strong> Multi-sensor integration combining IMU, LiDAR/ultrasonic range sensors, and stereo vision using SLAM algorithms for precise localization and mapping.</li>
-                                    <li><strong>System Integration:</strong> Hardware integration strategy including power distribution, communication protocols (MAVLink), and real-time data processing for mission-critical operations.</li>
-                                </ul>
-                            </div>
-
-                            <p><strong>Impact:</strong> Submitted innovative concept proposal to ISRO's national robotics challenge, demonstrating advanced understanding of autonomous systems, computer vision, and GPS-denied navigation techniques.</p>
-                        </div>
-                    </details>
-
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Pixhawk & ArduPilot</span>
-                        <span>OAK-D Pro Stereo</span>
-                        <span>LiDAR & IMU Sensors</span>
-                        <span>ROS & Python</span>
-                        <span>SLAM Algorithms</span>
-                        <span>Computer Vision</span>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">IRoC-U 2026 (ISRO Robotics Challenge)</p>
+                    <p>Vision-based GPS-denied autonomous quadrotor navigation using stereo vision and sensor fusion.</p>
+                    <div class="tech-stack">
+                        <span class="tag-pill">Pixhawk & ArduPilot</span>
+                        <span class="tag-pill">OAK-D Pro</span>
+                        <span class="tag-pill">SLAM</span>
                     </div>
                 </div>
             </div>
 
+            <!-- Private Local AI -->
             <div class="card">
-                <img src="Project Image/e_yantra_iitBombay.jpg" alt="e-Yantra Robotics Competition" loading="lazy">
+                <img src="Project Image/myAi_3.jpeg" alt="Private Local AI Server" loading="lazy">
+                <div class="card-content">
+                    <h3>Private Local AI Micro-Server</h3>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">Edge Infrastructure & Security</p>
+                    <p>Self-hosted 24/7 LLM edge server running Ollama and Open WebUI with encrypted Cloudflare Tunnels.</p>
+                    <div class="tech-stack">
+                        <span class="tag-pill">Ollama</span>
+                        <span class="tag-pill">Cloudflare Tunnels</span>
+                        <span class="tag-pill">Open WebUI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+            <button class="btn btn-outline" onclick="switchView('projects')">Explore All Projects & Details →</button>
+        </div>
+    </section>
+
+    <!-- ================= PAGE 2: PROJECTS ================= -->
+    <section id="page-projects" class="page-view">
+        <h2 class="section-title">Projects & Flagship Builds</h2>
+        <p class="section-subtitle">Complete portfolio across satellite tech, UAV flight dynamics, AI systems, and robotics</p>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+            <button class="filter-btn" onclick="filterProjects('aerospace')">Space & Satellite</button>
+            <button class="filter-btn" onclick="filterProjects('uav')">UAVs & Robotics</button>
+            <button class="filter-btn" onclick="filterProjects('ai')">AI & Remote Sensing</button>
+        </div>
+
+        <div class="grid-container" id="projects-grid">
+
+            <!-- Card 1: IIT Kharagpur Presentation -->
+            <div class="card" data-category="aerospace">
+                <img src="Project Image/ISG-ISRS_2025_Presentaion Image.jpeg" alt="Conference Presentation" loading="lazy">
+                <div class="card-content">
+                    <h3>Conference Presentation at IIT Kharagpur, Kolkata</h3>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">First Author & Presenter | ISG-ISRS National Conference</p>
+                    
+                    <div class="psi-block">
+                        <strong>🎯 Scope & Impact</strong>
+                        Delivered technical insights on low-cost 1U CubeSat architecture, structural integrity, and telemetry sensors to space science researchers.
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tag-pill">Technical Presentation</span>
+                        <span class="tag-pill">ISG - ISRS</span>
+                        <span class="tag-pill">IIT Kharagpur</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: ISRAAS Satellite -->
+            <div class="card" data-category="aerospace">
+                <img src="Project Image/ISRAAS-Satellite Image.jpeg" alt="ISRAAS Satellite" loading="lazy">
+                <div class="card-content">
+                    <h3>ISRAAS Satellite Project</h3>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">Team Lead | CubeSat System Engineering</p>
+
+                    <div class="psi-block">
+                        <strong>🎯 Problem</strong>
+                        Need for deployable, lightweight satellite payloads for tactical border security and atmospheric telemetry.
+                    </div>
+                    <div class="psi-block">
+                        <strong>🔧 Solution</strong>
+                        Led full engineering cycle design of a lightweight deployable CubeSat integrating structural COTS components and environmental sensor arrays.
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tag-pill">CubeSat</span>
+                        <span class="tag-pill">Border Security</span>
+                        <span class="tag-pill">Environmental Telemetry</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: ASCEND UAV -->
+            <div class="card" data-category="uav">
+                <img src="Project Image/isro_dronechallenge.jpg" alt="ASCEND UAV" loading="lazy">
+                <div class="card-content">
+                    <h3>ASCEND – Autonomous UAV System</h3>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">IRoC-U 2026 (ISRO Robotics Challenge) Proposal</p>
+
+                    <div class="psi-block">
+                        <strong>🎯 Problem</strong>
+                        GPS signals are unavailable or jammed in indoor environments and urban canyons, making traditional UAV navigation impossible.
+                    </div>
+                    <div class="psi-block">
+                        <strong>🔧 Solution</strong>
+                        Vision-based navigation pipeline using OAK-D Pro stereo camera for visual odometry, integrated with Pixhawk flight controller running ArduPilot firmware and SLAM fusion.
+                    </div>
+
+                    <details>
+                        <summary class="aura-text">View Detailed Architecture & Sensor Fusion</summary>
+                        <div style="padding: 10px 0; color: var(--text-muted); font-size: 0.88rem;">
+                            <p><strong>Sensor Fusion:</strong> Combines IMU, LiDAR range sensors, and OAK-D Pro depth perception for real-time localization.</p>
+                            <p><strong>Protocol:</strong> MAVLink high-speed telemetry with companion computer data processing.</p>
+                        </div>
+                    </details>
+
+                    <div class="tech-stack">
+                        <span class="tag-pill">Pixhawk & ArduPilot</span>
+                        <span class="tag-pill">OAK-D Pro</span>
+                        <span class="tag-pill">LiDAR</span>
+                        <span class="tag-pill">ROS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: e-Yantra Robotics -->
+            <div class="card" data-category="uav">
+                <img src="Project Image/e_yantra_iitBombay.jpg" alt="e-Yantra Robotics" loading="lazy">
                 <div class="card-content">
                     <h3>e-Yantra Robotics Competition 2025-26</h3>
-                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; flex-grow: 0;">Achievement: National-Level Competition by IIT Bombay | Selected till semi finals</p>
-                    <p><strong>Overview:</strong> Developing an autonomous farm-to-collection center delivery robot capable of navigating complex paths and color-coded item retrieval.</p>
-                    
-                    <details>
-                        <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
-                            <p><strong>Problem Statement:</strong> Agricultural logistics requires efficient automation for transporting harvested crops from fields to collection centers. Traditional manual methods are time-consuming and labor-intensive, especially for large farms.</p>
-                            <p><strong>Solution:</strong> An autonomous robot system using STM32 microcontroller with advanced line following algorithms that can navigate white/black lines, sharp curves, zigzag patterns, and dotted segments. IR array sensors enable color-coded crate identification and precise pickup/delivery operations.</p>
-                            <div>
-                                <strong style="color: var(--text-main);">Key Features:</strong>
-                                <ul style="margin-left: 20px; margin-top: 5px;">
-                                    <li>Advanced line following for complex paths</li>
-                                    <li>IR sensor-based crate identification</li>
-                                    <li>STM32 embedded control architecture</li>
-                                    <li>PID-optimized motor control</li>
-                                    <li>CoppeliaSim simulation testing</li>
-                                </ul>
-                            </div>
-                            <p><strong>Technical Navigation & Control:</strong> Real-time sensor fusion, motor control using PID optimization, and decision-making algorithms for autonomous navigation. Iterative testing and validation using CoppeliaSim robot simulation environment.</p>
-                            <p><strong>Impact:</strong> Building practical experience in autonomous robotics, embedded systems, and sensor fusion through participation in India's premier robotics competition organized by IIT Bombay.</p>
-                        </div>
-                    </details>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">National Semi-Finalist | IIT Bombay</p>
 
-                    <a href="Project Image/eyrc.pdf" target="_blank" class="hero-btn hero-btn-secondary" style="padding: 8px 18px; font-size: 0.82rem; margin-bottom: 12px; align-self: flex-start;">View Completion Letter</a>
+                    <div class="psi-block">
+                        <strong>🎯 Problem</strong>
+                        Agricultural logistics requires efficient automation for transporting harvested crops from fields to collection centers.
+                    </div>
+                    <div class="psi-block">
+                        <strong>🔧 Solution</strong>
+                        Autonomous delivery robot built on STM32 microcontroller with PID-optimized line following, IR array sensors, and CoppeliaSim simulation testing.
+                    </div>
 
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>STM32 Microcontroller</span>
-                        <span>Embedded C</span>
-                        <span>CoppeliaSim</span>
-                        <span>IR Array Sensors</span>
-                        <span>PID Control</span>
+                    <a href="Project Image/eyrc.pdf" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.8rem; margin-bottom: 12px; width: fit-content;">View Completion Letter</a>
+
+                    <div class="tech-stack">
+                        <span class="tag-pill">STM32</span>
+                        <span class="tag-pill">Embedded C</span>
+                        <span class="tag-pill">CoppeliaSim</span>
+                        <span class="tag-pill">PID Control</span>
                     </div>
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <section id="internships">
-        <h2>Internships & Field Experience</h2>
-        <div class="grid-container">
-            <div class="card">
-                <img src="Project Image/ISA_Internship_letter.png" alt="ISA Internship Completion Letter" loading="lazy">
+            <!-- Card 5: Remote Sensing & GIS -->
+            <div class="card" data-category="ai">
+                <img src="Project Image/ISA_Internship_letter.png" alt="Vegetation Health Assessment" loading="lazy">
                 <div class="card-content">
-                    <h3>AI-Based Vegetation Health Assessment using NDVI</h3>
-                    
-                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
-                        India Space Academy Internship | Remote Sensing & GIS | Jan 2026
-                    </p>
+                    <h3>AI-Based Vegetation Health Assessment (NDVI)</h3>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">India Space Academy Internship | Jan 2026</p>
 
-                    <p>
-                        Conducted satellite-based vegetation health analysis using Sentinel-2 imagery in Google Earth Engine. 
-                        Computed NDVI to assess vegetation density and implemented AI-inspired classification techniques 
-                        to automatically segment vegetation into multiple health categories.
-                    </p>
-
-                    <details>
-                        <summary class="aura-text">Click to View Technical Details</summary>
-                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
-                            <p><strong>Overview:</strong> Performed large-scale vegetation monitoring for Dakshina Kannada district using cloud-based geospatial analysis.</p>
-                            
-                            <p><strong style="color: var(--text-main);">Technical Work:</strong></p>
-                            <ul style="margin-left: 20px;">
-                                <li>Processed Sentinel-2 satellite imagery</li>
-                                <li>Computed NDVI using NIR (B8) and Red (B4) bands</li>
-                                <li>Performed seasonal vegetation analysis (Pre & Post Monsoon)</li>
-                                <li>Implemented AI-based rule classification for vegetation zoning</li>
-                                <li>Calculated area statistics for each vegetation class</li>
-                            </ul>
-
-                            <p><strong style="color: var(--text-main);">Key Results:</strong></p>
-                            <ul style="margin-left: 20px;">
-                                <li>Dense vegetation dominated ~3453 km²</li>
-                                <li>Post-monsoon NDVI showed significant vegetation improvement</li>
-                                <li>Automated classification improved mapping accuracy</li>
-                            </ul>
-
-                            <p><strong>Impact:</strong> Demonstrates practical application of AI + Remote Sensing for environmental monitoring, similar to real-world satellite-based systems.</p>
-                        </div>
-                    </details>
-
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Google Earth Engine</span>
-                        <span>Sentinel-2</span>
-                        <span>NDVI Analysis</span>
-                        <span>Remote Sensing</span>
-                        <span>AI Classification</span>
+                    <div class="psi-block">
+                        <strong>💡 Impact</strong>
+                        Processed Sentinel-2 satellite imagery over ~3,453 km² using Google Earth Engine, computing NDVI bands and implementing AI rule-classification for automated vegetation zoning.
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="publications">
-        <h2>Technical Research & Publications</h2>
-        <div class="grid-container">
-            
-            <div class="card">
-                <a href="NIRVANA_Paper.pdf" target="_blank" title="Click to read full paper">
-                    <img src="Project Image/Nirvana_frontpage.png" alt="NIRVANA Paper Front Page" loading="lazy">
-                </a>
-                <div class="card-content">
-                    <h3>NIRVANA – "NIE Research Vehicle for Atmospheric and Navigation Analysis"</h3>
-                    <p><strong>First Author.</strong> A research paper detailing the development of NIRVANA, a low-cost 1U CubeSat built using 3D-printed PLA and commercial off-the-shelf (COTS) components. The study highlights its dual-microcontroller architecture (ESP32 & ATmega328P), real-time IoT telemetry for environmental sensing, and sustainable Earth observation. Click the image above or the button below to read the full document.</p>
-                    <div class="tech-stack" style="margin-bottom: 20px;">
-                        <span>Research Publication ISG-ISRS National Conference @ IIT Kharagpur</span>
-                        <span>Satellite Tech</span>
-                        <span>IoT Telemetry</span>
+                    <div class="tech-stack">
+                        <span class="tag-pill">Google Earth Engine</span>
+                        <span class="tag-pill">Sentinel-2</span>
+                        <span class="tag-pill">NDVI</span>
+                        <span class="tag-pill">GIS</span>
                     </div>
-                    <a href="NIRVANA_Paper.pdf" target="_blank" class="hero-btn hero-btn-secondary" style="padding: 10px 22px; font-size: 0.9rem; align-self: flex-start;">Read Full Paper</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section id="awards">
-        <h2>Achievements</h2>
+    <!-- ================= PAGE 3: ABOUT ================= -->
+    <section id="page-about" class="page-view">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Hardware Engineer, UAV Enthusiast, and Space-Tech Researcher</p>
+
+        <div class="profile-card">
+            <img src="Project Image/My_Image.jpeg" alt="Thaman S N Profile">
+            <div>
+                <h3>Thaman S N</h3>
+                <p style="color: var(--cyan-accent); font-weight: 600; margin-bottom: 1rem;">Mechanical Engineering Student | President, Raptor Dynamics</p>
+                <p style="color: var(--text-sub); margin-bottom: 1.5rem;">
+                    I am an engineering student at The National Institute of Engineering (NIE), Mysuru. My work bridges core mechanical design, autonomous aerial robotics, space systems (CubeSats/CanSats), and edge AI infrastructure.
+                </p>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="Project Image/Thaman_SN_Resume.pdf.pdf" target="_blank" class="btn btn-cyan"><i class="fas fa-file-pdf"></i> Download Full Resume</a>
+                    <a href="mailto:thamansn217@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email Me</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="affiliation-grid">
+            <div class="affiliation-box">
+                <strong>🏫 Institution</strong>
+                NIE Mysuru (Mechanical Dept.)
+            </div>
+            <div class="affiliation-box">
+                <strong>🛸 Club Leadership</strong>
+                President, Raptor Dynamics
+            </div>
+            <div class="affiliation-box">
+                <strong>📍 Location</strong>
+                Bengaluru / Mysuru, Karnataka
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 1.5rem; color: var(--text-main);">Engineering Journey & Timeline</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="timeline-year">2026 — Space & Edge AI Systems</span>
+                <p style="color: var(--text-sub);">Submitted ISRO IRoC-U UAV proposal; developed Private Local AI Edge Server; presented at ISG-ISRS IIT Kharagpur conference; completed ISA Remote Sensing program.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2025 — Robotics & Competitions</span>
+                <p style="color: var(--text-sub);">Advanced to e-Yantra IIT Bombay semi-finals; won ENVISION 2025 First Prize; semi-finalist at Maker Bhavan Vishvakarma Awards.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2023 & 2021 — Early Innovation Honors</span>
+                <p style="color: var(--text-sub);">Secured 1st Prize in SSTH 2023 and 2nd Prize in SSTH 2021; awarded INSPIRE Award 2021 and 2019 by Govt. of India.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PAGE 4: ACHIEVEMENTS ================= -->
+    <section id="page-achievements" class="page-view">
+        <h2 class="section-title">Exhibitions & Achievements</h2>
+        <p class="section-subtitle">National awards, research honors, and technical competition victories</p>
+
         <div class="grid-container">
-            
             <div class="card">
-                <img src="Project Image/National_level_youngscientist_award.jpeg" alt="National Level Young Scientist" loading="lazy">
+                <img src="Project Image/National_level_youngscientist_award.jpeg" alt="National Young Scientist Award" loading="lazy">
                 <div class="card-content">
                     <h3>National Young Scientist Award</h3>
-                    <p>Honored at the national level for innovative satellite system development and scientific research excellence. Recognized for contributing advanced engineering solutions aligned with real-world Satellite Technology Development.</p>
+                    <p>Honored at the national level for satellite system development and scientific research excellence.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/ENVISION_2025.jpg" alt="ENVISION 2025 Winner" loading="lazy">
+                <div class="card-content">
+                    <h3>ENVISION 2025 Winner</h3>
+                    <p>Secured 1st Prize at ENVISION 2025 technical competition conducted at NIE Mysuru.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/Vishvakarma_certificate.jpg" alt="Vishvakarma Awards" loading="lazy">
+                <div class="card-content">
+                    <h3>Vishvakarma Awards 2025 Semi-Finalist</h3>
+                    <p>Advanced to the Semi-Final Stage out of 1,054 teams in the Maker Bhavan Foundation Vishwakarma Awards.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Project Image/SSTH_2023.jpg" alt="SSTH 2023" loading="lazy">
+                <div class="card-content">
+                    <h3>SSTH 2023 — First Prize</h3>
+                    <p>Secured 1st Prize in Sahyadri Science Talent Hunt 2023 for technical innovation and engineering design.</p>
                 </div>
             </div>
 
@@ -982,272 +940,113 @@
                 <img src="Project Image/ISG-ISRS_2025_Certificate image.jpeg" alt="ISG-ISRS Certificate" loading="lazy">
                 <div class="card-content">
                     <h3>ISG-ISRS 2025 Certificate</h3>
-                    <p>Official Certification for technical presentation on space technologies at the national Conference at IIT kharagpur, Kolkata .</p>
+                    <p>Official Certification for presentation on space technologies at IIT Kharagpur.</p>
                 </div>
             </div>
-            
+
             <div class="card">
-                <img src="Project Image/State_level_youngscientist_award.jpg" alt="State Level Young Scientist" loading="lazy">
+                <img src="Project Image/State_level_youngscientist_award.jpg" alt="State Young Scientist" loading="lazy">
                 <div class="card-content">
                     <h3>State Young Scientist Award</h3>
-                    <p>Awarded for outstanding performance in science and engineering innovation at the state level. Demonstrated technical excellence and research Work.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="Project Image/District_level_youngscientist_award.jpg" alt="District Level Young Scientist" loading="lazy">
-                <div class="card-content">
-                    <h3>District Young Scientist Award</h3>
-                    <p>Recognized for exceptional scientific creativity and project execution and Presentation at the district level, forming the foundation for higher-level achievements.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="Project Image/Inspire_award_2019.jpg" alt="INSPIRE Award 2019" loading="lazy">
-                <div class="card-content">
-                    <h3>INSPIRE Award 2019</h3>
-                    <p>Selected under the INSPIRE Award scheme for demonstrating early scientific aptitude and innovative thinking in engineering concepts.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="Project Image/inspire_award_2021.jpg" alt="INSPIRE Award 2021" loading="lazy">
-                <div class="card-content">
-                    <h3>INSPIRE Award 2021</h3>
-                    <p>Recognized again under the INSPIRE initiative for continued excellence in scientific innovation and project-based research.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="Project Image/SSTH_2021.jpg" alt="SSTH 2021" loading="lazy">
-                <div class="card-content">
-                    <h3>SSTH 2021</h3>
-                    <p>Participated and Secured 2nd Prize in Sahyadri Science Talent Hunt (SSTH) 2021, demonstrating analytical thinking and problem-solving skills in science and technology domains.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="Project Image/SSTH_2023.jpg" alt="SSTH 2023" loading="lazy">
-                <div class="card-content">
-                    <h3>SSTH 2023</h3>
-                    <p>Participated and Secured 1st Prize in Sahyadri Science Talent Hunt (SSTH) 2023, showcasing growth in technical depth, scientific reasoning, and engineering knowledge.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="Project Image/ENVISION_2025.jpg" alt="ENVISION 2025" loading="lazy">
-                <div class="card-content">
-                    <h3>ENVISION 2025 Winner</h3>
-                    <p>Secured 1st Prize at ENVISION 2025 technical competition conducted at The National Institute of Engineering, Mysuru. Presented an innovative engineering solution demonstrating practical problem-solving and advanced system design.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="Project Image/Vishvakarma_certificate.jpg" alt="Vishvakarma Awards 2025" loading="lazy">
-                <div class="card-content">
-                    <h3>Vishvakarma Awards 2025</h3>
-                    <p>Out of 1,054 teams, our team advanced to the Semifinal Stage of the Maker Bhavan Foundation Vishwakarma Awards — a prestigious platform that celebrates innovation, engineering excellence, and real-world problem solving.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="certifications">
-        <h2>Professional Certifications</h2>
-        <div class="grid-container">
-            <div class="card">
-                <img src="Project Image/ISA_WinterTraining.png" alt="Remote Sensing and GIS Certificate" loading="lazy">
-                <div class="card-content">
-                    <h3>Remote Sensing and GIS</h3>
-                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">India Space Academy (ISA) | Jan 2026</p>
-                    <p>Completed intensive winter training focused on the fundamentals of Remote Sensing and Geographic Information Systems (GIS). Gained insights into satellite data interpretation and spatial analysis, essential for modern space missions.</p>
-                    
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Remote Sensing</span>
-                        <span>GIS</span>
-                        <span>Satellite Data</span>
-                        <span>India Space Week</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <img src="Project Image/Cyber_sequ.jpeg" alt="Cyber Security Certificate" loading="lazy">
-                <div class="card-content">
-                    <h3>Cyber Security</h3>
-                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">College Skill Development Program | Mar 2025</p>
-                    <p>Completed a comprehensive Cyber Security course during the college skill development program. Gained practical knowledge in digital security, threat mitigation, and ethical network practices.</p>
-                    
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Cyber Security</span>
-                        <span>Kali Linux</span>
-                        <span>Ethical Testing</span>
-                        <span>Skill Development</span>
-                    </div>
+                    <p>Awarded for outstanding performance in engineering innovation at the state level.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ENGINEERING BLOG SECTION -->
-    <section id="blog">
-        <h2>Engineering Blog</h2>
+    <!-- ================= PAGE 5: BLOG ================= -->
+    <section id="page-blog" class="page-view">
+        <h2 class="section-title">Engineering Blog & Build Logs</h2>
+        <p class="section-subtitle">Deep dives into self-hosted edge infrastructure, generative design, and mechatronics</p>
+
         <div class="grid-container">
 
-            <!-- Private Local AI Micro-Server & Edge Infrastructure Blog Post -->
-            <div class="card">
-                <img src="Project Image/myAi_3.jpeg" alt="Private Local AI Micro-Server Hardware Setup" loading="lazy">
+            <!-- Private Local AI Micro-Server FLAGSHIP POST -->
+            <div class="card" style="grid-column: 1 / -1;">
+                <img src="Project Image/myAi_3.jpeg" alt="Private Local AI Hardware Setup" loading="lazy" style="max-height: 420px;">
                 <div class="card-content">
-                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
-                        July 2026
-                    </p>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">July 2026 | Infrastructure & Security</p>
                     <h3>Private Local AI Micro-Server & Edge Infrastructure</h3>
                     <p><strong>System Architect & Lead.</strong> Repurposed an unused Dell OptiPlex desktop into a 24/7 self-hosted LLM edge server. Engineered the complete local AI runtime pipeline using Ollama (Qwen2.5-Coder), Open WebUI, and encrypted Cloudflare Tunnels for secure multi-device access without port forwarding.</p>
                     
-                    <details>
+                    <details open>
                         <summary class="aura-text">Explore More: Full Technical Report & System Gallery</summary>
-                        <div style="margin-top: 14px; line-height: 1.6; display: flex; flex-direction: column; gap: 14px; color: var(--text-muted);">
-                            <p><strong>Overview:</strong> Built a production-grade private AI infrastructure from scratch using spare hardware. Rather than relying on cloud subscriptions, this project demonstrates end-to-end ownership of hardware constraints, local inference optimization, networking, and security.</p>
-                            
-                            <div>
-                                <strong style="color: var(--text-main);">Key Architectural Achievements:</strong>
-                                <ul style="margin-left: 20px; margin-top: 6px;">
-                                    <li><strong>Local LLM Deployment & Benchmarking:</strong> Configured and deployed open-source code models (<code>Qwen2.5-Coder</code>, <code>DeepSeek-Coder</code>) via Ollama, evaluating RAM bandwidth and CPU utilization to optimize real-time inference speed.</li>
-                                    <li><strong>Full-Stack Web Hosting & Security:</strong> Self-hosted an Open WebUI server environment on Windows, implementing Role-Based Access Controls (RBAC), user authentication, and admin security settings to prevent unauthorized access.</li>
-                                    <li><strong>Secure Remote Tunneling:</strong> Established an encrypted remote gateway using Cloudflare Tunnels (<code>cloudflared</code>) over HTTP/2, enabling seamless multi-device access (Desktop Web & PWA Mobile) without opening risky inbound router ports.</li>
-                                    <li><strong>System Troubleshooting & Uptime:</strong> Resolved complex system dependencies, including C++ Redistributable DLL runtime errors, PyTorch CPU constraints, and Windows Defender Firewall socket rules to ensure stable 24/7 server operation.</li>
-                                </ul>
-                            </div>
+                        <div style="margin-top: 14px; color: var(--text-muted); font-size: 0.92rem;">
+                            <p style="margin-bottom: 12px;"><strong>Overview:</strong> Built a production-grade private AI infrastructure using spare bare-metal hardware. Rather than relying on cloud subscriptions, this project demonstrates end-to-end control over hardware resource constraints, inference optimization, and secure global tunneling.</p>
 
-                            <div style="margin-top: 6px;">
-                                <strong style="color: var(--text-main); display: block; margin-bottom: 12px;">Project Gallery & Pipeline Walkthrough:</strong>
-                                
-                                <!-- Gallery Item 1 -->
-                                <div style="margin-bottom: 16px; background: rgba(0, 0, 0, 0.35); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-                                    <img src="Project Image/myAi_3.jpeg" alt="Complete PC Setup running 24/7" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 8px; padding: 0; background: transparent;">
-                                    <span style="font-size: 0.8rem; color: var(--text-light); display: block; text-align: center;">1. Hardware Infrastructure — Repurposed Dell OptiPlex desktop operating as a 24/7 dedicated edge micro-server.</span>
+                            <!-- Gallery Grid -->
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 15px;">
+                                <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; border: 1px solid var(--border-glow);">
+                                    <img src="Project Image/myAi_3.jpeg" alt="Setup" style="width:100%; height:180px; object-fit:contain; padding:0; background:none;">
+                                    <span style="font-size:0.75rem; color:var(--text-sub); display:block; text-align:center; margin-top:6px;">1. 24/7 Bare-Metal Hardware Setup</span>
                                 </div>
-
-                                <!-- Gallery Item 2 -->
-                                <div style="margin-bottom: 16px; background: rgba(0, 0, 0, 0.35); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-                                    <img src="Project Image/myAi_2.jpeg" alt="Cloudflare Tunnel Network Logs" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 8px; padding: 0; background: transparent;">
-                                    <span style="font-size: 0.8rem; color: var(--text-light); display: block; text-align: center;">2. Networking Pipeline — Live <code>cloudflared</code> terminal logs confirming secure DNS, UDP, TCP, and HTTP/2 encrypted tunnel connectivity.</span>
+                                <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; border: 1px solid var(--border-glow);">
+                                    <img src="Project Image/myAi_2.jpeg" alt="Cloudflare Tunnel" style="width:100%; height:180px; object-fit:contain; padding:0; background:none;">
+                                    <span style="font-size:0.75rem; color:var(--text-sub); display:block; text-align:center; margin-top:6px;">2. Cloudflare Tunnel Connectivity Logs</span>
                                 </div>
-
-                                <!-- Gallery Item 3 -->
-                                <div style="margin-bottom: 16px; background: rgba(0, 0, 0, 0.35); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-                                    <img src="Project Image/myAi_4.jpeg" alt="Self-Hosted Open WebUI Dashboard" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 8px; padding: 0; background: transparent;">
-                                    <span style="font-size: 0.8rem; color: var(--text-light); display: block; text-align: center;">3. Web Portal Interface — Authenticated Open WebUI desktop portal for real-time model interaction and system administration.</span>
+                                <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; border: 1px solid var(--border-glow);">
+                                    <img src="Project Image/myAi_4.jpeg" alt="Web UI" style="width:100%; height:180px; object-fit:contain; padding:0; background:none;">
+                                    <span style="font-size:0.75rem; color:var(--text-sub); display:block; text-align:center; margin-top:6px;">3. Authenticated Open WebUI Dashboard</span>
                                 </div>
-
-                                <!-- Gallery Item 4 -->
-                                <div style="margin-bottom: 4px; background: rgba(0, 0, 0, 0.35); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-                                    <img src="Project Image/myAi_1.jpeg" alt="Mobile App PWA Interface" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 8px; padding: 0; background: transparent;">
-                                    <span style="font-size: 0.8rem; color: var(--text-light); display: block; text-align: center;">4. Mobile PWA Deployment — Seamless remote access to local LLMs on mobile devices from anywhere in the world.</span>
+                                <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; border: 1px solid var(--border-glow);">
+                                    <img src="Project Image/myAi_1.jpeg" alt="Mobile App" style="width:100%; height:180px; object-fit:contain; padding:0; background:none;">
+                                    <span style="font-size:0.75rem; color:var(--text-sub); display:block; text-align:center; margin-top:6px;">4. Remote Mobile Access (PWA Interface)</span>
                                 </div>
                             </div>
                         </div>
                     </details>
 
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Ollama & Qwen2.5-Coder</span>
-                        <span>Cloudflare Tunnels</span>
-                        <span>Open WebUI</span>
-                        <span>Edge Computing</span>
-                        <span>Python & REST API</span>
-                        <span>Windows Administration</span>
+                    <div class="tech-stack">
+                        <span class="tag-pill">Ollama</span>
+                        <span class="tag-pill">Cloudflare Tunnels</span>
+                        <span class="tag-pill">Open WebUI</span>
+                        <span class="tag-pill">Edge Computing</span>
+                        <span class="tag-pill">Python</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Generative Design Mars Rover Blog Post -->
+            <!-- Blog 2: Generative Design Rover -->
             <div class="card">
                 <img src="Project Image/GD_Rover.png" alt="Generative Design Mars Rover" loading="lazy">
                 <div class="card-content">
-                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
-                        June 2026
-                    </p>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">June 2026 | CAD & Mass Optimization</p>
                     <h3>Generative Design: Mars Rover Chassis</h3>
-                    <p><strong>Design Lead.</strong> Engineered a mass-optimized 6-wheeled rover suspension system using Autodesk Fusion's generative design capabilities to maximize the strength-to-weight ratio for extraterrestrial exploration.</p>
-                    
-                    <details>
-                        <summary class="aura-text">View Project & Technical Details</summary>
-                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
-                            <p><strong>Problem Statement:</strong> Excess mass in planetary rovers exponentially increases launch costs. Traditional structural components are often over-engineered and lack organic load-path optimization.</p>
-                            
-                            <p><strong>Solution:</strong> Applied generative design to a classic Rocker-Bogie kinematic model. By defining strict preserve regions for the DC motor mounts and central shafts, alongside specific load cases and obstacle geometries, the algorithm generated an organic, lattice-like structural chassis. This approach drastically reduces weight while maintaining strict structural integrity for traversing dynamic, uneven terrain.</p>
-                            
-                            <div>
-                                <strong style="color: var(--text-main);">Key Features:</strong>
-                                <ul style="margin-left: 20px; margin-top: 5px;">
-                                    <li>Generative design structural optimization</li>
-                                    <li>6-Wheel Rocker-Bogie kinematics integration</li>
-                                    <li>Precise definition of preserve and obstacle geometries</li>
-                                    <li>Mass reduction targeting aerospace payload constraints</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </details>
-
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Autodesk Fusion</span>
-                        <span>Generative Design</span>
-                        <span>Rocker-Bogie Kinematics</span>
-                        <span>CAD Assembly</span>
-                        <span>Mass Optimization</span>
+                    <p>Mass-optimized 6-wheeled rover suspension engineered using Autodesk Fusion generative design algorithms for extraterrestrial payload constraints.</p>
+                    <div class="tech-stack">
+                        <span class="tag-pill">Autodesk Fusion</span>
+                        <span class="tag-pill">Generative Design</span>
+                        <span class="tag-pill">Rocker-Bogie</span>
                     </div>
                 </div>
             </div>
 
-            <!-- ChocoPrint 3D Blog Post -->
+            <!-- Blog 3: Chocolate 3D Printer -->
             <div class="card">
                 <img src="Project Image/Chocolate 3D printing_vishvakarma.jpeg" alt="Chocolate 3D Printer" loading="lazy">
                 <div class="card-content">
-                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
-                        December 2025
-                    </p>
-                    <h3>Engineering a 3-Axis Chocolate 3D Printer: Thermal Control & Kinematics</h3>
-                    <p>A deep dive into developing the ChocoPrint 3D. This post covers the challenges of fluid extrusion and how we utilized dual-microcontroller coordination (ATmega328P + CNC Shield) to manage the unique rheological properties of chocolate.</p>
-                    
-                    <details>
-                        <summary class="aura-text">View Technical Details</summary>
-                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
-                            <p><strong>Technical Overview:</strong> Utilized an ATmega328P paired with a CNC shield to accurately drive the 3-axis motion kinematics.</p>
-                            <p><strong>Solution:</strong> Developed dual microcontroller coordination to handle the unique rheological properties of chocolate, balancing thermal management with feed-rate control.</p>
-                        </div>
-                    </details>
-
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Mechatronics</span>
-                        <span>Thermal Management</span>
-                        <span>3D Printing</span>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">December 2025 | Additive Mfg</p>
+                    <h3>3-Axis Chocolate 3D Printer: Thermal Control</h3>
+                    <p>Fluid extrusion challenges solved using dual-microcontroller coordination (ATmega328P + CNC Shield) for precise thermal and feed-rate management.</p>
+                    <div class="tech-stack">
+                        <span class="tag-pill">Mechatronics</span>
+                        <span class="tag-pill">Thermal Control</span>
+                        <span class="tag-pill">3D Printing</span>
                     </div>
                 </div>
             </div>
 
-            <!-- 4-DOF Robotic Arm Blog Post -->
+            <!-- Blog 4: 4-DOF Robotic Arm -->
             <div class="card">
-                <img src="Project Image/roboarm.jpeg" alt="4-DOF Robotic Arm Setup" loading="lazy">
+                <img src="Project Image/roboarm.jpeg" alt="4-DOF Robotic Arm" loading="lazy">
                 <div class="card-content">
-                    <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
-                        October 2025
-                    </p>
-                    <h3>Kinematics and Control: Building a 4-DOF Articulated Robotic Arm</h3>
-                    <p>An overview of assembling and programming a physical robotic manipulator for pick-and-place operations. Discusses implementing forward and inverse kinematics, power distribution via custom SMPS, and precise PWM joint actuation.</p>
-                    
-                    <details>
-                        <summary class="aura-text">View Technical Details</summary>
-                        <div style="margin-top: 12px; line-height: 1.6; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted);">
-                            <p><strong>Overview:</strong> Developed a functional physical prototype, managing the mechanical assembly, power distribution via a dedicated SMPS, and electronics integration.</p>
-                            <p><strong>Technical Application:</strong> Implemented forward and inverse kinematics to accurately control the base, shoulder, elbow, and end-effector. Programmed the microcontroller to translate spatial coordinates into precise PWM signals for smooth joint actuation and trajectory planning.</p>
-                        </div>
-                    </details>
-
-                    <div class="tech-stack" style="margin-top: auto;">
-                        <span>Robotics & Kinematics</span>
-                        <span>Microcontrollers</span>
-                        <span>Hardware Integration</span>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">October 2025 | Robotics</p>
+                    <h3>4-DOF Articulated Robotic Arm</h3>
+                    <p>Kinematic manipulator design featuring custom power distribution via SMPS, forward/inverse kinematics, and PWM joint actuation.</p>
+                    <div class="tech-stack">
+                        <span class="tag-pill">Kinematics</span>
+                        <span class="tag-pill">Microcontrollers</span>
+                        <span class="tag-pill">PWM Control</span>
                     </div>
                 </div>
             </div>
@@ -1255,31 +1054,102 @@
         </div>
     </section>
 
-    <section id="contact">
-        <div class="card" style="text-align: center; max-width: 600px; margin: 0 auto; padding: 2.5rem 1.5rem;">
-            <h3>Let's Connect</h3>
-            <p style="color: var(--text-muted); margin-top: 6px; margin-bottom: 1.5rem;">Open to research collaborations and engineering inquiries.</p>
-            <div class="social-links">
-                <a href="mailto:thamansn217@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/thaman-sn-552a34342/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/ThamanSN" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <!-- ================= PAGE 6: CONTACT ================= -->
+    <section id="page-contact" class="page-view">
+        <h2 class="section-title">Let's Build Something Amazing</h2>
+        <p class="section-subtitle">Open to space-tech collaborations, research projects, and engineering opportunities</p>
+
+        <div style="max-width: 650px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-glow); border-radius: var(--radius-lg); padding: 2.5rem; text-align: center;">
+            <h3 style="margin-bottom: 1rem;">Contact Information</h3>
+            <p style="color: var(--text-sub); margin-bottom: 2rem;">Feel free to reach out via email or connect with me on professional platforms.</p>
+
+            <div style="display: flex; flex-direction: column; gap: 14px; text-align: left; margin-bottom: 2rem;">
+                <div class="affiliation-box">
+                    <strong>📧 Email</strong>
+                    <a href="mailto:thamansn217@gmail.com" style="color:#fff;">thamansn217@gmail.com</a>
+                </div>
+                <div class="affiliation-box">
+                    <strong>💼 LinkedIn</strong>
+                    <a href="https://www.linkedin.com/in/thaman-sn-552a34342/" target="_blank" style="color:#fff;">linkedin.com/in/thaman-sn</a>
+                </div>
+                <div class="affiliation-box">
+                    <strong>💻 GitHub</strong>
+                    <a href="https://github.com/ThamanSN" target="_blank" style="color:#fff;">github.com/ThamanSN</a>
+                </div>
             </div>
-            <a href="Project Image/Thaman_SN_Resume.pdf.pdf" target="_blank" class="hero-btn hero-btn-primary" style="margin-top: 10px;">
-                <i class="fas fa-file-arrow-down"></i> Download Resume
+
+            <a href="Project Image/Thaman_SN_Resume.pdf.pdf" target="_blank" class="btn btn-cyan" style="width: 100%; justify-content: center;">
+                <i class="fas fa-download"></i> Download Resume (PDF)
             </a>
         </div>
     </section>
 
+    <!-- STATS MODAL POPUP -->
+    <div class="stats-modal" id="statsModal" hidden>
+        <div class="stats-modal-panel">
+            <div class="stats-modal-header">
+                <div>
+                    <span style="font-size:0.75rem; text-transform:uppercase; color:var(--cyan-accent); font-weight:700;">Snapshot Details</span>
+                    <h3 id="statsModalTitle" style="font-size:1.5rem;">Engineering Highlights</h3>
+                </div>
+                <button class="stats-modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <p id="statsModalIntro" style="color:var(--text-muted); margin-bottom:1rem;"></p>
+            <ul id="statsModalList" style="list-style:none; display:grid; gap:10px;"></ul>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer>
+        <div class="social-links">
+            <a href="mailto:thamansn217@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/thaman-sn-552a34342/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ThamanSN" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
         <p>© 2026 Thaman S N. Driven by Curiosity, Powered by Engineering 🚀</p>
     </footer>
 
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        (function animateHeroCounters() {
-            const counters = document.querySelectorAll('.countup');
-            if (!counters.length) return;
+        // 1. SPA View Switching
+        function switchView(pageId) {
+            document.querySelectorAll('.page-view').forEach(view => view.classList.remove('active-view'));
+            const targetView = document.getElementById('page-' + pageId);
+            if (targetView) {
+                targetView.classList.add('active-view');
+            }
 
-            counters.forEach(function (counter) {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.dataset.page === pageId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 2. Category Filtering on Projects Page
+        function filterProjects(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('#projects-grid .card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 3. Counter Animation
+        (function animateCounters() {
+            const counters = document.querySelectorAll('.countup');
+            counters.forEach(counter => {
                 const target = Number(counter.getAttribute('data-target')) || 0;
                 const suffix = counter.getAttribute('data-suffix') || '';
                 const duration = 1200;
@@ -1287,141 +1157,102 @@
 
                 function step(now) {
                     const progress = Math.min((now - startTime) / duration, 1);
-                    const value = Math.floor(progress * target);
-                    counter.textContent = String(value) + suffix;
-
-                    if (progress < 1) {
-                        requestAnimationFrame(step);
-                    } else {
-                        counter.textContent = String(target) + suffix;
-                    }
+                    counter.textContent = Math.floor(progress * target) + suffix;
+                    if (progress < 1) requestAnimationFrame(step);
+                    else counter.textContent = target + suffix;
                 }
-
                 requestAnimationFrame(step);
             });
         })();
 
-        (function wireStatsModal() {
-            const modal = document.getElementById('statsModal');
-            const modalTitle = document.getElementById('statsModalTitle');
-            const modalIntro = document.getElementById('statsModalIntro');
-            const modalList = document.getElementById('statsModalList');
-            const closeButton = modal ? modal.querySelector('.stats-modal-close') : null;
-            const triggers = document.querySelectorAll('.stat-trigger');
+        // 4. Modal Logic
+        const modal = document.getElementById('statsModal');
+        const modalTitle = document.getElementById('statsModalTitle');
+        const modalIntro = document.getElementById('statsModalIntro');
+        const modalList = document.getElementById('statsModalList');
 
-            if (!modal || !modalTitle || !modalIntro || !modalList || !closeButton || !triggers.length) {
-                return;
+        const statData = {
+            projects: {
+                title: 'Engineering Projects',
+                intro: 'Major project work and technical builds across satellite, UAV, and robotics domains.',
+                items: [
+                    'Conference Presentation at IIT Kharagpur, Kolkata',
+                    'ISRAAS Satellite Project (Deployable CubeSat)',
+                    'ASCEND – Autonomous UAV System (ISRO Challenge)',
+                    'Generative Design: Mars Rover Chassis',
+                    'e-Yantra Robotics Competition 2025-26',
+                    'AI-Based Vegetation Health Assessment (NDVI)',
+                    'Private Local AI Micro-Server & Edge Infrastructure',
+                    'NIRVANA CubeSat Research Work',
+                    '3-Axis Chocolate 3D Printer',
+                    '4-DOF Articulated Robotic Arm'
+                ]
+            },
+            events: {
+                title: 'National Events',
+                intro: 'Research conferences, competitions, and technical programs.',
+                items: [
+                    'ISG-ISRS National Conference at IIT Kharagpur',
+                    'ISRO Robotics Challenge (IRoC-U 2026)',
+                    'e-Yantra Robotics Competition by IIT Bombay',
+                    'India Space Academy Remote Sensing Training',
+                    'ENVISION 2025 Technical Competition',
+                    'Maker Bhavan Foundation Vishvakarma Awards 2025'
+                ]
+            },
+            domains: {
+                title: 'Research Domains',
+                intro: 'Core technical focus areas.',
+                items: [
+                    'Satellite Systems & CubeSats',
+                    'Autonomous Robotics & UAV Flight Dynamics',
+                    'Edge AI Infrastructure & Systems Security',
+                    'Remote Sensing & Geospatial Analytics (GIS)',
+                    'Additive Manufacturing & Generative Design'
+                ]
+            },
+            awards: {
+                title: 'Prize Money & Recognition',
+                intro: 'Honors and prize milestones.',
+                items: [
+                    'National Young Scientist Award',
+                    'ENVISION 2025 First Prize Winner',
+                    'SSTH 2023 First Prize Winner',
+                    'SSTH 2021 Second Prize Winner',
+                    'INSPIRE Award Winner (2021 & 2019)',
+                    'Vishvakarma Awards 2025 Semi-Finalist'
+                ]
             }
+        };
 
-            const statContent = {
-                projects: {
-                    title: 'Engineering Projects',
-                    intro: 'Major project work and technical builds currently featured in the portfolio.',
-                    items: [
-                        'Conference Presentation at IIT Kharagpur, Kolkata',
-                        'ISRAAS Satellite Project',
-                        'ASCEND – Autonomous UAV System',
-                        'Generative Design: Mars Rover Chassis',
-                        'e-Yantra Robotics Competition 2025-26',
-                        'AI-Based Vegetation Health Assessment using NDVI',
-                        'NIRVANA CubeSat research work',
-                        'CubeSats and CanSat development',
-                        'Robotics and automation builds',
-                        'Embedded systems prototyping',
-                        'Additive manufacturing experiments',
-                        'Sensor fusion and navigation experiments'
-                    ]
-                },
-                events: {
-                    title: 'National Events',
-                    intro: 'Research conferences, technical challenges, and national-level participation highlights.',
-                    items: [
-                        'ISG-ISRS National Conference at IIT Kharagpur',
-                        'ISRO Robotics Challenge (IRoC-U 2026)',
-                        'e-Yantra Robotics Competition by IIT Bombay',
-                        'India Space Academy training and events',
-                        'ENVISION 2025 technical competition',
-                        'Vishvakarma Awards 2025',
-                        'Sahyadri Science Talent Hunt 2021',
-                        'Sahyadri Science Talent Hunt 2023'
-                    ]
-                },
-                domains: {
-                    title: 'Research Domains',
-                    intro: 'Core technical areas driving the portfolio work and research direction.',
-                    items: [
-                        'Satellite systems and CubeSats',
-                        'Autonomous robotics and UAVs',
-                        'Remote sensing and GIS',
-                        'IoT telemetry and environmental sensing',
-                        'Additive manufacturing and 3D printing',
-                        'Sensor fusion, SLAM, and navigation control'
-                    ]
-                },
-                awards: {
-                    title: 'Prize Money Won and Awards',
-                    intro: 'Recognition milestones contributing to the cumulative prize money and award record.',
-                    items: [
-                        'National Young Scientist Award',
-                        'State Young Scientist Award',
-                        'District Young Scientist Award',
-                        'INSPIRE Award 2019',
-                        'INSPIRE Award 2021',
-                        'SSTH 2021 - 2nd Prize',
-                        'SSTH 2023 - 1st Prize',
-                        'ENVISION 2025 Winner',
-                        'Vishvakarma Awards 2025 semifinal stage'
-                    ]
-                }
-            };
+        document.querySelectorAll('.stat-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const key = trigger.dataset.stat;
+                const data = statData[key];
+                if (!data) return;
 
-            function openModal(statKey) {
-                const content = statContent[statKey];
-                if (!content) return;
-
-                modalTitle.textContent = content.title;
-                modalIntro.textContent = content.intro;
+                modalTitle.textContent = data.title;
+                modalIntro.textContent = data.intro;
                 modalList.innerHTML = '';
-
-                content.items.forEach(function (item) {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = item;
-                    modalList.appendChild(listItem);
+                data.items.forEach(item => {
+                    const li = document.createElement('li');
+                    li.style.cssText = 'background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.08);';
+                    li.textContent = item;
+                    modalList.appendChild(li);
                 });
-
                 modal.hidden = false;
-                modal.setAttribute('aria-hidden', 'false');
                 document.body.classList.add('modal-open');
-                closeButton.focus();
-            }
-
-            function closeModal() {
-                modal.hidden = true;
-                modal.setAttribute('aria-hidden', 'true');
-                document.body.classList.remove('modal-open');
-            }
-
-            triggers.forEach(function (trigger) {
-                trigger.addEventListener('click', function () {
-                    openModal(trigger.dataset.stat);
-                });
             });
+        });
 
-            closeButton.addEventListener('click', closeModal);
+        function closeModal() {
+            modal.hidden = true;
+            document.body.classList.remove('modal-open');
+        }
 
-            modal.addEventListener('click', function (event) {
-                if (event.target === modal) {
-                    closeModal();
-                }
-            });
-
-            document.addEventListener('keydown', function (event) {
-                if (event.key === 'Escape' && !modal.hidden) {
-                    closeModal();
-                }
-            });
-        })();
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
     </script>
-
 </body>
 </html>
