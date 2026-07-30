@@ -1083,6 +1083,72 @@
         <h2>✍️ Engineering Blog</h2>
         <div class="grid-container">
 
+            <!-- Private Local AI Micro-Server & Edge Infrastructure Blog Post -->
+            <div class="card">
+                <img src="Project Image/myAi_3.jpeg" alt="Private Local AI Micro-Server Hardware Setup" loading="lazy">
+                <div class="card-content">
+                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">
+                        July 2026
+                    </p>
+                    <h3>Private Local AI Micro-Server & Edge Infrastructure</h3>
+                    <p><strong>System Architect & Lead.</strong> Repurposed an unused Dell OptiPlex desktop into a 24/7 self-hosted LLM edge server. Engineered the complete local AI runtime pipeline using Ollama (Qwen2.5-Coder), Open WebUI, and encrypted Cloudflare Tunnels for secure multi-device access without port forwarding.</p>
+                    
+                    <details style="margin-top: 15px; margin-bottom: 15px; font-size: 0.9rem;">
+                        <summary class="aura-text">Explore More: Full Technical Report & System Gallery</summary>
+                        <div style="margin-top: 10px; line-height: 1.6; display: flex; flex-direction: column; gap: 14px; color: var(--text-secondary);">
+                            <p><strong>Overview:</strong> Built a production-grade private AI infrastructure from scratch using spare hardware. Rather than relying on cloud subscriptions, this project demonstrates end-to-end ownership of hardware constraints, local inference optimization, networking, and security.</p>
+                            
+                            <div>
+                                <strong style="color: var(--text-primary);">Key Architectural Achievements:</strong>
+                                <ul style="margin-left: 20px; margin-top: 5px;">
+                                    <li><strong>Local LLM Deployment & Benchmarking:</strong> Configured and deployed open-source code models (<code>Qwen2.5-Coder</code>, <code>DeepSeek-Coder</code>) via Ollama, evaluating RAM bandwidth and CPU utilization to optimize real-time inference speed.</li>
+                                    <li><strong>Full-Stack Web Hosting & Security:</strong> Self-hosted an Open WebUI server environment on Windows, implementing Role-Based Access Controls (RBAC), user authentication, and admin security settings to prevent unauthorized access.</li>
+                                    <li><strong>Secure Remote Tunneling:</strong> Established an encrypted remote gateway using Cloudflare Tunnels (<code>cloudflared</code>) over HTTP/2, enabling seamless multi-device access (Desktop Web & PWA Mobile) without opening risky inbound router ports.</li>
+                                    <li><strong>System Troubleshooting & Uptime:</strong> Resolved complex system dependencies, including C++ Redistributable DLL runtime errors, PyTorch CPU constraints, and Windows Defender Firewall socket rules to ensure stable 24/7 server operation.</li>
+                                </ul>
+                            </div>
+
+                            <div style="margin-top: 5px;">
+                                <strong style="color: var(--text-primary); display: block; margin-bottom: 10px;">Project Gallery & Pipeline Walkthrough:</strong>
+                                
+                                <!-- Gallery Item 1 -->
+                                <div style="margin-bottom: 15px; background: rgba(0, 0, 0, 0.25); padding: 10px; border-radius: 10px; border: 1px solid rgba(114, 194, 255, 0.15);">
+                                    <img src="Project Image/myAi_3.jpeg" alt="Complete PC Setup running 24/7" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 6px; padding: 0; background: transparent;">
+                                    <span style="font-size: 0.8rem; color: #bce8ff; display: block; text-align: center;">1. Hardware Infrastructure — Repurposed Dell OptiPlex desktop operating as a 24/7 dedicated edge micro-server.</span>
+                                </div>
+
+                                <!-- Gallery Item 2 -->
+                                <div style="margin-bottom: 15px; background: rgba(0, 0, 0, 0.25); padding: 10px; border-radius: 10px; border: 1px solid rgba(114, 194, 255, 0.15);">
+                                    <img src="Project Image/myAi_2.jpeg" alt="Cloudflare Tunnel Network Logs" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 6px; padding: 0; background: transparent;">
+                                    <span style="font-size: 0.8rem; color: #bce8ff; display: block; text-align: center;">2. Networking Pipeline — Live <code>cloudflared</code> terminal logs confirming secure DNS, UDP, TCP, and HTTP/2 encrypted tunnel connectivity.</span>
+                                </div>
+
+                                <!-- Gallery Item 3 -->
+                                <div style="margin-bottom: 15px; background: rgba(0, 0, 0, 0.25); padding: 10px; border-radius: 10px; border: 1px solid rgba(114, 194, 255, 0.15);">
+                                    <img src="Project Image/myAi_4.jpeg" alt="Self-Hosted Open WebUI Dashboard" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 6px; padding: 0; background: transparent;">
+                                    <span style="font-size: 0.8rem; color: #bce8ff; display: block; text-align: center;">3. Web Portal Interface — Authenticated Open WebUI desktop portal for real-time model interaction and system administration.</span>
+                                </div>
+
+                                <!-- Gallery Item 4 -->
+                                <div style="margin-bottom: 5px; background: rgba(0, 0, 0, 0.25); padding: 10px; border-radius: 10px; border: 1px solid rgba(114, 194, 255, 0.15);">
+                                    <img src="Project Image/myAi_1.jpeg" alt="Mobile App PWA Interface" style="width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; margin-bottom: 6px; padding: 0; background: transparent;">
+                                    <span style="font-size: 0.8rem; color: #bce8ff; display: block; text-align: center;">4. Mobile PWA Deployment — Seamless remote access to local LLMs on mobile devices from anywhere in the world.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <div class="tech-stack" style="margin-top: auto;">
+                        <span>Ollama & Qwen2.5-Coder</span>
+                        <span>Cloudflare Tunnels</span>
+                        <span>Open WebUI</span>
+                        <span>Edge Computing</span>
+                        <span>Python & REST API</span>
+                        <span>Windows Administration</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Generative Design Mars Rover Blog Post -->
             <div class="card">
                 <img src="Project Image/GD_Rover.png" alt="Generative Design Mars Rover" loading="lazy">
