@@ -411,7 +411,7 @@
             margin-top: 4px;
         }
 
-        /* --- Standard Cards & Grid System (Projects/Research/Blog Pages) --- */
+        /* --- Standard Cards & Grid System (Projects/Research/Blog Pages --- */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -777,7 +777,7 @@
             </div>
         </div>
 
-        <!-- ALL-MISSIONS COMPACT DASHBOARD GRID (10 Compact Text-Only Cards) -->
+        <!-- ALL-MISSIONS COMPACT DASHBOARD GRID -->
         <h2 class="section-title">Featured Missions</h2>
         <p class="section-subtitle">Click any project card to open its complete case study report</p>
 
@@ -840,6 +840,12 @@
             <div class="compact-card" onclick="openCaseStudy('roboarm')">
                 <h3>4-DOF Articulated Robotic Arm</h3>
                 <p>Spatial kinematic manipulator featuring custom SMPS power distribution and mathematically modeled PWM trajectory control.</p>
+            </div>
+            
+            <!-- 11. MATLAB Simulink -->
+            <div class="compact-card" onclick="openCaseStudy('matlab-simulink')">
+                <h3>MATLAB Simulink: Predictive Maintenance</h3>
+                <p>Simulated electrical and mechanical failure detection systems to develop robust predictive maintenance algorithms.</p>
             </div>
         </div>
 
@@ -1294,7 +1300,7 @@
             <div class="card" onclick="openCaseStudy('matlab-simulink')">
                 <img src="Project Image/PM_Simulink.png" alt="MATLAB Simulink Model" loading="lazy">
                 <div class="card-content">
-                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">March 2026 | Simulation & Modeling</p>
+                    <p style="color: var(--cyan-accent); font-weight: 600; font-size: 0.85rem;">July 2026 | Simulation & Modeling</p>
                     <h3>MATLAB Simulink: Predictive Maintenance</h3>
                     <p>Simulated electrical and mechanical failure detection systems to develop robust predictive maintenance algorithms.</p>
                     <div class="tech-stack">
@@ -1639,7 +1645,7 @@
                 title: 'Predictive Maintenance & Failure Detection',
                 subtitle: 'MATLAB Simulink Electrical & Mechanical Fault Simulation',
                 category: 'Simulation & Modeling',
-                event: 'Engineering Blog & Build Log — March 2026',
+                event: 'Engineering Blog & Build Log — July 2026',
                 achievement: 'Simulation Engineer',
                 overview: 'Developed a comprehensive MATLAB Simulink model to simulate and detect electrical and mechanical failures in industrial systems. This model serves as a foundation for testing predictive maintenance algorithms.',
                 features: [
@@ -1653,7 +1659,7 @@
                 techDetails: 'Utilized MATLAB, Simulink, and signal processing blocks to model physical components and logical state machines for identifying threshold breaches in simulated electrical and mechanical subsystems.',
                 gallery: [
                     { img: 'Project Image/PM_Simulink.png', caption: '1. Overall MATLAB Simulink System Architecture Model' },
-                    { img: 'Project Image/PM_Electrical Failure Detection', caption: '2. Electrical Failure Detection Subsystem and Logic' },
+                    { img: 'Project Image/PM_Electrical Failure Detection.png', caption: '2. Electrical Failure Detection Subsystem and Logic' },
                     { img: 'Project Image/PM_Mechanical Failure Detection.png', caption: '3. Mechanical Failure Detection Subsystem and Thresholds' }
                 ],
                 stack: ['MATLAB', 'Simulink', 'Predictive Maintenance', 'Control Systems'],
